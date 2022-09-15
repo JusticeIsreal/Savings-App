@@ -14,7 +14,8 @@
 body {
   //   height: 100vh;
   // border: 5px solid red;
-  max-width: 1700px;
+  max-width: 2000px;
+  margin: 0 auto;
   //   max-height: 1500px;
   // background-color: rgba(178, 146, 57, 0.634);
 }
@@ -75,75 +76,162 @@ $special-Color: #4c5eff;
   }
 }
 
-// SIDEBAR AND TOP SECTION
-.sidebar-topbar {
-  border: 2px solid black;
+// TOPBAR SESSION
+.topbar-container {
+  //   border: 2px solid black;
+  @include flexDisplay(space-between, center, row);
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  padding: 0 5px;
+  top: 0;
+  right: 0;
+  position: fixed;
+  @include responsive(bigphone) {
+    width: 70%;
+    min-width: calc(100vw - 300px);
+    margin-left: auto;
+    padding: 0 10px;
+  }
 
-  //  TOP SECTION
-  .topbar-container {
-    border: 2px solid black;
-    @include flexDisplay(space-between, center, row);
-
-    .sidebar-logo {
-      // border: 2px solid red;
-      width: 100px;
-      margin-left: 20px;
-      img {
-        width: 100%;
-      }
+  .sidebar-logo {
+    width: 120px;
+    @include responsive(bigphone) {
+      width: 150px;
     }
-    //   input {
-    //   }
-
-    .topbar-icons-img {
-      border: 2px solid black;
-      @include flexDisplay(space-between, center, row);
-
-      .icon-top {
-        border: 2px solid black;
-        img {
-          width: 30px;
-        }
-      }
+    img {
+      width: 100%;
+    }
+  }
+  input {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    display: none;
+    @include responsive(bigphone) {
+      width: 300px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid black;
+      padding: 10px;
+      display: block;
     }
   }
 
-  // SIDEBAR SECTION
-  .sidebar-container {
-    border: 2px solid black;
+  .topbar-icons-img {
+    @include flexDisplay(space-between, center, row);
+    width: 130px;
+
+    .icon-top {
+      position: relative;
+      font-size: 20px;
+      //   border: 2px solid black;
+      border-radius: 50%;
+      span {
+        position: absolute;
+        top: -10px;
+        right: -3px;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        height: 15px;
+        width: 15px;
+        text-align: center;
+        border-radius: 50%;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+// TOPBAR END
+
+// SIDEBAR SECTION
+
+.sidebar-container {
+  @include flexDisplay(space-between, center, row);
+  border: 2px solid black;
+  position: absolute;
+  width: 100vw;
+  height: 60px;
+  bottom: 0;
+  padding: 10px;
+
+  @include responsive(bigphone) {
+    @include flexDisplay(space-between, center, column);
+    border: 1px solid black;
     position: relative;
     width: 30%;
     height: 100vh;
     max-width: 300px;
     padding: 10px;
+    position: fixed;
   }
+
+  h1 {
+    display: none;
+
+    @include responsive(bigphone) {
+      text-align: center;
+      margin-top: 50px;
+      display: block;
+    }
+  }
+
   .sidebar-nav-container {
     @include flexDisplay(space-between, flex-start, column);
-    // border: 2px solid red;
     width: 100%;
-    height: 80%;
-    margin-top: 20%;
-    h1 {
+
+    @include responsive(bigphone) {
+      height: 90%;
     }
+
     Nav {
-      //   border: 2px solid red;
       width: 100%;
 
       ul {
-        // border: 2px solid red;
+        @include flexDisplay(space-between, center, row);
+        @include responsive(bigphone) {
+          @include flexDisplay(center, center, column);
+        }
 
         li {
-          font-size: 14px;
-          font-weight: 500;
-          border: 2px solid black;
-          border-radius: 5px;
-          margin: 20px;
-          padding: 10px;
+          @include flexDisplay(center, center, column);
+          font-size: 10px;
+          width: 60px;
+          @include responsive(bigphone) {
+            @include flexDisplay(flex-start, center, row);
+            font-size: 14px;
+            font-weight: 500;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 20px;
+            padding: 10px;
+            width: 200px;
+          }
 
           span {
-            padding: 5px;
-            font-size: 16px;
+            // padding: 3px;
+            font-size: 30px;
+
+            @include responsive(bigphone) {
+              padding: 5px;
+              font-size: 16px;
+            }
           }
+        }
+      }
+
+      .support-settings {
+        display: none;
+        @include responsive(bigphone) {
+          display: block;
         }
       }
     }
