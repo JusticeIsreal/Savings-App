@@ -9,7 +9,6 @@
 }
 
 body {
-  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -27,6 +26,7 @@ body {
 }
 
 .topbar-container {
+  border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,6 +42,8 @@ body {
 @media only screen and (min-width: 750px) {
   .topbar-container {
     width: 70%;
+    margin: 0 auto;
+    max-width: 1000px;
     min-width: calc(100vw - 300px);
     margin-left: auto;
     padding: 0 10px;
@@ -49,6 +51,7 @@ body {
 }
 .topbar-container .sidebar-logo {
   width: 120px;
+  cursor: pointer;
 }
 @media only screen and (min-width: 750px) {
   .topbar-container .sidebar-logo {
@@ -71,7 +74,6 @@ body {
     width: 300px;
     height: 40px;
     border-radius: 5px;
-    border: 1px solid black;
     padding: 10px;
     display: block;
   }
@@ -86,6 +88,7 @@ body {
 .topbar-container .topbar-icons-img .icon-top {
   position: relative;
   font-size: 20px;
+  cursor: pointer;
   border-radius: 50%;
 }
 .topbar-container .topbar-icons-img .icon-top span {
@@ -105,14 +108,24 @@ body {
   height: 50px;
   border: 1px solid black;
   border-radius: 50%;
+  cursor: pointer;
 }
 
-.sidebar-container {
+.sidebar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  flex-direction: row;
+  display: flex;
+  height: 100vh;
+}
+.sidebar .sidebar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  border: 2px solid black;
+  border-right: 1px solid black;
   position: absolute;
   width: 100vw;
   height: 60px;
@@ -120,31 +133,30 @@ body {
   padding: 10px;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar-container {
+  .sidebar .sidebar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    border: 1px solid black;
     position: relative;
     width: 30%;
     height: 100vh;
     max-width: 300px;
     padding: 10px;
-    position: fixed;
+    overflow-y: scroll;
   }
 }
-.sidebar-container h1 {
+.sidebar .sidebar-container h1 {
   display: none;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar-container h1 {
+  .sidebar .sidebar-container h1 {
     text-align: center;
     margin-top: 50px;
     display: block;
   }
 }
-.sidebar-container .sidebar-nav-container {
+.sidebar .sidebar-container .sidebar-nav-container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -152,37 +164,42 @@ body {
   width: 100%;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar-container .sidebar-nav-container {
+  .sidebar .sidebar-container .sidebar-nav-container {
     height: 90%;
   }
 }
-.sidebar-container .sidebar-nav-container Nav {
+.sidebar .sidebar-container .sidebar-nav-container Nav {
   width: 100%;
 }
-.sidebar-container .sidebar-nav-container Nav ul {
+.sidebar .sidebar-container .sidebar-nav-container Nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar-container .sidebar-nav-container Nav ul {
+  .sidebar .sidebar-container .sidebar-nav-container Nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
 }
-.sidebar-container .sidebar-nav-container Nav ul li {
+.sidebar .sidebar-container .sidebar-nav-container Nav ul li {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-size: 10px;
   width: 60px;
+  cursor: pointer;
+}
+.sidebar .sidebar-container .sidebar-nav-container Nav ul li:hover {
+  background-color: black;
+  color: white;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar-container .sidebar-nav-container Nav ul li {
+  .sidebar .sidebar-container .sidebar-nav-container Nav ul li {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -196,20 +213,118 @@ body {
     width: 200px;
   }
 }
-.sidebar-container .sidebar-nav-container Nav ul li span {
+.sidebar .sidebar-container .sidebar-nav-container Nav ul li span {
   font-size: 30px;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar-container .sidebar-nav-container Nav ul li span {
+  .sidebar .sidebar-container .sidebar-nav-container Nav ul li span {
     padding: 5px;
     font-size: 16px;
   }
 }
-.sidebar-container .sidebar-nav-container Nav .support-settings {
-  display: none;
+.sidebar .sidebar-container .sidebar-nav-container Nav .support-settings {
+  position: absolute;
+  top: -70px;
+  margin: 5px;
+  right: 0;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar-container .sidebar-nav-container Nav .support-settings {
+  .sidebar .sidebar-container .sidebar-nav-container Nav .support-settings {
+    display: block;
+    position: relative;
+    margin: 17px;
+    top: 0;
+  }
+}
+.sidebar .sidebar-container .sidebar-nav-container Nav .support {
+  top: -120px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .sidebar-container .sidebar-nav-container Nav .support {
+    display: block;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .sidebar-container .sidebar-nav-container Nav .settings {
     display: block;
   }
+}
+.sidebar .home {
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 60px;
+  order: 2;
+  width: 100%;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .home {
+    width: 70%;
+  }
+}
+.sidebar .home .cardMap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+  overflow-y: scroll;
+  max-width: 1000px;
+  width: 100%;
+}
+.sidebar .home .cardMap .card {
+  margin: 10px;
+  width: 30%;
+  min-width: 200px;
+  max-width: 500px;
+  position: relative;
+  color: gray;
+}
+.sidebar .home .cardMap .card .card-img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.sidebar .home .cardMap .card .bankName {
+  position: absolute;
+  width: 70px;
+  left: 10px;
+  top: -15px;
+}
+.sidebar .home .cardMap .card .card-type {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 10px;
+}
+.sidebar .home .cardMap .card .card-network {
+  position: absolute;
+  width: 70px;
+  left: 33px;
+  top: 35%;
+  color: rgb(52, 53, 54);
+  transform: rotate(90deg);
+  font-size: 20px;
+}
+.sidebar .home .cardMap .card .card-amount {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+}
+.sidebar .home .cardMap .card .card-number {
+  position: absolute;
+  top: 60%;
+  font-size: 13px;
+  left: 20px;
+}
+.sidebar .home .cardMap .card .card-expiration {
+  position: absolute;
+  top: 73%;
+  font-size: 8px;
+  left: 20px;
+}
+.sidebar .home .cardMap .card .card-cardHolder {
+  position: absolute;
+  top: 82%;
+  left: 20px;
 }/*# sourceMappingURL=compStyle.css.map */

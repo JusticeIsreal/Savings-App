@@ -14,7 +14,7 @@
 body {
   //   height: 100vh;
   // border: 5px solid red;
-  max-width: 2000px;
+  //   max-width: 2000px;
   margin: 0 auto;
   //   max-height: 1500px;
   // background-color: rgba(178, 146, 57, 0.634);
@@ -78,7 +78,7 @@ $special-Color: #4c5eff;
 
 // TOPBAR SESSION
 .topbar-container {
-  //   border: 2px solid black;
+  border-bottom: 1px solid black;
   @include flexDisplay(space-between, center, row);
   position: absolute;
   height: 60px;
@@ -88,7 +88,10 @@ $special-Color: #4c5eff;
   right: 0;
   position: fixed;
   @include responsive(bigphone) {
+    // position: relative;
     width: 70%;
+    margin: 0 auto;
+    max-width: 1000px;
     min-width: calc(100vw - 300px);
     margin-left: auto;
     padding: 0 10px;
@@ -96,6 +99,7 @@ $special-Color: #4c5eff;
 
   .sidebar-logo {
     width: 120px;
+    cursor: pointer;
     @include responsive(bigphone) {
       width: 150px;
     }
@@ -114,7 +118,6 @@ $special-Color: #4c5eff;
       width: 300px;
       height: 40px;
       border-radius: 5px;
-      border: 1px solid black;
       padding: 10px;
       display: block;
     }
@@ -127,7 +130,7 @@ $special-Color: #4c5eff;
     .icon-top {
       position: relative;
       font-size: 20px;
-      //   border: 2px solid black;
+      cursor: pointer;
       border-radius: 50%;
       span {
         position: absolute;
@@ -146,6 +149,7 @@ $special-Color: #4c5eff;
         height: 50px;
         border: 1px solid black;
         border-radius: 50%;
+        cursor: pointer;
       }
     }
   }
@@ -153,85 +157,202 @@ $special-Color: #4c5eff;
 // TOPBAR END
 
 // SIDEBAR SECTION
+.sidebar {
+  position: relative;
+  //   border: 5px solid red;
+  @include flexDisplay(space-between, top, row);
+  display: flex;
+  height: 100vh;
 
-.sidebar-container {
-  @include flexDisplay(space-between, center, row);
-  border: 2px solid black;
-  position: absolute;
-  width: 100vw;
-  height: 60px;
-  bottom: 0;
-  padding: 10px;
+  .sidebar-container {
+    @include flexDisplay(space-between, center, row);
+    border-right: 1px solid black;
+    position: absolute;
+    width: 100vw;
+    height: 60px;
+    bottom: 0;
 
-  @include responsive(bigphone) {
-    @include flexDisplay(space-between, center, column);
-    border: 1px solid black;
-    position: relative;
-    width: 30%;
-    height: 100vh;
-    max-width: 300px;
     padding: 10px;
-    position: fixed;
-  }
-
-  h1 {
-    display: none;
 
     @include responsive(bigphone) {
-      text-align: center;
-      margin-top: 50px;
-      display: block;
-    }
-  }
-
-  .sidebar-nav-container {
-    @include flexDisplay(space-between, flex-start, column);
-    width: 100%;
-
-    @include responsive(bigphone) {
-      height: 90%;
+      @include flexDisplay(space-between, center, column);
+      position: relative;
+      width: 30%;
+      height: 100vh;
+      max-width: 300px;
+      padding: 10px;
+      //   position: fixed;
+      overflow-y: scroll;
     }
 
-    Nav {
+    h1 {
+      display: none;
+
+      @include responsive(bigphone) {
+        text-align: center;
+        margin-top: 50px;
+        display: block;
+      }
+    }
+
+    .sidebar-nav-container {
+      @include flexDisplay(space-between, flex-start, column);
       width: 100%;
 
-      ul {
-        @include flexDisplay(space-between, center, row);
-        @include responsive(bigphone) {
-          @include flexDisplay(center, center, column);
-        }
+      @include responsive(bigphone) {
+        height: 90%;
+      }
 
-        li {
-          @include flexDisplay(center, center, column);
-          font-size: 10px;
-          width: 60px;
+      Nav {
+        width: 100%;
+
+        ul {
+          @include flexDisplay(space-between, center, row);
           @include responsive(bigphone) {
-            @include flexDisplay(flex-start, center, row);
-            font-size: 14px;
-            font-weight: 500;
-            border: 2px solid black;
-            border-radius: 5px;
-            margin: 20px;
-            padding: 10px;
-            width: 200px;
+            @include flexDisplay(center, center, column);
           }
 
-          span {
-            // padding: 3px;
-            font-size: 30px;
+          li {
+            @include flexDisplay(center, center, column);
+            font-size: 10px;
+            width: 60px;
+            cursor: pointer;
 
+            &:hover {
+              background-color: black;
+              color: white;
+            }
             @include responsive(bigphone) {
-              padding: 5px;
-              font-size: 16px;
+              @include flexDisplay(flex-start, center, row);
+              font-size: 14px;
+              font-weight: 500;
+              border: 2px solid black;
+              border-radius: 5px;
+              margin: 20px;
+              padding: 10px;
+              width: 200px;
+            }
+
+            span {
+              // padding: 3px;
+              font-size: 30px;
+
+              @include responsive(bigphone) {
+                padding: 5px;
+                font-size: 16px;
+              }
             }
           }
         }
-      }
 
-      .support-settings {
-        display: none;
-        @include responsive(bigphone) {
-          display: block;
+        .support-settings {
+          position: absolute;
+          top: -70px;
+          margin: 5px;
+          right: 0;
+          // display: none;
+          @include responsive(bigphone) {
+            display: block;
+            position: relative;
+            margin: 17px;
+            top: 0;
+          }
+        }
+        .support {
+          top: -120px;
+          @include responsive(bigphone) {
+            display: block;
+            top: 0;
+          }
+        }
+        .settings {
+          @include responsive(bigphone) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  //   HOME PAGE
+  .home {
+    // border: 5px solid red;
+
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 60px;
+    order: 2;
+    width: 100%;
+
+    @include responsive(bigphone) {
+      width: 70%;
+    }
+
+    .cardMap {
+      @include flexDisplay(space-between, center, row);
+      margin: 0 auto;
+
+      overflow-y: scroll;
+      max-width: 1000px;
+      width: 100%;
+      .card {
+        margin: 10px;
+        width: 30%;
+        min-width: 200px;
+        max-width: 500px;
+        position: relative;
+        // border: 1px solid red;
+        color: gray;
+
+        .card-img {
+          width: 100%;
+          border-radius: 15px;
+          box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        }
+        .bankName {
+          position: absolute;
+          width: 70px;
+          left: 10px;
+          top: -15px;
+        }
+        .card-type {
+          position: absolute;
+        //   width: 70px;
+          right: 10px;
+          top: 5px;
+          font-size: 10px;
+        }
+        .card-network {
+          position: absolute;
+          width: 70px;
+          left: 33px;
+          top: 35%;
+          color: rgb(52, 53, 54);
+          transform: rotate(90deg);
+          font-size: 20px;
+        }
+        .card-amount {
+          position: absolute;
+          top: 30%;
+          right: 10px;
+        }
+        .card-number {
+          position: absolute;
+          top: 60%;
+          font-size: 13px;
+          left: 20px;
+        }
+        .card-expiration {
+          position: absolute;
+          top: 73%;
+          font-size: 8px;
+          left: 20px;
+        }
+        .card-cardHolder {
+          position: absolute;
+          top: 82%;
+          //   font-size: 10px;
+          left: 20px;
         }
       }
     }
