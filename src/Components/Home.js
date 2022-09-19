@@ -64,6 +64,7 @@ function Home() {
 
       {/* HOME PAGE */}
       <div className="home">
+        <h4>My cards</h4>
         <div className="cardMap">
           {cardDetails.map((card) => (
             <div className="card" key={card.id}>
@@ -84,6 +85,25 @@ function Home() {
           <div className="totalSavings">
             <p>Total Savings</p>
             <h2> ${yy}</h2>
+          </div>
+          <div className="savings-stats">
+            <div className="savings-heading">
+              <div className="number of wallets">
+                <h3>Savings</h3>
+                <p>number of wallets</p>
+              </div>
+              <div className="settings-icon">
+                <p>settings icon</p>
+              </div>
+            </div>
+            <div className="cardMa">
+              {cardDetails.map((card) => (
+                <div className="savings-card" key={card.id}>
+                  <h3 className="card-type">{card.savingsType}</h3>
+                  <h1 className="card-amount">${card.amount}</h1>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

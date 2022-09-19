@@ -219,6 +219,8 @@ $special-Color: #4c5eff;
             font-size: 10px;
             width: 60px;
             cursor: pointer;
+            border-radius: 5px;
+            padding: 0 5px;
 
             &:hover {
               background-color: black;
@@ -380,6 +382,47 @@ $special-Color: #4c5eff;
       }
       h2 {
         font-size: 35px;
+      }
+    }
+    .savings-stats {
+      border: 2px solid red;
+      width: 100%;
+      margin: 0 auto;
+      @include responsive(bigphone) {
+        width: 80%;
+      }
+      .cardMa {
+        @include flexDisplay(space-between, center, row);
+        margin: 0 auto;
+
+        overflow-y: scroll;
+        max-width: 1000px;
+        // width: 70%;
+        .savings-card {
+          margin: 10px;
+          width: 20%;
+          height: 100px;
+          min-width: 150px;
+          max-width: 300px;
+          position: relative;
+          border: 1px solid green;
+          color: gray;
+          border-radius: 5px;
+
+          .card-type {
+            position: absolute;
+            //   width: 70px;
+            right: 10px;
+            top: 5px;
+            font-size: 10px;
+          }
+
+          .card-amount {
+            position: absolute;
+            top: 30%;
+            right: 10px;
+          }
+        }
       }
     }
   }
