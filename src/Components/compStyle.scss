@@ -78,7 +78,7 @@ $special-Color: #4c5eff;
 
 // TOPBAR SESSION
 .topbar-container {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(174, 171, 171);
   @include flexDisplay(space-between, center, row);
   position: absolute;
   height: 60px;
@@ -87,6 +87,8 @@ $special-Color: #4c5eff;
   top: 0;
   right: 0;
   position: fixed;
+  background-color: whitesmoke;
+  z-index: 2;
   @include responsive(bigphone) {
     // position: relative;
     width: 70%;
@@ -166,12 +168,12 @@ $special-Color: #4c5eff;
 
   .sidebar-container {
     @include flexDisplay(space-between, center, row);
-    border-right: 1px solid black;
+    border: 1px solid black;
     position: absolute;
     width: 100vw;
     height: 60px;
     bottom: 0;
-
+    position: fixed;
     padding: 10px;
 
     @include responsive(bigphone) {
@@ -280,6 +282,7 @@ $special-Color: #4c5eff;
 
     margin: 0 auto;
     padding: 10px;
+    padding-bottom: 60px;
     margin-top: 60px;
     order: 2;
     width: 100%;
@@ -317,7 +320,7 @@ $special-Color: #4c5eff;
         }
         .card-type {
           position: absolute;
-        //   width: 70px;
+          //   width: 70px;
           right: 10px;
           top: 5px;
           font-size: 10px;
@@ -354,6 +357,29 @@ $special-Color: #4c5eff;
           //   font-size: 10px;
           left: 20px;
         }
+      }
+    }
+  }
+  .homeLowerPart {
+    // border: 2px solid red;
+
+    .totalSavings {
+      @include flexDisplay(center, center, column);
+      border: 1px solid gray;
+      width: 200px;
+      height: 70px;
+      margin: 0 auto;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+      @include responsive(bigphone) {
+        width: 300px;
+        height: 100px;
+      }
+      p {
+        font-size: 14px;
+      }
+      h2 {
+        font-size: 35px;
       }
     }
   }

@@ -5,6 +5,10 @@ import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import "./compStyle.css";
 
 function Home() {
+  let yy = cardDetails.reduce(function (acc, card) {
+    return acc + card.amount;
+  }, 0);
+  parseInt(yy);
   return (
     <section className="sidebar">
       {/*HOME SIDE BAR */}
@@ -75,6 +79,12 @@ function Home() {
               <h5 className="card-cardHolder">{card.cardHolderName}</h5>
             </div>
           ))}
+        </div>
+        <div className="homeLowerPart">
+          <div className="totalSavings">
+            <p>Total Savings</p>
+            <h2> ${yy}</h2>
+          </div>
         </div>
       </div>
     </section>
