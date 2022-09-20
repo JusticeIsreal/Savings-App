@@ -452,17 +452,24 @@ $special-Color: #4c5eff;
 
           .card-type {
             position: absolute;
-            //   width: 70px;
-            right: 10px;
+            left: 5px;
             top: 5px;
             font-size: 10px;
           }
-
-          .card-amount {
-            // @include flexDisplay(space-between, center, row);
+          .open-savings-card {
+            top: 3px;
             position: absolute;
+            right: 5px;
+            text-align: center;
+          }
+          .card-amount {
             top: 30%;
-            right: 10px;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
             .targetAmount {
               font-size: 13px;
             }
@@ -479,6 +486,7 @@ $special-Color: #4c5eff;
               right: 0;
               bottom: 10px;
               font-size: 12px;
+              color: #046493;
             }
           }
         }

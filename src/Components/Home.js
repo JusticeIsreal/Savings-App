@@ -6,6 +6,7 @@ import {
   MdOutlineMenuOpen,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
+import { HiOutlineArrowsExpand } from "react-icons/hi";
 import { Slider } from "@mantine/core";
 import "./compStyle.css";
 
@@ -125,6 +126,9 @@ function SavingsCard({ savingsType, target, amount }) {
             ${target}
           </span>
         </h1>
+        <div className="open-savings-card">
+          <HiOutlineArrowsExpand />
+        </div>
         <div className="progress-range">
           <span className="progress-range-value">
             {((amount * 100) / target).toFixed(1)}%
@@ -132,7 +136,9 @@ function SavingsCard({ savingsType, target, amount }) {
           <Slider
             defaultValue={((amount * 100) / target).toFixed(1)}
             size="sm"
-            disabled
+            // disabled
+            thumbSize={1}
+            // color="#046493"
           />
         </div>
       </div>
