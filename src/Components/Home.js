@@ -6,6 +6,7 @@ import {
   MdOutlineMenuOpen,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
+import { Slider } from "@mantine/core";
 import "./compStyle.css";
 
 function Home() {
@@ -94,7 +95,7 @@ function Home() {
             <div className="savings-heading">
               <div className="number-of-wallets">
                 <h3>Savings</h3>
-                <p>number of wallets</p>
+                <p>You have {cardDetails.length} wallets</p>
               </div>
               <div className="settings-icon">
                 <MdOutlineMenuOpen />
@@ -102,16 +103,40 @@ function Home() {
             </div>
             <div className="cardMa">
               {cardDetails.map((card) => (
-                <div className="savings-card" key={card.id}>
-                  <h3 className="card-type">{card.savingsType}</h3>
-                  <h1 className="card-amount">${card.amount}</h1>
-                </div>
+                <SavingsCard key={card.id} {...card} />
               ))}
             </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+// Savings card component to create individual routing functionality
+function SavingsCard({ savingsType, target, amount }) {
+  return (
+    <>
+      <div className="savings-card">
+        <h3 className="card-type">{savingsType}</h3>
+        <h1 className="card-amount">
+          ${amount} <span style={{ fontWeight: "300" }}> /</span>
+          <span className="targetAmount" style={{ fontWeight: "400" }}>
+            ${target}
+          </span>
+        </h1>
+        <div className="progress-range">
+          <span className="progress-range-value">
+            {((amount * 100) / target).toFixed(1)}%
+          </span>
+          <Slider
+            defaultValue={((amount * 100) / target).toFixed(1)}
+            size="sm"
+            disabled
+          />
+        </div>
+      </div>
+    </>
   );
 }
 

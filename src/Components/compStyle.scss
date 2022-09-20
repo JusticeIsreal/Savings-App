@@ -431,11 +431,13 @@ $special-Color: #4c5eff;
         max-width: 100%;
         // width: 70%;
         .savings-card {
+          position: relative;
           margin: 10px;
-          width: 100px;
+          width: 150px;
           height: 100px;
-          min-width: 100px;
+          min-width: 150px;
           max-width: 300px;
+          padding: 0 5px;
           position: relative;
           border: 1px solid gray;
           color: gray;
@@ -457,9 +459,27 @@ $special-Color: #4c5eff;
           }
 
           .card-amount {
+            // @include flexDisplay(space-between, center, row);
             position: absolute;
             top: 30%;
             right: 10px;
+            .targetAmount {
+              font-size: 13px;
+            }
+          }
+
+          .progress-range {
+            // border: 1px solid red;
+            position: absolute;
+            width: 93%;
+            bottom: 3px;
+
+            .progress-range-value {
+              position: absolute;
+              right: 0;
+              bottom: 10px;
+              font-size: 12px;
+            }
           }
         }
       }

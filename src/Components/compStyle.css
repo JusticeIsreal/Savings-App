@@ -406,11 +406,13 @@ body {
   max-width: 100%;
 }
 .sidebar .homeLowerPart .savings-stats .cardMa .savings-card {
+  position: relative;
   margin: 10px;
-  width: 100px;
+  width: 150px;
   height: 100px;
-  min-width: 100px;
+  min-width: 150px;
   max-width: 300px;
+  padding: 0 5px;
   position: relative;
   border: 1px solid gray;
   color: gray;
@@ -435,4 +437,18 @@ body {
   position: absolute;
   top: 30%;
   right: 10px;
+}
+.sidebar .homeLowerPart .savings-stats .cardMa .savings-card .card-amount .targetAmount {
+  font-size: 13px;
+}
+.sidebar .homeLowerPart .savings-stats .cardMa .savings-card .progress-range {
+  position: absolute;
+  width: 93%;
+  bottom: 3px;
+}
+.sidebar .homeLowerPart .savings-stats .cardMa .savings-card .progress-range .progress-range-value {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 12px;
 }/*# sourceMappingURL=compStyle.css.map */
