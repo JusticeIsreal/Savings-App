@@ -1,6 +1,10 @@
 import cardDetails from "./data";
 import { FaHome, FaChartLine, FaChartBar } from "react-icons/fa";
-import { MdAccountBalance, MdContactSupport } from "react-icons/md";
+import {
+  MdAccountBalance,
+  MdContactSupport,
+  MdOutlineMenuOpen,
+} from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import "./compStyle.css";
 
@@ -88,12 +92,12 @@ function Home() {
           </div>
           <div className="savings-stats">
             <div className="savings-heading">
-              <div className="number of wallets">
+              <div className="number-of-wallets">
                 <h3>Savings</h3>
                 <p>number of wallets</p>
               </div>
               <div className="settings-icon">
-                <p>settings icon</p>
+                <MdOutlineMenuOpen />
               </div>
             </div>
             <div className="cardMa">

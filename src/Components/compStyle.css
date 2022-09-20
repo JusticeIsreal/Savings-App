@@ -256,6 +256,7 @@ body {
   }
 }
 .sidebar .home {
+  border: 5px solid red;
   margin: 0 auto;
   padding: 10px;
   padding-bottom: 60px;
@@ -268,6 +269,11 @@ body {
     width: 70%;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .sidebar .home {
+    width: 80%;
+  }
+}
 .sidebar .home .cardMap {
   display: flex;
   justify-content: space-between;
@@ -275,13 +281,12 @@ body {
   flex-direction: row;
   margin: 0 auto;
   overflow-y: scroll;
-  max-width: 1000px;
   width: 100%;
 }
 .sidebar .home .cardMap .card {
   margin: 10px;
   width: 30%;
-  min-width: 200px;
+  min-width: 250px;
   max-width: 500px;
   position: relative;
   color: gray;
@@ -341,15 +346,16 @@ body {
   flex-direction: column;
   border: 1px solid gray;
   width: 200px;
-  height: 70px;
+  height: 60px;
   margin: 0 auto;
+  margin-top: 50px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .totalSavings {
     width: 300px;
-    height: 100px;
+    height: 80px;
   }
 }
 .sidebar .homeLowerPart .totalSavings p {
@@ -359,14 +365,33 @@ body {
   font-size: 35px;
 }
 .sidebar .homeLowerPart .savings-stats {
-  border: 2px solid red;
   width: 100%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .savings-stats {
     width: 80%;
+    max-width: 1000px;
   }
+}
+.sidebar .homeLowerPart .savings-stats .savings-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets h3 {
+  font-size: 18px;
+}
+.sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets p {
+  font-size: 13px;
+}
+.sidebar .homeLowerPart .savings-stats .savings-heading .settings-icon {
+  font-size: 35px;
+}
+.sidebar .homeLowerPart .savings-stats .savings-heading .settings-icon:hover {
+  font-size: 40px;
 }
 .sidebar .homeLowerPart .savings-stats .cardMa {
   display: flex;
@@ -374,19 +399,20 @@ body {
   align-items: center;
   flex-direction: row;
   margin: 0 auto;
-  overflow-y: scroll;
-  max-width: 1000px;
+  overflow-x: scroll;
+  max-width: 100%;
 }
 .sidebar .homeLowerPart .savings-stats .cardMa .savings-card {
   margin: 10px;
-  width: 20%;
-  height: 100px;
+  width: 100px;
+  height: 150px;
   min-width: 150px;
   max-width: 300px;
   position: relative;
-  border: 1px solid green;
+  border: 1px solid gray;
   color: gray;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 .sidebar .homeLowerPart .savings-stats .cardMa .savings-card .card-type {
   position: absolute;
