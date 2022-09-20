@@ -256,7 +256,6 @@ body {
   }
 }
 .sidebar .home {
-  border: 5px solid red;
   margin: 0 auto;
   padding: 10px;
   padding-bottom: 60px;
@@ -348,7 +347,7 @@ body {
   width: 200px;
   height: 60px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
@@ -356,13 +355,17 @@ body {
   .sidebar .homeLowerPart .totalSavings {
     width: 300px;
     height: 80px;
+    margin-top: 50px;
+  }
+  .sidebar .homeLowerPart .totalSavings h2 {
+    font-size: 35px;
   }
 }
 .sidebar .homeLowerPart .totalSavings p {
   font-size: 14px;
 }
 .sidebar .homeLowerPart .totalSavings h2 {
-  font-size: 35px;
+  font-size: 25px;
 }
 .sidebar .homeLowerPart .savings-stats {
   width: 100%;
@@ -405,14 +408,22 @@ body {
 .sidebar .homeLowerPart .savings-stats .cardMa .savings-card {
   margin: 10px;
   width: 100px;
-  height: 150px;
-  min-width: 150px;
+  height: 100px;
+  min-width: 100px;
   max-width: 300px;
   position: relative;
   border: 1px solid gray;
   color: gray;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .savings-stats .cardMa .savings-card {
+    width: 100px;
+    height: 150px;
+    min-width: 150px;
+    max-width: 300px;
+  }
 }
 .sidebar .homeLowerPart .savings-stats .cardMa .savings-card .card-type {
   position: absolute;

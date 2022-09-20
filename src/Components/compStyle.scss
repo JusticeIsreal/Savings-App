@@ -280,7 +280,7 @@ $special-Color: #4c5eff;
 
   //   HOME PAGE
   .home {
-    border: 5px solid red;
+    // border: 5px solid red;
 
     margin: 0 auto;
     padding: 10px;
@@ -376,18 +376,22 @@ $special-Color: #4c5eff;
       width: 200px;
       height: 60px;
       margin: 0 auto;
-      margin-top: 50px;
+      margin-top: 30px;
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
       @include responsive(bigphone) {
         width: 300px;
         height: 80px;
+        margin-top: 50px;
+        h2 {
+          font-size: 35px;
+        }
       }
       p {
         font-size: 14px;
       }
       h2 {
-        font-size: 35px;
+        font-size: 25px;
       }
     }
     .savings-stats {
@@ -429,14 +433,20 @@ $special-Color: #4c5eff;
         .savings-card {
           margin: 10px;
           width: 100px;
-          height: 150px;
-          min-width: 150px;
+          height: 100px;
+          min-width: 100px;
           max-width: 300px;
           position: relative;
           border: 1px solid gray;
           color: gray;
           border-radius: 8px;
           box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+          @include responsive(bigphone) {
+            width: 100px;
+            height: 150px;
+            min-width: 150px;
+            max-width: 300px;
+          }
 
           .card-type {
             position: absolute;
