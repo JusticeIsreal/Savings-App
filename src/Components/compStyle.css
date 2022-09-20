@@ -285,14 +285,19 @@ body {
 .sidebar .home .cardMap .card {
   margin: 10px;
   width: 30%;
-  min-width: 250px;
+  min-width: 210px;
   max-width: 500px;
   position: relative;
   color: gray;
 }
+@media only screen and (min-width: 750px) {
+  .sidebar .home .cardMap .card {
+    min-width: 250px;
+  }
+}
 .sidebar .home .cardMap .card .card-img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 .sidebar .home .cardMap .card .bankName {
@@ -347,7 +352,6 @@ body {
   width: 200px;
   height: 60px;
   margin: 0 auto;
-  margin-top: 30px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
@@ -370,7 +374,7 @@ body {
 .sidebar .homeLowerPart .savings-stats {
   width: 100%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .savings-stats {
@@ -438,6 +442,9 @@ body {
   position: absolute;
   right: 5px;
   text-align: center;
+}
+.sidebar .homeLowerPart .savings-stats .cardMa .savings-card .open-savings-card:hover {
+  transform: scale(1.3);
 }
 .sidebar .homeLowerPart .savings-stats .cardMa .savings-card .card-amount {
   top: 30%;

@@ -122,7 +122,10 @@ function SavingsCard({ savingsType, target, amount }) {
         <h3 className="card-type">{savingsType}</h3>
         <h1 className="card-amount">
           ${amount} <span style={{ fontWeight: "300" }}> /</span>
-          <span className="targetAmount" style={{ fontWeight: "400" }}>
+          <span
+            className="targetAmount"
+            style={{ fontWeight: "400", fontSize: "11px" }}
+          >
             ${target}
           </span>
         </h1>
