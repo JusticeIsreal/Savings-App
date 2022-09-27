@@ -290,7 +290,7 @@ $special-Color: #4c5eff;
     margin-top: 60px;
     order: 2;
     width: 100%;
-
+    overflow-y: scroll;
     @include responsive(bigphone) {
       width: 70%;
     }

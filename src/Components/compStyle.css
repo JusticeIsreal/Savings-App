@@ -263,6 +263,7 @@ body {
   margin-top: 60px;
   order: 2;
   width: 100%;
+  overflow-y: scroll;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .home {
