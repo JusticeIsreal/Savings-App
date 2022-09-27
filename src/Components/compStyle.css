@@ -15,6 +15,7 @@ body {
 *::-webkit-scrollbar {
   height: 0.5rem;
   width: 1px;
+  background-color: rgba(65, 105, 225, 0);
 }
 
 *::-webkit-scrollbar-track {
@@ -211,7 +212,7 @@ body {
     flex-direction: row;
     font-size: 14px;
     font-weight: 500;
-    border: 2px solid black;
+    border: 1px solid gray;
     border-radius: 5px;
     margin: 20px;
     padding: 10px;
@@ -396,6 +397,7 @@ body {
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading .settings-icon {
   font-size: 35px;
+  display: none;
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading .settings-icon:hover {
   font-size: 40px;

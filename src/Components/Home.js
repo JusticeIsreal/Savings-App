@@ -10,7 +10,14 @@ import { HiOutlineArrowsExpand } from "react-icons/hi";
 import { Slider } from "@mantine/core";
 import "./compStyle.css";
 
+import React from "react";
+
+import SplineAreaChart from "../views/area charts/Spline Area Chart";
+
 function Home() {
+  // vhghjvjh
+
+  // bjhghghj
   let yy = cardDetails.reduce(function (acc, card) {
     return acc + card.amount;
   }, 0);
@@ -33,7 +40,7 @@ function Home() {
                 <span>
                   <FaChartLine />
                 </span>
-                Expenses
+                Wallet
               </li>
               <li>
                 <span>
@@ -108,6 +115,9 @@ function Home() {
               ))}
             </div>
           </div>
+        </div>
+        <div>
+          <SplineAreaChart />{" "}
         </div>
       </div>
     </section>

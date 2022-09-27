@@ -17,12 +17,14 @@ body {
   //   max-width: 2000px;
   margin: 0 auto;
   //   max-height: 1500px;
-  // background-color: rgba(178, 146, 57, 0.634);
+  //   background-color: black;
+  //   color: #4c5eff;
 }
 
 *::-webkit-scrollbar {
   height: 0.5rem;
   width: 1px;
+  background-color: rgba(65, 105, 225, 0);
 }
 
 *::-webkit-scrollbar-track {
@@ -161,7 +163,7 @@ $special-Color: #4c5eff;
 // SIDEBAR SECTION
 .sidebar {
   position: relative;
-  //   border: 5px solid red;
+  // border: 5px solid red;
   @include flexDisplay(space-between, top, row);
   display: flex;
   height: 100vh;
@@ -230,7 +232,7 @@ $special-Color: #4c5eff;
               @include flexDisplay(flex-start, center, row);
               font-size: 14px;
               font-weight: 500;
-              border: 2px solid black;
+              border: 1px solid gray;
               border-radius: 5px;
               margin: 20px;
               padding: 10px;
@@ -416,6 +418,7 @@ $special-Color: #4c5eff;
         }
         .settings-icon {
           font-size: 35px;
+          display: none;
           &:hover {
             font-size: 40px;
           }
