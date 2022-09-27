@@ -12,8 +12,6 @@ import "./compStyle.css";
 
 import React from "react";
 
-import SplineAreaChart from "../views/area charts/Spline Area Chart";
-
 function Home() {
   // vhghjvjh
 
@@ -95,19 +93,18 @@ function Home() {
           ))}
         </div>
         <div className="homeLowerPart">
-          <div className="totalSavings">
-            <p>Total Savings</p>
-            <h2> ${yy}</h2>
-          </div>
           <div className="savings-stats">
             <div className="savings-heading">
               <div className="number-of-wallets">
-                <h3>Savings</h3>
+                <h3>Total Savings</h3>
                 <p>You have {cardDetails.length} wallets</p>
               </div>
               <div className="settings-icon">
                 <MdOutlineMenuOpen />
               </div>
+            </div>
+            <div className="totalSavings">
+              <h2> ${yy}</h2>
             </div>
             <div className="cardMa">
               {cardDetails.map((card) => (
@@ -116,9 +113,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div>
-          <SplineAreaChart />{" "}
-        </div>
+        <div>jhj </div>
       </div>
     </section>
   );

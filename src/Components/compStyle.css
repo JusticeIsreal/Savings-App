@@ -344,38 +344,14 @@ body {
   top: 82%;
   left: 20px;
 }
-.sidebar .homeLowerPart .totalSavings {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid gray;
-  width: 200px;
-  height: 60px;
-  margin: 0 auto;
+.sidebar .homeLowerPart .savings-stats {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-}
-@media only screen and (min-width: 750px) {
-  .sidebar .homeLowerPart .totalSavings {
-    width: 300px;
-    height: 80px;
-    margin-top: 50px;
-  }
-  .sidebar .homeLowerPart .totalSavings h2 {
-    font-size: 35px;
-  }
-}
-.sidebar .homeLowerPart .totalSavings p {
-  font-size: 14px;
-}
-.sidebar .homeLowerPart .totalSavings h2 {
-  font-size: 25px;
-}
-.sidebar .homeLowerPart .savings-stats {
+  border: 1px solid rgba(87, 86, 86, 0.112);
   width: 100%;
   margin: 0 auto;
   margin-top: 70px;
+  padding: 5px;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .savings-stats {
@@ -390,10 +366,18 @@ body {
   flex-direction: row;
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets h3 {
-  font-size: 18px;
+  font-size: 15px;
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets p {
-  font-size: 13px;
+  font-size: 10px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets h3 {
+    font-size: 18px;
+  }
+  .sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets p {
+    font-size: 13px;
+  }
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading .settings-icon {
   font-size: 35px;
@@ -471,4 +455,24 @@ body {
   bottom: 10px;
   font-size: 12px;
   color: #046493;
+}
+.sidebar .homeLowerPart .savings-stats .totalSavings {
+  width: 200px;
+  height: 60px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .savings-stats .totalSavings {
+    width: 300px;
+    height: 80px;
+    margin-top: 10px;
+  }
+  .sidebar .homeLowerPart .savings-stats .totalSavings h2 {
+    font-size: 35px;
+  }
+}
+.sidebar .homeLowerPart .savings-stats .totalSavings p {
+  font-size: 14px;
+}
+.sidebar .homeLowerPart .savings-stats .totalSavings h2 {
+  font-size: 25px;
 }/*# sourceMappingURL=compStyle.css.map */
