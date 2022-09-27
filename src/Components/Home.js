@@ -93,6 +93,12 @@ function Home() {
           ))}
         </div>
         <div className="homeLowerPart">
+          <div className="stats-card">
+            <div className="stats-card1">1</div>
+            <div className="stats-card2">2</div>
+            <div className="stats-card3">3</div>
+            <div className="stats-card4">4</div>
+          </div>
           <div className="savings-stats">
             <div className="savings-heading">
               <div className="number-of-wallets">
@@ -113,7 +119,6 @@ function Home() {
             </div>
           </div>
         </div>
-        <div>jhj </div>
       </div>
     </section>
   );

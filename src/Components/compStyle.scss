@@ -369,6 +369,9 @@ $special-Color: #4c5eff;
   }
   .homeLowerPart {
     // border: 2px solid red;
+    @include flexDisplay(space-between, center, row);
+    flex-wrap: wrap;
+
     // margin-top: -30px;
     // .totalSavings {
     //   @include flexDisplay(center, center, column);
@@ -394,17 +397,58 @@ $special-Color: #4c5eff;
     //     font-size: 25px;
     //   }
     // }
+
+    .stats-card {
+      // border: 2px solid red;
+      @include flexDisplay(space-between, center, row);
+      flex-wrap: wrap;
+      border-radius: 5px;
+      order: 2;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 20px;
+      // padding: 5px;
+      @include responsive(bigphone) {
+        width: 80%;
+      }
+      @include responsive(desktop) {
+        width: 40%;
+      }
+      .stats-card1,
+      .stats-card2,
+      .stats-card3,
+      .stats-card4 {
+        width: 47%;
+        margin: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        border: 1px solid rgba(87, 86, 86, 0.112);
+        // width: 150px;
+        height: 150px;
+        // min-width: 150px;
+        // max-width: 300px;
+        padding: 0 5px;
+        position: relative;
+        border: 1px solid gray;
+        color: gray;
+        border-radius: 8px;
+      }
+    }
+
     .savings-stats {
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
       border: 1px solid rgba(87, 86, 86, 0.112);
       width: 100%;
       margin: 0 auto;
-      margin-top: 70px;
+      margin-top: 20px;
       padding: 5px;
+
       @include responsive(bigphone) {
         width: 80%;
-        max-width: 1000px;
+      }
+      @include responsive(desktop) {
+        width: 55%;
+        order: 1;
       }
       .savings-heading {
         // border: 2px solid red;
@@ -417,14 +461,6 @@ $special-Color: #4c5eff;
           }
           p {
             font-size: 10px;
-          }
-          @include responsive(bigphone) {
-            h3 {
-              font-size: 18px;
-            }
-            p {
-              font-size: 13px;
-            }
           }
         }
         .settings-icon {
@@ -443,7 +479,6 @@ $special-Color: #4c5eff;
         max-width: 100%;
         // width: 70%;
         .savings-card {
-          position: relative;
           margin: 10px;
           width: 150px;
           height: 100px;

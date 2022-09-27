@@ -344,19 +344,68 @@ body {
   top: 82%;
   left: 20px;
 }
+.sidebar .homeLowerPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sidebar .homeLowerPart .stats-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  order: 2;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .stats-card {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .sidebar .homeLowerPart .stats-card {
+    width: 40%;
+  }
+}
+.sidebar .homeLowerPart .stats-card .stats-card1,
+.sidebar .homeLowerPart .stats-card .stats-card2,
+.sidebar .homeLowerPart .stats-card .stats-card3,
+.sidebar .homeLowerPart .stats-card .stats-card4 {
+  width: 47%;
+  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  border: 1px solid rgba(87, 86, 86, 0.112);
+  height: 150px;
+  padding: 0 5px;
+  position: relative;
+  border: 1px solid gray;
+  color: gray;
+  border-radius: 8px;
+}
 .sidebar .homeLowerPart .savings-stats {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   border: 1px solid rgba(87, 86, 86, 0.112);
   width: 100%;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 20px;
   padding: 5px;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .savings-stats {
     width: 80%;
-    max-width: 1000px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .sidebar .homeLowerPart .savings-stats {
+    width: 55%;
+    order: 1;
   }
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading {
@@ -370,14 +419,6 @@ body {
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets p {
   font-size: 10px;
-}
-@media only screen and (min-width: 750px) {
-  .sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets h3 {
-    font-size: 18px;
-  }
-  .sidebar .homeLowerPart .savings-stats .savings-heading .number-of-wallets p {
-    font-size: 13px;
-  }
 }
 .sidebar .homeLowerPart .savings-stats .savings-heading .settings-icon {
   font-size: 35px;
@@ -396,7 +437,6 @@ body {
   max-width: 100%;
 }
 .sidebar .homeLowerPart .savings-stats .cardMa .savings-card {
-  position: relative;
   margin: 10px;
   width: 150px;
   height: 100px;
