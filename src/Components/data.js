@@ -11,6 +11,7 @@ const cardDetails = [
     cardNumber: "2342 5421 4563 2345",
     expiration: "12/24",
     cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(54, 162, 235, 0.2)",
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const cardDetails = [
     cardNumber: "3424 5432 2356 2134",
     expiration: "12/24",
     cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(255, 99, 132, 0.2)",
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ const cardDetails = [
     cardNumber: "1234 6543 7890 2345",
     expiration: "12/24",
     cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(255, 159, 64, 0.2)",
   },
   {
     id: 4,
@@ -50,6 +53,7 @@ const cardDetails = [
     cardNumber: "2342 5421 4563 2345",
     expiration: "12/24",
     cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(255, 205, 86, 0.2)",
   },
   {
     id: 5,
@@ -63,6 +67,7 @@ const cardDetails = [
     cardNumber: "3424 5432 2356 2134",
     expiration: "12/24",
     cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(75, 192, 192, 0.2)",
   },
 ];
 export default cardDetails;

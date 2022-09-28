@@ -9,13 +9,9 @@ import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import { HiOutlineArrowsExpand } from "react-icons/hi";
 import { Slider } from "@mantine/core";
 import "./compStyle.css";
-
-import React from "react";
+import Test from "./Test";
 
 function Home() {
-  // vhghjvjh
-
-  // bjhghghj
   let yy = cardDetails.reduce(function (acc, card) {
     return acc + card.amount;
   }, 0);
@@ -119,6 +115,7 @@ function Home() {
             </div>
           </div>
         </div>
+      <div><Test /> </div>
       </div>
     </section>
   );

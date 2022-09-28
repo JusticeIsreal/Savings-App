@@ -177,6 +177,8 @@ $special-Color: #4c5eff;
     bottom: 0;
     position: fixed;
     padding: 10px;
+    background-color: whitesmoke;
+    z-index: 2;
 
     @include responsive(bigphone) {
       @include flexDisplay(space-between, center, column);
@@ -438,7 +440,7 @@ $special-Color: #4c5eff;
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
       border: 1px solid rgba(87, 86, 86, 0.112);
-      width: 100%;
+      width: 98%;
       margin: 0 auto;
       margin-top: 20px;
       padding: 5px;
