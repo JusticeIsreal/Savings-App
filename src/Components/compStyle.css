@@ -265,6 +265,7 @@ body {
   margin-top: 60px;
   order: 2;
   width: 100%;
+  max-width: 2000px;
   overflow-y: scroll;
 }
 @media only screen and (min-width: 750px) {
@@ -369,12 +370,15 @@ body {
   color: gray;
   border-radius: 8px;
   margin: 0 auto;
+  order: 2;
+  margin-top: 50px;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1280px) {
   .sidebar .home .home-chart .home-barchart {
     width: 50%;
-    max-width: 600px;
+    max-width: 500px;
     padding-bottom: 20px;
+    margin-top: 0;
   }
 }
 .sidebar .home .home-chart .home-table {
@@ -385,8 +389,10 @@ body {
   margin: 0 auto;
   margin-top: 20px;
   padding: 5px;
+  margin-top: 50px;
+  order: 1;
 }
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1280px) {
   .sidebar .home .home-chart .home-table {
     width: 45%;
   }
