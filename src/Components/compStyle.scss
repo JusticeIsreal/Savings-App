@@ -368,9 +368,60 @@ $special-Color: #4c5eff;
         }
       }
     }
+
+    // home chart and table container
+    .home-chart {
+      margin-top: 50px;
+      // border: 2px solid red;
+      @include flexDisplay(space-between, center, row);
+      flex-wrap: wrap;
+      @include responsive(bigphone) {
+        margin-top: 50px;
+      }
+
+      .home-barchart {
+        width: 98%;
+        margin: 5px;
+        // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        // border: 1px solid rgba(87, 86, 86, 0.112);
+        // width: 150px;
+        height: 150px;
+        // min-width: 150px;
+        // max-width: 300px;
+        padding: 0 5px;
+        position: relative;
+        // border: 1px solid gray;
+        color: gray;
+        border-radius: 8px;
+        // border: 2px solid red;
+        margin: 0 auto;
+
+        @include responsive(bigphone) {
+          width: 50%;
+          max-width: 600px;
+          // height: 150px;
+          padding-bottom: 20px;
+        }
+      }
+      .home-table {
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        border: 1px solid rgba(87, 86, 86, 0.112);
+        width: 98%;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 5px;
+        // border: 2px solid red;
+        @include responsive(bigphone) {
+          width: 45%;
+
+        }
+      }
+    }
   }
   .homeLowerPart {
     // border: 2px solid red;
+    margin-top: 50px;
     @include flexDisplay(space-between, center, row);
     flex-wrap: wrap;
 

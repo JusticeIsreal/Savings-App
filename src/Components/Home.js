@@ -8,6 +8,7 @@ import {
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import { HiOutlineArrowsExpand } from "react-icons/hi";
 import { Slider } from "@mantine/core";
+import { Table } from "@mantine/core";
 import "./compStyle.css";
 import Test from "./Test";
 
@@ -16,6 +17,16 @@ function Home() {
     return acc + card.amount;
   }, 0);
   parseInt(yy);
+
+  // Transaction table
+  const rows = cardDetails.map((element) => (
+    <tr key={element.id}>
+      <td>{element.savingsType}</td>
+      <td>{element.amount}</td>
+      <td>{element.target}</td>
+      <td>{element.expiration}</td>
+    </tr>
+  ));
   return (
     <section className="sidebar">
       {/*HOME SIDE BAR */}
@@ -115,7 +126,23 @@ function Home() {
             </div>
           </div>
         </div>
-      <div><Test /> </div>
+        <div className="home-chart">
+          <Test />
+          <div className="home-table">
+            <h4>Actions</h4>
+            <Table>
+              <thead>
+                <tr>
+                  <th>savingsType</th>
+                  <th>Amount</th>
+                  <th>Target</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>{rows}</tbody>
+            </Table>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -146,9 +173,7 @@ function SavingsCard({ savingsType, target, amount }) {
           <Slider
             defaultValue={((amount * 100) / target).toFixed(1)}
             size="sm"
-            // disabled
             thumbSize={1}
-            // color="#046493"
           />
         </div>
       </div>
