@@ -285,11 +285,11 @@ $special-Color: #4c5eff;
 
   //   HOME PAGE
   .home {
-    // border: 5px solid red;
+    border: 5px solid red;
 
     margin: 0 auto;
     padding: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     margin-top: 60px;
     order: 2;
     width: 100%;
@@ -380,9 +380,9 @@ $special-Color: #4c5eff;
     // home chart and table container
     .home-chart {
       margin-top: 50px;
-      padding-bottom: 70px;
+      // padding-bottom: 50px;
       // overflow-y: scroll;
-      border: 2px solid red;
+      // border: 2px solid red;
       @include flexDisplay(space-between, center, row);
       flex-wrap: wrap;
       
