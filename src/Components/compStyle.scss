@@ -294,7 +294,7 @@ $special-Color: #4c5eff;
     order: 2;
     width: 100%;
     max-width: 2000px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     @include responsive(bigphone) {
       width: 70%;
     }
@@ -305,7 +305,7 @@ $special-Color: #4c5eff;
     .cardMap {
       @include flexDisplay(space-between, center, row);
       margin: 0 auto;
-      // border: 5px solid red;
+      border: 5px solid red;
       overflow-y: scroll;
       //   max-width: 1200px;
       width: 100%;
@@ -414,15 +414,16 @@ $special-Color: #4c5eff;
         box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
         border: 1px solid rgba(87, 86, 86, 0.112);
         width: 98%;
-        height: 250px;
+        // height: 250px;
         margin: 0 auto;
         // margin-top: 20px;
         padding: 5px;
         // margin-top: 50px;
         order: 1;
-        overflow-x: scroll;
-        overflow-y: scroll;
-        border: 2px solid red;
+        // overflow-x: scroll;
+        // overflow-y: scroll;
+        // border: 2px solid red;
+        margin-bottom: 70px;
         @include responsive(desktop) {
           width: 100%;
 
@@ -501,7 +502,7 @@ $special-Color: #4c5eff;
         border: 1px solid rgba(90, 90, 90, 0.112);
 
         @include responsive(smallPhone) {
-        border: 2px solid red;
+        // border: 2px solid red;
         width: 45%;
         }
       }
