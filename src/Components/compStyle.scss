@@ -286,7 +286,7 @@ $special-Color: #4c5eff;
   .home {
     // border: 5px solid red;
 
-    // margin: 0 auto;
+    margin: 0 auto;
     padding: 5px;
     padding-bottom: 100px;
     margin-top: 60px;
@@ -305,25 +305,25 @@ $special-Color: #4c5eff;
     .cardMap {
       @include flexDisplay(space-between, center, row);
       margin: 0 auto;
-      border: 5px solid red;
+      // border: 5px solid red;
       overflow-y: scroll;
-      //   max-width: 1200px;
       width: 100%;
       .card {
         // border: 5px solid red;
-        margin: 10px;
+        margin: 12px;
         width: 30%;
-        min-width: 210px;
+        min-width: 300px;
         max-width: 500px;
         position: relative;
         color: gray;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.8s ease;
 
         &:hover {
           transform: scale(1.1);
         }
         @include responsive(bigphone) {
-          min-width: 250px;
+          min-width: 320px;
+          margin: 15px;
         }
         .card-img {
           width: 100%;
@@ -475,10 +475,10 @@ $special-Color: #4c5eff;
       margin-top: 20px;
       // padding: 5px;
       @include responsive(bigphone) {
-        width: 80%;
+        // width: 80%;
       }
       @include responsive(desktop) {
-        width: 40%;
+        // width: 40%;
       }
       .stats-card1,
       .stats-card2,
@@ -486,10 +486,6 @@ $special-Color: #4c5eff;
       .stats-card4 {
         width: 47%;
         margin: 5px;
-        // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-        // border: 1px solid rgba(87, 86, 86, 0.112);
-        // width: 150px;
-        // @include flexDisplay(space-between, center, row);
         height: 150px;
         // min-width: 150px;
         // max-width: 300px;
@@ -500,10 +496,16 @@ $special-Color: #4c5eff;
         border-radius: 8px;
         box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
         border: 1px solid rgba(90, 90, 90, 0.112);
-
-        @include responsive(smallPhone) {
         // border: 2px solid red;
-        width: 45%;
+        @include responsive(smallPhone) {
+          // border: 2px solid red;
+          width: 45%;
+        }
+        @include responsive(bigphone) {
+           height: 250px;
+        }
+        @include responsive(desktop) {
+          // width: 40%;
         }
       }
     }

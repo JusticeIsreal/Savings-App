@@ -27,6 +27,7 @@ function Home() {
       <td>{element.expiration}</td>
     </tr>
   ));
+
   return (
     <section className="sidebar">
       {/*HOME SIDE BAR */}
@@ -82,7 +83,9 @@ function Home() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <h4>My cards</h4>
+        <h4>Wallet</h4>
+
+        {/*card wallet container */}
         <div className="cardMap">
           {cardDetails.map((card) => (
             <div className="card" key={card.id}>
@@ -99,6 +102,9 @@ function Home() {
             </div>
           ))}
         </div>
+        {/* end of card wallet  */}
+
+        {/* Fund details container*/}
         <div className="homeLowerPart">
           <div className="stats-card">
             <div className="stats-card1">1</div>
@@ -106,7 +112,7 @@ function Home() {
             <div className="stats-card3">3</div>
             <div className="stats-card4">4</div>
           </div>
-          <div className="savings-stats">
+          {/* <div className="savings-stats">
             <div className="savings-heading">
               <div className="number-of-wallets">
                 <h3>Total Savings</h3>
@@ -124,10 +130,10 @@ function Home() {
                 <SavingsCard key={card.id} {...card} />
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="home-chart">
-          {/* <Test /> */}
+        {/* <div className="home-chart">
+          <Test />
           <div className="home-table">
             <h4>Actions</h4>
             <Table>
@@ -142,7 +148,7 @@ function Home() {
               <tbody>{rows}</tbody>
             </Table>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
