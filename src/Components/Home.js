@@ -1,14 +1,14 @@
 import cardDetails from "./data";
-import { FaHome, FaChartLine, FaChartBar } from "react-icons/fa";
+import { FaHome, FaChartLine, FaChartBar, FaMoneyCheck } from "react-icons/fa";
 import {
   MdAccountBalance,
   MdContactSupport,
   MdOutlineMenuOpen,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
-import { HiOutlineArrowsExpand } from "react-icons/hi";
-import { Slider } from "@mantine/core";
-import { Table } from "@mantine/core";
+import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
+import { VscGraph } from "react-icons/vsc";
+import { Slider, RingProgress, Table } from "@mantine/core";
 import "./compStyle.css";
 import Test from "./Test";
 
@@ -17,6 +17,10 @@ function Home() {
     return acc + card.amount;
   }, 0);
   parseInt(yy);
+  let zz = cardDetails.reduce(function (acc, card) {
+    return acc + card.target;
+  }, 0);
+  parseInt(zz);
 
   // Transaction table
   const rows = cardDetails.map((element) => (
@@ -101,14 +105,46 @@ function Home() {
               <h5 className="card-cardHolder">{card.cardHolderName}</h5>
             </div>
           ))}
+          <span className="add-wallet-icon-container">
+            <HiPlus className="add-wallet-icon" />
+          </span>
         </div>
         {/* end of card wallet  */}
 
         {/* Fund details container*/}
         <div className="homeLowerPart">
           <div className="stats-card">
-            <div className="stats-card1">1</div>
-            <div className="stats-card2">2</div>
+            <div className="stats-card1">
+              <FaMoneyCheck className="stats-card1-total-savings" />
+
+              <div className="total-savings-details-con">
+                <h4>Total Saving</h4>
+                <sup>{cardDetails.length} Wallets</sup>
+                <h1>₦{yy}</h1>
+
+                <div className="progress-range">
+                  <div className="progress-range-figures">
+                    <span className="progress-range-value">
+                      {((yy * 100) / zz).toFixed(1)}%
+                    </span>
+                    <span> / ₦{zz}</span>
+                  </div>
+
+                  <Slider
+                    defaultValue={((yy * 100) / zz).toFixed(1)}
+                    size="sm"
+                    thumbSize={1}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="stats-card2">
+              <VscGraph />
+              <div>
+                <p>Stats</p>
+                <h2>₦{zz}</h2>
+              </div>
+            </div>
             <div className="stats-card3">3</div>
             <div className="stats-card4">4</div>
           </div>
