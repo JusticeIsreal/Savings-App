@@ -69,5 +69,47 @@ const cardDetails = [
     cardHolderName: "JUSTICE AGBOMA",
     backgroundColor: "rgba(54, 162, 235, 0.2)",
   },
+  {
+    id: 5,
+    savingsType: "Upkeep",
+    cardImg:
+      "https://res.cloudinary.com/isreal/image/upload/v1663412238/banking%20app/istockphoto-532251550-612x612-removebg-preview_s4625r.png",
+    bankName:
+      "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
+    amount: 40,
+    target: 100,
+    cardNumber: "3424 5432 2356 2134",
+    expiration: "12/22",
+    cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(54, 162, 235, 0.2)",
+  },
+  {
+    id: 5,
+    savingsType: "Upkeep",
+    cardImg:
+      "https://res.cloudinary.com/isreal/image/upload/v1663412238/banking%20app/istockphoto-532251550-612x612-removebg-preview_s4625r.png",
+    bankName:
+      "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
+    amount: 40,
+    target: 100,
+    cardNumber: "3424 5432 2356 2134",
+    expiration: "12/22",
+    cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(54, 162, 235, 0.2)",
+  },
+  {
+    id: 5,
+    savingsType: "Upkeep",
+    cardImg:
+      "https://res.cloudinary.com/isreal/image/upload/v1663412238/banking%20app/istockphoto-532251550-612x612-removebg-preview_s4625r.png",
+    bankName:
+      "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
+    amount: 40,
+    target: 100,
+    cardNumber: "3424 5432 2356 2134",
+    expiration: "12/22",
+    cardHolderName: "JUSTICE AGBOMA",
+    backgroundColor: "rgba(54, 162, 235, 0.2)",
+  },
 ];
 export default cardDetails;
