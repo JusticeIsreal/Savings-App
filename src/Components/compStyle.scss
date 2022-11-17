@@ -258,8 +258,9 @@ $special-Color: #4c5eff;
           top: -70px;
           margin: 5px;
           right: 0;
-          // display: none;
+          display: none;
           @include responsive(bigphone) {
+            
             display: block;
             position: relative;
             margin: 17px;
@@ -309,12 +310,18 @@ $special-Color: #4c5eff;
       //   max-width: 1200px;
       width: 100%;
       .card {
+        // border: 5px solid red;
         margin: 10px;
         width: 30%;
         min-width: 210px;
         max-width: 500px;
         position: relative;
         color: gray;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
         @include responsive(bigphone) {
           min-width: 250px;
         }
@@ -373,9 +380,11 @@ $special-Color: #4c5eff;
     // home chart and table container
     .home-chart {
       margin-top: 50px;
+      padding-bottom: 20px;
       // border: 2px solid red;
       @include flexDisplay(space-between, center, row);
       flex-wrap: wrap;
+      
       @include responsive(bigphone) {
         margin-top: 50px;
       }
@@ -383,7 +392,7 @@ $special-Color: #4c5eff;
       .home-barchart {
         width: 98%;
         margin: 5px;
-        height: 150px;
+        // height: 150px;
         padding: 0 5px;
         position: relative;
         color: gray;
@@ -412,7 +421,8 @@ $special-Color: #4c5eff;
         // border: 2px solid red;
         @include responsive(desktop) {
           width: 45%;
-          // margin-top: 0;
+         
+          margin-top: 10px;
         }
       }
     }
