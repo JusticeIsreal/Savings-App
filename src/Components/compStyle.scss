@@ -420,7 +420,7 @@ $special-Color: #4c5eff;
         order: 1;
         // border: 2px solid red;
         @include responsive(desktop) {
-          width: 45%;
+          width: 100%;
          
           margin-top: 10px;
         }

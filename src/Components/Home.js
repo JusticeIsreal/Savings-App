@@ -127,7 +127,7 @@ function Home() {
           </div>
         </div>
         <div className="home-chart">
-          <Test />
+          {/* <Test /> */}
           <div className="home-table">
             <h4>Actions</h4>
             <Table>
