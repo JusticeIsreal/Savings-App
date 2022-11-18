@@ -297,9 +297,11 @@ $special-Color: #4c5eff;
     // overflow-y: scroll;
     @include responsive(bigphone) {
       width: 70%;
+      overflow-y: scroll;
     }
     @include responsive(desktop) {
       width: 80%;
+      overflow-y: scroll;
     }
 
     .cardMap {
@@ -345,7 +347,7 @@ $special-Color: #4c5eff;
         .card-network {
           position: absolute;
           width: 70px;
-          left: 33px;
+          left: 50px;
           top: 35%;
           color: rgb(52, 53, 54);
           transform: rotate(90deg);
@@ -466,33 +468,11 @@ $special-Color: #4c5eff;
     margin-top: 50px;
     @include flexDisplay(space-between, center, row);
     flex-wrap: wrap;
-
-    // margin-top: -30px;
-    // .totalSavings {
-    //   @include flexDisplay(center, center, column);
-    //   border: 1px solid gray;
-    //   width: 200px;
-    //   height: 60px;
-    //   margin: 0 auto;
-    //   //   margin-top: 30px;
-    //   border-radius: 5px;
-    //   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-    //   @include responsive(bigphone) {
-    //     width: 300px;
-    //     height: 80px;
-    //     margin-top: 50px;
-    //     h2 {
-    //       font-size: 35px;
-    //     }
-    //   }
-    //   p {
-    //     font-size: 14px;
-    //   }
-    //   h2 {
-    //     font-size: 25px;
-    //   }
+    // @include responsive(desktop) {
+    //   margin-top: 0px;
     // }
 
+    // HOME PAGE LOWER CARDS
     .stats-card {
       // border: 2px solid red;
       @include flexDisplay(space-between, center, row);
@@ -509,6 +489,8 @@ $special-Color: #4c5eff;
       @include responsive(desktop) {
         // width: 40%;
       }
+
+      // 4 CARDS
       .stats-card1,
       .stats-card2,
       .stats-card3,
@@ -537,6 +519,7 @@ $special-Color: #4c5eff;
           // width: 40%;
         }
 
+        // card 1 properties
         .stats-card1-total-savings {
           // border: 2px solid red;
           font-size: 40px;
@@ -579,15 +562,15 @@ $special-Color: #4c5eff;
             left: 0;
             right: 0;
             text-align: center;
-            top: 35%;
+            top: 45%;
 
             @include responsive(bigphone) {
               font-size: 50px;
-              top: 30%;
+              // top: 30%;
             }
             @include responsive(desktop) {
               font-size: 100px;
-              top: 35%;
+              // top: 35%;
             }
           }
           sub {
@@ -615,12 +598,104 @@ $special-Color: #4c5eff;
               @include flexDisplay(space-between, center, row);
               span {
                 font-size: 10px;
+                @include responsive(bigphone) {
+                  font-size: 15px;
+                }
               }
+            }
+          }
+        }
+        // end of card 1 properties
+
+        // card 2 properties
+        .stats-card2-icon {
+          margin-top: 2px;
+          font-size: 40px;
+          // border: 2px solid red;
+        }
+        .stats-card2-details {
+          // border: 2px solid red;
+          height: calc(100% - 50px);
+          position: relative;
+
+          h4 {
+            margin-top: 0;
+            font-size: 15px;
+          }
+          sup {
+            font-size: 10px;
+          }
+          sub {
+            font-size: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+
+          @include responsive(bigphone) {
+            h4 {
+              margin-top: 0;
+              font-size: 25px;
+            }
+            sup {
+              font-size: 15px;
+            }
+            sub {
+              font-size: 15px;
+            }
+          }
+          .stats-card2-ring-progress {
+            // margin-top: 70px;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            // left: 0;
+            right: -10px;
+            text-align: center;
+            top: 14px;
+            // border: 2px solid red;
+          }
+          .stats-card2-ring-progress-tablet {
+            display: none;
+          }
+          .stats-card2-ring-progress-desktop {
+            display: none;
+          }
+          @include responsive(bigphone) {
+            .stats-card2-ring-progress {
+              display: none;
+            }
+            .stats-card2-ring-progress-desktop {
+              display: none;
+            }
+            .stats-card2-ring-progress-tablet {
+              display: block;
+              margin: 0 auto;
+              bottom: 15px;
+            }
+          }
+          @include responsive(bigphone) {
+            .stats-card2-ring-progress {
+              display: none;
+            }
+            .stats-card2-ring-progress-desktop {
+              display: block;
+              position: absolute;
+              margin-left: auto;
+              margin-right: auto;
+              // left: 0;
+              right: 10px;
+              text-align: center;
+              top: 14px;
+            }
+            .stats-card2-ring-progress-tablet {
+              display: none;
             }
           }
         }
       }
     }
+    // END OF CARDS
 
     .savings-stats {
       border-radius: 5px;

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import cardDetails from "./data";
 import { FaHome, FaChartLine, FaChartBar, FaMoneyCheck } from "react-icons/fa";
 import {
@@ -8,20 +9,41 @@ import {
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
-import { Slider, RingProgress, Table } from "@mantine/core";
+import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
 import "./compStyle.css";
 import Test from "./Test";
 
 function Home() {
+  // total savings amount
   let yy = cardDetails.reduce(function (acc, card) {
     return acc + card.amount;
   }, 0);
   parseInt(yy);
+
+  // total target amount
   let zz = cardDetails.reduce(function (acc, card) {
     return acc + card.target;
   }, 0);
   parseInt(zz);
 
+  // date
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const d = new Date();
+  let month = months[d.getMonth()];
   // Transaction table
   const rows = cardDetails.map((element) => (
     <tr key={element.id}>
@@ -32,6 +54,7 @@ function Home() {
     </tr>
   ));
 
+  let uu = cardDetails.map((data) => data.amount);
   return (
     <section className="sidebar">
       {/*HOME SIDE BAR */}
@@ -99,7 +122,7 @@ function Home() {
               <p className="card-network">
                 <IoIosWifi />
               </p>
-              <h1 className="card-amount">${card.amount}</h1>
+              <h1 className="card-amount">₦{card.amount}</h1>
               <p className="card-number">{card.cardNumber}</p>
               <p className="card-expiration">{card.expiration}</p>
               <h5 className="card-cardHolder">{card.cardHolderName}</h5>
@@ -120,9 +143,9 @@ function Home() {
               <div className="total-savings-details-con">
                 <h4>Total Saving</h4>
                 <sup>{cardDetails.length} Wallets</sup>
-                <h1>₦{yy}</h1>
+                <h1>₦{(yy * d.getMonth()).toFixed(1)}</h1>
 
-                <div className="progress-range">
+                {/* <div className="progress-range">
                   <div className="progress-range-figures">
                     <span className="progress-range-value">
                       {((yy * 100) / zz).toFixed(1)}%
@@ -135,14 +158,50 @@ function Home() {
                     size="sm"
                     thumbSize={1}
                   />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="stats-card2">
-              <VscGraph />
-              <div>
-                <p>Stats</p>
-                <h2>₦{zz}</h2>
+              <VscGraph className="stats-card2-icon" />
+              <div className="stats-card2-details">
+                <h4>{month}</h4>
+                <sup>Saved: ₦{186}</sup>
+                <RingProgress
+                  size={80}
+                  thickness={6}
+                  className="stats-card2-ring-progress"
+                  sections={[{ value: 85.7, color: "blue" }]}
+                  label={
+                    <Text color="blue" align="center" size="xs">
+                      {/* {((yy * 100) / yy).toFixed(1)}% */}
+                      {85.7}%
+                    </Text>
+                  }
+                />
+                <RingProgress
+                  size={150}
+                  className="stats-card2-ring-progress-tablet"
+                  sections={[{ value: 85.7, color: "blue" }]}
+                  label={
+                    <Text color="blue" align="center" size="xl">
+                      {/* {((yy * 100) / yy).toFixed(1)}% */}
+                      {85.7}%
+                    </Text>
+                  }
+                />
+                <RingProgress
+                  size={200}
+                  thickness={16}
+                  className="stats-card2-ring-progress-desktop"
+                  sections={[{ value: 85.7, color: "blue" }]}
+                  label={
+                    <Text color="blue" align="center" weight={700} size="xl">
+                      {/* {((yy * 100) / yy).toFixed(1)}% */}
+                      {85.7}%
+                    </Text>
+                  }
+                />
+                <sub>Target: ₦{yy}</sub>
               </div>
             </div>
             <div className="stats-card3">3</div>

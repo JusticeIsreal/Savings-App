@@ -272,11 +272,13 @@ body {
 @media only screen and (min-width: 750px) {
   .sidebar .home {
     width: 70%;
+    overflow-y: scroll;
   }
 }
 @media only screen and (min-width: 1280px) {
   .sidebar .home {
     width: 80%;
+    overflow-y: scroll;
   }
 }
 .sidebar .home .cardMap {
@@ -326,7 +328,7 @@ body {
 .sidebar .home .cardMap .card .card-network {
   position: absolute;
   width: 70px;
-  left: 33px;
+  left: 50px;
   top: 35%;
   color: rgb(52, 53, 54);
   transform: rotate(90deg);
@@ -553,7 +555,7 @@ body {
   left: 0;
   right: 0;
   text-align: center;
-  top: 35%;
+  top: 45%;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con h1,
@@ -561,7 +563,6 @@ body {
 .sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con h1,
 .sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con h1 {
     font-size: 50px;
-    top: 30%;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -570,7 +571,6 @@ body {
 .sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con h1,
 .sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con h1 {
     font-size: 100px;
-    top: 35%;
   }
 }
 .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con sub,
@@ -624,6 +624,142 @@ body {
 .sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con .progress-range .progress-range-figures span,
 .sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con .progress-range .progress-range-figures span {
   font-size: 10px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con .progress-range .progress-range-figures span,
+.sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con .progress-range .progress-range-figures span,
+.sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con .progress-range .progress-range-figures span,
+.sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con .progress-range .progress-range-figures span {
+    font-size: 15px;
+  }
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-icon,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-icon,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-icon,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-icon {
+  margin-top: 2px;
+  font-size: 40px;
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details {
+  height: calc(100% - 50px);
+  position: relative;
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details h4,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details h4,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details h4,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details h4 {
+  margin-top: 0;
+  font-size: 15px;
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details sup,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details sup,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details sup,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details sup {
+  font-size: 10px;
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details sub,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details sub,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details sub,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details sub {
+  font-size: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details h4,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details h4,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details h4,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details h4 {
+    margin-top: 0;
+    font-size: 25px;
+  }
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details sup,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details sup,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details sup,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details sup {
+    font-size: 15px;
+  }
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details sub,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details sub,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details sub,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details sub {
+    font-size: 15px;
+  }
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: -10px;
+  text-align: center;
+  top: 14px;
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress-tablet {
+  display: none;
+}
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress-desktop {
+  display: none;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress {
+    display: none;
+  }
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress-desktop {
+    display: none;
+  }
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress-tablet {
+    display: block;
+    margin: 0 auto;
+    bottom: 15px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress {
+    display: none;
+  }
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress-desktop,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress-desktop {
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 10px;
+    text-align: center;
+    top: 14px;
+  }
+  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card2-details .stats-card2-ring-progress-tablet,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card2-details .stats-card2-ring-progress-tablet {
+    display: none;
+  }
 }
 .sidebar .homeLowerPart .savings-stats {
   border-radius: 5px;
