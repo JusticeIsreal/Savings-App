@@ -172,7 +172,7 @@ function Home() {
                   className="stats-card2-ring-progress"
                   sections={[{ value: 85.7, color: "blue" }]}
                   label={
-                    <Text color="blue" align="center" size="xs">
+                    <Text color="blue" weight={600} align="center" size="sm">
                       {/* {((yy * 100) / yy).toFixed(1)}% */}
                       {85.7}%
                     </Text>
