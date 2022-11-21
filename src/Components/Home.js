@@ -5,8 +5,10 @@ import {
   MdAccountBalance,
   MdContactSupport,
   MdOutlineMenuOpen,
+  MdMoney,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
+import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
 import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
@@ -143,22 +145,7 @@ function Home() {
               <div className="total-savings-details-con">
                 <h4>Total Saving</h4>
                 <sup>{cardDetails.length} Wallets</sup>
-                <h1>₦{(yy * d.getMonth()).toFixed(1)}</h1>
-
-                {/* <div className="progress-range">
-                  <div className="progress-range-figures">
-                    <span className="progress-range-value">
-                      {((yy * 100) / zz).toFixed(1)}%
-                    </span>
-                    <span> / ₦{zz}</span>
-                  </div>
-
-                  <Slider
-                    defaultValue={((yy * 100) / zz).toFixed(1)}
-                    size="sm"
-                    thumbSize={1}
-                  />
-                </div> */}
+                <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
               </div>
             </div>
             <div className="stats-card2">
@@ -204,8 +191,43 @@ function Home() {
                 <sub>Target: ₦{yy}</sub>
               </div>
             </div>
-            <div className="stats-card3">3</div>
-            <div className="stats-card4">4</div>
+            <div className="stats-card3">
+              <GrMoney className="stats-card2-icon" />
+
+              <div className="total-savings-details-con">
+                <h4>Investment</h4>
+                <sup>Profit</sup>
+                <h1>₦ 500</h1>
+                <div className="progress-range">
+                  <div className="progress-range-figures">
+                    <span className="progress-range-value">
+                      {((yy * 100) / zz).toFixed(1)}%
+                    </span>
+                    <span> / ₦{zz}</span>
+                  </div>
+
+                  <Slider
+                    defaultValue={((yy * 100) / zz).toFixed(1)}
+                    size="sm"
+                    thumbSize={1}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="stats-card4">
+              {" "}
+              <MdMoney className="stats-card2-icon" />
+              <div className="total-savings-details-con">
+                <h4>Offers</h4>
+
+                <h1>
+                  <MdMoney
+                    className="stats-card2-icon"
+                    style={{ fontSize: "100px" }}
+                  />
+                </h1>
+              </div>
+            </div>
           </div>
           {/* <div className="savings-stats">
             <div className="savings-heading">
