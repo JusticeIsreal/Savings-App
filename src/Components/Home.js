@@ -220,12 +220,12 @@ function Home() {
               <div className="total-savings-details-con">
                 <h4>Offers</h4>
 
-                <h1>
+                {/* <h1>
                   <MdMoney
                     className="stats-card2-icon"
                     style={{ fontSize: "100px" }}
                   />
-                </h1>
+                </h1> */}
               </div>
             </div>
           </div>
