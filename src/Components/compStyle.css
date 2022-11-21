@@ -260,13 +260,16 @@ body {
   }
 }
 .sidebar .home {
+  border: 5px solid red;
   margin: 0 auto;
   padding: 5px;
+  padding-bottom: 60px;
   margin-top: 60px;
   margin-bottom: 0;
   order: 2;
   width: 100%;
   max-width: 2000px;
+  overflow-y: hidden;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .home {
@@ -286,11 +289,13 @@ body {
   align-items: center;
   flex-direction: row;
   margin: 0 auto;
+  border: 5px solid red;
   overflow-y: scroll;
   width: 100%;
 }
 .sidebar .home .cardMap .card {
-  margin: 12px;
+  border: 5px solid red;
+  margin: 5px;
   width: 30%;
   min-width: 300px;
   max-width: 500px;
@@ -444,6 +449,7 @@ body {
   }
 }
 .sidebar .homeLowerPart {
+  border: 2px solid red;
   margin-top: 0px;
   display: flex;
   justify-content: space-between;
