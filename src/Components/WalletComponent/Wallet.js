@@ -1,5 +1,5 @@
 import { useState } from "react";
-import cardDetails from "./data";
+import cardDetails from "..//HomeComp/data";
 import { FaHome, FaChartLine, FaChartBar, FaMoneyCheck } from "react-icons/fa";
 import {
   MdAccountBalance,
@@ -8,6 +8,7 @@ import {
   MdMoney,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
@@ -15,7 +16,7 @@ import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
 import "../compStyle.css";
 import Test from "../WalletComponent/Test";
 
-function Home() {
+function Wallet() {
   // total savings amount
   let yy = cardDetails.reduce(function (acc, card) {
     return acc + card.amount;
@@ -61,17 +62,17 @@ function Home() {
     <section className="sidebar">
       {/*HOME SIDE BAR */}
       <main className="sidebar-container">
-        <h1>Home</h1>
+        <h1>Wallet</h1>
         <div className="sidebar-nav-container">
           <nav>
             <ul style={{ listStyle: "none" }}>
-              <li style={{ backgroundColor: "black", color: "white" }}>
+              <li>
                 <span>
                   <FaHome />
                 </span>
                 Home
               </li>
-              <li>
+              <li style={{ backgroundColor: "black", color: "white" }}>
                 <span>
                   <FaChartLine />
                 </span>
@@ -112,83 +113,11 @@ function Home() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <h4>Wallet</h4>
+        <h4>{cardDetails.length > 1 ? "Wallets" : "Wallet"}</h4>
 
         {/*card wallet container */}
-        <div className="cardMap">
-          {cardDetails.map((card) => (
-            <div className="card" key={card.id}>
-              <img src={card.cardImg} alt="" className="card-img" />
-              <img src={card.bankName} alt="" className="bankName" />
-              <h3 className="card-type">{card.savingsType}</h3>
-              <p className="card-network">
-                <IoIosWifi />
-              </p>
-              <h1 className="card-amount">₦{card.amount}</h1>
-              <p className="card-number">{card.cardNumber}</p>
-              <p className="card-expiration">{card.expiration}</p>
-              <h5 className="card-cardHolder">{card.cardHolderName}</h5>
-            </div>
-          ))}
-          <span className="add-wallet-icon-container">
-            <HiPlus className="add-wallet-icon" />
-          </span>
-        </div>
-        {/* end of card wallet  */}
-
-        {/* Fund details container*/}
         <div className="homeLowerPart">
-          <div className="stats-card">
-            <div className="stats-card1">
-              <FaMoneyCheck className="stats-card1-total-savings" />
-
-              <div className="total-savings-details-con">
-                <h4>Total Saving</h4>
-                <sup>{cardDetails.length} Wallets</sup>
-                <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
-              </div>
-            </div>
-            <div className="stats-card2">
-              <VscGraph className="stats-card2-icon" />
-              <div className="stats-card2-details">
-                <h4>{month}</h4>
-                <sup>Savings:</sup>
-                <h1 style={{ textAlign: "center" }}>₦ {186}</h1>
-                <sub>Target: ₦{yy}</sub>
-              </div>
-            </div>
-            <div className="stats-card3">
-              <GrMoney className="stats-card2-icon" />
-
-              <div className="total-savings-details-con">
-                <h4>Investment</h4>
-                <sup>Profits:</sup>
-                <h1>₦ 500</h1>
-                <div className="progress-range">
-                  <div className="progress-range-figures">
-                    <span className="progress-range-value">
-                      {((yy * 100) / zz).toFixed(1)}%
-                    </span>
-                    <span> / ₦{zz}</span>
-                  </div>
-
-                  <Slider
-                    defaultValue={((yy * 100) / zz).toFixed(1)}
-                    size="sm"
-                    thumbSize={1}
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="stats-card4">
-              {" "}
-              <MdMoney className="stats-card2-icon" />
-              <div className="total-savings-details-con">
-                <h4>Offers</h4>
-              </div>
-            </div>
-          </div>
-          {/* <div className="savings-stats">
+          <div className="savings-stats">
             <div className="savings-heading">
               <div className="number-of-wallets">
                 <h3>Total Savings</h3>
@@ -206,13 +135,17 @@ function Home() {
                 <SavingsCard key={card.id} {...card} />
               ))}
             </div>
-          </div> */}
+          </div>
         </div>
-        {/* <div className="home-chart">
+        {/* end of card wallet  */}
+
+        {/* Fund details container*/}
+
+        <div className="home-chart">
           <Test />
           <div className="home-table">
-            <h4>Actions</h4>
-            <Table>
+            {/* <h4>Stats</h4> */}
+            {/* <Table>
               <thead>
                 <tr>
                   <th>savingsType</th>
@@ -222,9 +155,9 @@ function Home() {
                 </tr>
               </thead>
               <tbody>{rows}</tbody>
-            </Table>
+            </Table> */}
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
@@ -246,7 +179,7 @@ function SavingsCard({ savingsType, target, amount }) {
           </span>
         </h1>
         <div className="open-savings-card">
-          <HiOutlineArrowsExpand />
+          {/* <BsThreeDotsVertical /> */}
         </div>
         <div className="progress-range">
           <span className="progress-range-value">
@@ -263,4 +196,4 @@ function SavingsCard({ savingsType, target, amount }) {
   );
 }
 
-export default Home;
+export default Wallet;

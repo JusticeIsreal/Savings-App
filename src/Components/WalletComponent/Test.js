@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import BarChart from "./BarChart";
 import { ChartData } from "./ChartData";
-import cardDetails from "./data";
+import cardDetails from "../HomeComp/data";
 
 function Test() {
   const [userData, setUserData] = useState({

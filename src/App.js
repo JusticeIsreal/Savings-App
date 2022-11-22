@@ -1,15 +1,19 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TopBar from "./Components/TopBar";
-import Home from "./Components/Home";
-
-
+import HomePage from ".//Pages/HomePage";
+import WalletPage from "./Pages/WalletPage";
 
 function App() {
   return (
     <div className="App">
-      <TopBar />
-      <Home />
-    
+      <Router>
+        <TopBar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/WalletPage" element={<WalletPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
