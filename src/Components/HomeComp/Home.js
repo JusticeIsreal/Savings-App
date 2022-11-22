@@ -14,6 +14,7 @@ import { VscGraph } from "react-icons/vsc";
 import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
 import "../compStyle.css";
 import Test from "../WalletComponent/Test";
+import { Link } from "react-router-dom";
 
 function Home() {
   // total savings amount
@@ -65,18 +66,25 @@ function Home() {
         <div className="sidebar-nav-container">
           <nav>
             <ul style={{ listStyle: "none" }}>
-              <li style={{ backgroundColor: "black", color: "white" }}>
-                <span>
-                  <FaHome />
-                </span>
-                Home
-              </li>
-              <li>
-                <span>
-                  <FaChartLine />
-                </span>
-                Wallet
-              </li>
+              <Link to="/">
+                {" "}
+                <li style={{ backgroundColor: "black", color: "white" }}>
+                  <span>
+                    <FaHome />
+                  </span>
+                  Home
+                </li>
+              </Link>
+              <Link to="/WalletPage">
+                {" "}
+                <li>
+                  <span>
+                    <FaChartLine />
+                  </span>
+                  Wallet
+                </li>
+              </Link>
+
               <li>
                 <span>
                   <FaChartBar />

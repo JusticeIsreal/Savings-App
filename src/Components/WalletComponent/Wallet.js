@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import cardDetails from "..//HomeComp/data";
 import { FaHome, FaChartLine, FaChartBar, FaMoneyCheck } from "react-icons/fa";
 import {
@@ -66,18 +67,22 @@ function Wallet() {
         <div className="sidebar-nav-container">
           <nav>
             <ul style={{ listStyle: "none" }}>
-              <li>
-                <span>
-                  <FaHome />
-                </span>
-                Home
-              </li>
-              <li style={{ backgroundColor: "black", color: "white" }}>
-                <span>
-                  <FaChartLine />
-                </span>
-                Wallet
-              </li>
+              <Link to="/">
+                <li>
+                  <span>
+                    <FaHome />
+                  </span>
+                  Home
+                </li>
+              </Link>{" "}
+              <Link to="/WalletPage">
+                <li style={{ backgroundColor: "black", color: "white" }}>
+                  <span>
+                    <FaChartLine />
+                  </span>
+                  Wallet
+                </li>
+              </Link>
               <li>
                 <span>
                   <FaChartBar />
@@ -113,7 +118,24 @@ function Wallet() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <h4>{cardDetails.length > 1 ? "Wallets" : "Wallet"}</h4>
+        <div
+          style={{
+            position: "relative",
+          }}
+        >
+          {" "}
+          <h4>{cardDetails.length > 1 ? "Wallets" : "Wallet"}</h4>
+          <h1
+            style={{
+              fontSize: "50px",
+              position: "absolute",
+              right: "0px",
+              bottom: "-100%",
+            }}
+          >
+            +
+          </h1>
+        </div>
 
         {/*card wallet container */}
         <div className="homeLowerPart">
@@ -128,7 +150,7 @@ function Wallet() {
               </div>
             </div>
             <div className="totalSavings">
-              <h2> ${yy}</h2>
+              <h2> ₦ {(yy * d.getMonth()).toFixed(1)}</h2>
             </div>
             <div className="cardMa">
               {cardDetails.map((card) => (
@@ -178,9 +200,7 @@ function SavingsCard({ savingsType, target, amount }) {
             ${target}
           </span>
         </h1>
-        <div className="open-savings-card">
-          {/* <BsThreeDotsVertical /> */}
-        </div>
+        <div className="open-savings-card">{/* <BsThreeDotsVertical /> */}</div>
         <div className="progress-range">
           <span className="progress-range-value">
             {((amount * 100) / target).toFixed(1)}%
