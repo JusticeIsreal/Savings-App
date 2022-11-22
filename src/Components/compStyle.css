@@ -469,7 +469,7 @@ body {
   margin: 0 auto;
   margin-top: 20px;
 }
-@media only screen and (max-width: 345px) {
+@media only screen and (max-width: 380px) {
   .sidebar .homeLowerPart .stats-card {
     margin-top: 10px;
     padding-bottom: 100px;
@@ -490,7 +490,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   border: 1px solid rgba(90, 90, 90, 0.112);
 }
-@media only screen and (max-width: 345px) {
+@media only screen and (max-width: 380px) {
   .sidebar .homeLowerPart .stats-card .stats-card1,
 .sidebar .homeLowerPart .stats-card .stats-card2,
 .sidebar .homeLowerPart .stats-card .stats-card3,

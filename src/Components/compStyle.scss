@@ -54,7 +54,7 @@ $special-Color: #4c5eff;
 
 @mixin responsive($breakpoint) {
   @if $breakpoint==smallPhone {
-    @media only screen and (max-width: 345px) {
+    @media only screen and (max-width: 380px) {
       @content;
     }
   }
