@@ -76,7 +76,6 @@ function Home() {
                 </li>
               </Link>
               <Link to="/WalletPage">
-                {" "}
                 <li>
                   <span>
                     <FaChartLine />
@@ -84,13 +83,15 @@ function Home() {
                   Wallet
                 </li>
               </Link>
+              <Link to="/TransactionPage">
+                <li>
+                  <span>
+                    <FaChartBar />
+                  </span>
+                  Transactions
+                </li>
+              </Link>
 
-              <li>
-                <span>
-                  <FaChartBar />
-                </span>
-                Transactions
-              </li>
               <li>
                 <span>
                   <MdAccountBalance />

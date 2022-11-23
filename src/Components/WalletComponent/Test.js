@@ -9,7 +9,7 @@ function Test() {
     labels: cardDetails.map((data) => data.savingsType),
     datasets: [
       {
-        label: "Statistics",
+        label: "Savings",
         data: cardDetails.map((data) => data.amount),
         backgroundColor: cardDetails.map((data) => data.backgroundColor),
         borderColor: "rgba(0, 0, 0, 0.1)",

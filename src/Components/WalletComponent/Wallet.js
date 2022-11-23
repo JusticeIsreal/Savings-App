@@ -66,7 +66,7 @@ function Wallet() {
         <h1>Wallet</h1>
         <div className="sidebar-nav-container">
           <nav>
-            <ul style={{ listStyle: "none" }}>
+            <ul style={{ listStyle: "none", color: "black" }}>
               <Link to="/">
                 <li>
                   <span>
@@ -83,12 +83,14 @@ function Wallet() {
                   Wallet
                 </li>
               </Link>
-              <li>
-                <span>
-                  <FaChartBar />
-                </span>
-                Transactions
-              </li>
+              <Link to="/TransactionPage">
+                <li>
+                  <span>
+                    <FaChartBar />
+                  </span>
+                  Transactions
+                </li>
+              </Link>
               <li>
                 <span>
                   <MdAccountBalance />
