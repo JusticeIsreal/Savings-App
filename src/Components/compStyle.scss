@@ -294,7 +294,9 @@ $special-Color: #4c5eff;
     margin-bottom: 0;
     order: 2;
     width: 100%;
+    height: calc(100vh - 120px);
     max-width: 2000px;
+
     // overflow-y: hidden;
     @include responsive(bigphone) {
       width: 70%;
@@ -302,7 +304,8 @@ $special-Color: #4c5eff;
     }
     @include responsive(desktop) {
       width: 80%;
-      overflow-y: scroll;
+       height: calc(100vh - 70px);
+      // overflow-y: scroll;
     }
 
     .cardMap {
@@ -413,13 +416,15 @@ $special-Color: #4c5eff;
     .home-chart {
       // margin-top: 50px;
       // padding-bottom: 50px;
-      // overflow-y: scroll;
+      height: calc(100vh - 160px);
+      overflow-y: scroll;
       // border: 2px solid red;
+
       @include flexDisplay(space-between, center, row);
       flex-wrap: wrap;
 
       @include responsive(bigphone) {
-        // margin-top: 50px;
+        margin-top: 50px;
       }
 
       .home-barchart {
@@ -431,14 +436,15 @@ $special-Color: #4c5eff;
         color: gray;
         border-radius: 8px;
         margin: 0 auto;
-        // order: 2;
+        margin-bottom: auto;
         margin-top: 50px;
+        // order: 2;
+        // margin-top: -50px;
         // border: 2px solid red;
         @include responsive(desktop) {
           // width: 50%;
           max-width: 1000px;
-          padding-bottom: 20px;
-          margin-top: 0;
+          // padding-bottom: 20px;
         }
       }
       .home-table {
@@ -452,14 +458,19 @@ $special-Color: #4c5eff;
         padding: 5px;
         // margin-top: 50px;
         order: 1;
+        margin-top: 50px;
         // overflow-x: scroll;
         // overflow-y: scroll;
         // border: 2px solid red;
-        margin-bottom: 70px;
+        // margin-bottom: 70px;
         @include responsive(desktop) {
           width: 100%;
 
-          margin-top: 10px;
+          // margin-top: 10px;
+        }
+        .table {
+          // border: 1px solid red;
+          margin-top: 0px;
         }
       }
     }

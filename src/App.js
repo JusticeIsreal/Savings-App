@@ -7,7 +7,7 @@ import TransactionPage from "./Pages/TransactionPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ height: "100vh", overflow: "hidden" }}>
       <Router>
         <TopBar />
         <Routes>

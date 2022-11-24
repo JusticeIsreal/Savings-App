@@ -110,14 +110,56 @@ function Transactions() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <h4>Transactions</h4>
+        <h1>Transactions</h1>
 
         {/* Fund details container*/}
 
         <div className="home-chart">
           <div className="home-table">
-            <h4>Monthly</h4>
-            <Table>
+            <h4>{month}</h4>
+            <Table className="table">
+              <thead>
+                <tr>
+                  <th>savingsType</th>
+                  <th>Amount</th>
+                  <th>Target</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>{rows}</tbody>
+            </Table>
+          </div>
+          <div className="home-table">
+            <h4>{month}</h4>
+            <Table className="table">
+              <thead>
+                <tr>
+                  <th>savingsType</th>
+                  <th>Amount</th>
+                  <th>Target</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>{rows}</tbody>
+            </Table>
+          </div>
+          <div className="home-table">
+            <h4>{month}</h4>
+            <Table className="table">
+              <thead>
+                <tr>
+                  <th>savingsType</th>
+                  <th>Amount</th>
+                  <th>Target</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>{rows}</tbody>
+            </Table>
+          </div>
+          <div className="home-table">
+            <h4>{month}</h4>
+            <Table className="table">
               <thead>
                 <tr>
                   <th>savingsType</th>

@@ -167,20 +167,6 @@ function Wallet() {
 
         <div className="home-chart">
           <Test />
-          <div className="home-table">
-            {/* <h4>Stats</h4> */}
-            {/* <Table>
-              <thead>
-                <tr>
-                  <th>savingsType</th>
-                  <th>Amount</th>
-                  <th>Target</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>{rows}</tbody>
-            </Table> */}
-          </div>
         </div>
       </div>
     </section>

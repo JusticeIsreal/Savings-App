@@ -266,6 +266,7 @@ body {
   margin-bottom: 0;
   order: 2;
   width: 100%;
+  height: calc(100vh - 120px);
   max-width: 2000px;
 }
 @media only screen and (min-width: 750px) {
@@ -277,7 +278,7 @@ body {
 @media only screen and (min-width: 1280px) {
   .sidebar .home {
     width: 80%;
-    overflow-y: scroll;
+    height: calc(100vh - 70px);
   }
 }
 .sidebar .home .cardMap {
@@ -397,11 +398,18 @@ body {
   }
 }
 .sidebar .home .home-chart {
+  height: calc(100vh - 160px);
+  overflow-y: scroll;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .home .home-chart {
+    margin-top: 50px;
+  }
 }
 .sidebar .home .home-chart .home-barchart {
   width: 98%;
@@ -410,13 +418,12 @@ body {
   color: gray;
   border-radius: 8px;
   margin: 0 auto;
+  margin-bottom: auto;
   margin-top: 50px;
 }
 @media only screen and (min-width: 1280px) {
   .sidebar .home .home-chart .home-barchart {
     max-width: 1000px;
-    padding-bottom: 20px;
-    margin-top: 0;
   }
 }
 .sidebar .home .home-chart .home-table {
@@ -427,13 +434,15 @@ body {
   margin: 0 auto;
   padding: 5px;
   order: 1;
-  margin-bottom: 70px;
+  margin-top: 50px;
 }
 @media only screen and (min-width: 1280px) {
   .sidebar .home .home-chart .home-table {
     width: 100%;
-    margin-top: 10px;
   }
+}
+.sidebar .home .home-chart .home-table .table {
+  margin-top: 0px;
 }
 .sidebar .homeLowerPart {
   margin-top: 0px;
