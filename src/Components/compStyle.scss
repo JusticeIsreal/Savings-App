@@ -304,7 +304,7 @@ $special-Color: #4c5eff;
     }
     @include responsive(desktop) {
       width: 80%;
-       height: calc(100vh - 70px);
+      height: calc(100vh - 70px);
       // overflow-y: scroll;
     }
 
@@ -414,9 +414,9 @@ $special-Color: #4c5eff;
 
     // home chart and table container
     .home-chart {
-      // margin-top: 50px;
-      // padding-bottom: 50px;
-      height: calc(100vh - 160px);
+      margin-top: 10px;
+
+      // height: calc(100vh - 160px);
       overflow-y: scroll;
       // border: 2px solid red;
 
@@ -430,14 +430,15 @@ $special-Color: #4c5eff;
       .home-barchart {
         width: 98%;
         // margin: 5px;
-        // height: 150px;
+        // height: 50px;
+        // overflow-y: scroll;
         padding: 0 5px;
         position: relative;
         color: gray;
         border-radius: 8px;
         margin: 0 auto;
         margin-bottom: auto;
-        margin-top: 50px;
+        margin-top: 20px;
         // order: 2;
         // margin-top: -50px;
         // border: 2px solid red;
@@ -458,9 +459,11 @@ $special-Color: #4c5eff;
         padding: 5px;
         // margin-top: 50px;
         order: 1;
-        margin-top: 50px;
+        margin-top: 20px;
         // overflow-x: scroll;
         // overflow-y: scroll;
+        height: calc(100vh - 210px);
+        overflow-y: scroll;
         // border: 2px solid red;
         // margin-bottom: 70px;
         @include responsive(desktop) {

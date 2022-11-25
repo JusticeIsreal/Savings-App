@@ -42,9 +42,9 @@ function Transactions() {
   const rows = cardDetails.map((element) => (
     <tr key={element.id}>
       <td>{element.savingsType}</td>
-      <td>{element.amount}</td>
-      <td>{element.target}</td>
+      <td>₦ {element.amount}</td>
       <td>{element.expiration}</td>
+      <td>{element.status}</td>
     </tr>
   ));
 
@@ -110,62 +110,22 @@ function Transactions() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <h1>Transactions</h1>
+        <h3 style={{ marginTop: "30px" }}>
+          Transactions
+        </h3>
 
         {/* Fund details container*/}
 
         <div className="home-chart">
           <div className="home-table">
-            <h4>{month}</h4>
+            {/* <h4>{month}</h4> */}
             <Table className="table">
               <thead>
                 <tr>
                   <th>savingsType</th>
                   <th>Amount</th>
-                  <th>Target</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>{rows}</tbody>
-            </Table>
-          </div>
-          <div className="home-table">
-            <h4>{month}</h4>
-            <Table className="table">
-              <thead>
-                <tr>
-                  <th>savingsType</th>
-                  <th>Amount</th>
-                  <th>Target</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>{rows}</tbody>
-            </Table>
-          </div>
-          <div className="home-table">
-            <h4>{month}</h4>
-            <Table className="table">
-              <thead>
-                <tr>
-                  <th>savingsType</th>
-                  <th>Amount</th>
-                  <th>Target</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>{rows}</tbody>
-            </Table>
-          </div>
-          <div className="home-table">
-            <h4>{month}</h4>
-            <Table className="table">
-              <thead>
-                <tr>
-                  <th>savingsType</th>
-                  <th>Amount</th>
-                  <th>Target</th>
-                  <th>Duration</th>
+                  <th>Date</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>{rows}</tbody>

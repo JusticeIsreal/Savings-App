@@ -398,7 +398,7 @@ body {
   }
 }
 .sidebar .home .home-chart {
-  height: calc(100vh - 160px);
+  margin-top: 10px;
   overflow-y: scroll;
   display: flex;
   justify-content: space-between;
@@ -419,7 +419,7 @@ body {
   border-radius: 8px;
   margin: 0 auto;
   margin-bottom: auto;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 @media only screen and (min-width: 1280px) {
   .sidebar .home .home-chart .home-barchart {
@@ -434,7 +434,9 @@ body {
   margin: 0 auto;
   padding: 5px;
   order: 1;
-  margin-top: 50px;
+  margin-top: 20px;
+  height: calc(100vh - 210px);
+  overflow-y: scroll;
 }
 @media only screen and (min-width: 1280px) {
   .sidebar .home .home-chart .home-table {

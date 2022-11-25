@@ -180,12 +180,12 @@ function SavingsCard({ savingsType, target, amount }) {
       <div className="savings-card">
         <h3 className="card-type">{savingsType}</h3>
         <h1 className="card-amount">
-          ${amount} <span style={{ fontWeight: "300" }}> /</span>
+          ₦ {amount} <span style={{ fontWeight: "300" }}> /</span>
           <span
             className="targetAmount"
             style={{ fontWeight: "400", fontSize: "11px" }}
           >
-            ${target}
+            ₦ {target}
           </span>
         </h1>
         <div className="open-savings-card">{/* <BsThreeDotsVertical /> */}</div>
