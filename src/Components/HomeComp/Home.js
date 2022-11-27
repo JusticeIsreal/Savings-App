@@ -177,12 +177,10 @@ function Home() {
                 Portfolio
               </Tabs.Tab>
             </Tabs.List>
-
+            <h2 className="Conceive-it-Achieve-it">
+              Conceive it, Achieve it ...
+            </h2>
             <Tabs.Panel value="gallery" pt="xs">
-              Gallery tab content
-            </Tabs.Panel>
-
-            <Tabs.Panel value="messages" pt="xs">
               <div className="stats-card">
                 <div className="stats-card1">
                   <FaMoneyCheck className="stats-card1-total-savings" />
@@ -225,14 +223,11 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="stats-card4">
-                  {" "}
-                  <MdMoney className="stats-card2-icon" />
-                  <div className="total-savings-details-con">
-                    <h4>Offers</h4>
-                  </div>
-                </div>
               </div>
+            </Tabs.Panel>
+
+            <Tabs.Panel value="messages" pt="xs">
+              bbb
             </Tabs.Panel>
           </Tabs>
         </div>

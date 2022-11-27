@@ -351,6 +351,7 @@ body {
   position: relative;
   color: rgb(238, 253, 254);
   transition: all 0.8s ease;
+  cursor: pointer;
 }
 .sidebar .home .cardMap .card:hover {
   transform: scale(1.05);
@@ -430,6 +431,7 @@ body {
   position: relative;
   color: rgb(238, 253, 254);
   transition: all 0.8s ease;
+  cursor: pointer;
 }
 .sidebar .home .cardMap .add-wallet-icon-container:hover {
   transform: scale(1.05);
@@ -570,6 +572,11 @@ body {
   border-radius: 40px;
   height: 80%;
 }
+.sidebar .homeLowerPart .Tabs .Conceive-it-Achieve-it {
+  color: rgb(2, 107, 115);
+  margin-top: 20px;
+  margin-left: 20px;
+}
 .sidebar .homeLowerPart .stats-card {
   display: flex;
   justify-content: space-between;
@@ -577,7 +584,6 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   border-radius: 5px;
-  order: 2;
   width: 100%;
   margin: 0 auto;
   margin-top: 20px;
@@ -592,7 +598,7 @@ body {
 .sidebar .homeLowerPart .stats-card .stats-card2,
 .sidebar .homeLowerPart .stats-card .stats-card3,
 .sidebar .homeLowerPart .stats-card .stats-card4 {
-  width: 47%;
+  width: 30%;
   margin: 5px;
   height: 150px;
   padding: 0 5px;

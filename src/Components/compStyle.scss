@@ -373,6 +373,7 @@ $special-Color: #4c5eff;
         position: relative;
         color: $bg;
         transition: all 0.8s ease;
+        cursor: pointer;
 
         &:hover {
           transform: scale(1.05);
@@ -455,6 +456,7 @@ $special-Color: #4c5eff;
         position: relative;
         color: $bg;
         transition: all 0.8s ease;
+        cursor: pointer;
 
         &:hover {
           transform: scale(1.05);
@@ -471,8 +473,6 @@ $special-Color: #4c5eff;
           // margin: 0 auto;
           color: $darkBg;
           animation: bounce 2s linear infinite;
-          // margin-top: 15%;
-          // border: 1px solid red;
         }
 
         @keyframes bounce {
@@ -603,6 +603,11 @@ $special-Color: #4c5eff;
           height: 80%;
         }
       }
+      .Conceive-it-Achieve-it {
+        color: $darkBg;
+        margin-top: 20px;
+        margin-left: 20px;
+      }
     }
     // HOME PAGE LOWER CARDS
     .stats-card {
@@ -610,7 +615,7 @@ $special-Color: #4c5eff;
       @include flexDisplay(space-between, center, row);
       flex-wrap: wrap;
       border-radius: 5px;
-      order: 2;
+      // order: 2;
       width: 100%;
       margin: 0 auto;
       margin-top: 20px;
@@ -631,7 +636,8 @@ $special-Color: #4c5eff;
       .stats-card2,
       .stats-card3,
       .stats-card4 {
-        width: 47%;
+        width: 30%;
+        // width: 45%;
         margin: 5px;
         height: 150px;
         // min-width: 150px;
