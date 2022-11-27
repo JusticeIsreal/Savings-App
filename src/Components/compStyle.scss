@@ -470,6 +470,7 @@ $special-Color: #4c5eff;
           color: $darkBg;
           animation: bounce 2s linear infinite;
           margin-top: 15%;
+          border: 1px solid red;
         }
 
         @keyframes bounce {

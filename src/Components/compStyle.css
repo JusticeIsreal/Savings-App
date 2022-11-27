@@ -448,6 +448,7 @@ body {
   -webkit-animation: bounce 2s linear infinite;
           animation: bounce 2s linear infinite;
   margin-top: 15%;
+  border: 1px solid red;
 }
 @-webkit-keyframes bounce {
   0% {
