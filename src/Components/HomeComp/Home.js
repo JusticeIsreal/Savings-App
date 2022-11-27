@@ -6,8 +6,10 @@ import {
   MdContactSupport,
   MdOutlineMenuOpen,
   MdMoney,
+  MdRadioButtonChecked,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
+import { FcCancel } from "react-icons/fc";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
@@ -28,6 +30,10 @@ function Home() {
     return acc + card.target;
   }, 0);
   parseInt(zz);
+
+  // officia logo
+  const logo =
+    "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png";
 
   // date
   const months = [
@@ -62,13 +68,18 @@ function Home() {
     <section className="sidebar">
       {/*HOME SIDE BAR */}
       <main className="sidebar-container">
-        <h1>Home</h1>
+        <img src={logo} alt="logo" />
         <div className="sidebar-nav-container">
           <nav>
             <ul style={{ listStyle: "none" }}>
               <Link to="/">
                 {" "}
-                <li style={{ backgroundColor: "black", color: "white" }}>
+                <li
+                  style={{
+                    backgroundColor: "rgb(2, 107, 115)",
+                    color: "rgb(238, 253, 254)",
+                  }}
+                >
                   <span>
                     <FaHome />
                   </span>
@@ -121,22 +132,13 @@ function Home() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <h4>Wallet</h4>
-
+        <h2 className="Wallet-Overview">Wallet Overview</h2>
+        <h3 className="total-savings">Total wallets</h3>
         {/*card wallet container */}
         <div className="cardMap">
           {cardDetails.map((card) => (
             <div className="card" key={card.id}>
-              <img src={card.cardImg} alt="" className="card-img" />
-              <img src={card.bankName} alt="" className="bankName" />
-              <h3 className="card-type">{card.savingsType}</h3>
-              <p className="card-network">
-                <IoIosWifi />
-              </p>
-              <h1 className="card-amount">₦{card.amount}</h1>
-              <p className="card-number">{card.cardNumber}</p>
-              <p className="card-expiration">{card.expiration}</p>
-              <h5 className="card-cardHolder">{card.cardHolderName}</h5>
+              <SavingsCard {...card} />
             </div>
           ))}
           <span className="add-wallet-icon-container">
@@ -197,77 +199,37 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* <div className="savings-stats">
-            <div className="savings-heading">
-              <div className="number-of-wallets">
-                <h3>Total Savings</h3>
-                <p>You have {cardDetails.length} wallets</p>
-              </div>
-              <div className="settings-icon">
-                <MdOutlineMenuOpen />
-              </div>
-            </div>
-            <div className="totalSavings">
-              <h2> ${yy}</h2>
-            </div>
-            <div className="cardMa">
-              {cardDetails.map((card) => (
-                <SavingsCard key={card.id} {...card} />
-              ))}
-            </div>
-          </div> */}
         </div>
-        {/* <div className="home-chart">
-          <Test />
-          <div className="home-table">
-            <h4>Actions</h4>
-            <Table>
-              <thead>
-                <tr>
-                  <th>savingsType</th>
-                  <th>Amount</th>
-                  <th>Target</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>{rows}</tbody>
-            </Table>
-          </div>
-        </div> */}
       </div>
     </section>
   );
 }
 
 // Savings card component to create individual routing functionality
-function SavingsCard({ savingsType, target, amount }) {
+function SavingsCard({
+  logo,
+  walletName,
+  amount,
+  cardStatus,
+  expirationDate,
+  cardHolderName,
+}) {
   return (
     <>
-      <div className="savings-card">
-        <h3 className="card-type">{savingsType}</h3>
-        <h1 className="card-amount">
-          ${amount} <span style={{ fontWeight: "300" }}> /</span>
-          <span
-            className="targetAmount"
-            style={{ fontWeight: "400", fontSize: "11px" }}
-          >
-            ${target}
-          </span>
-        </h1>
-        <div className="open-savings-card">
-          <HiOutlineArrowsExpand />
-        </div>
-        <div className="progress-range">
-          <span className="progress-range-value">
-            {((amount * 100) / target).toFixed(1)}%
-          </span>
-          <Slider
-            defaultValue={((amount * 100) / target).toFixed(1)}
-            size="sm"
-            thumbSize={1}
-          />
-        </div>
-      </div>
+      <img src={logo} alt="" className="logo" />
+      <h3 className="walletName">{walletName}</h3>
+      <p className="card-status">
+        {cardStatus !== "Active" ? "On-hold" : cardStatus}
+        <MdRadioButtonChecked
+          className={`${cardStatus === "Active" ? "active" : "on-hold"}`}
+        />
+        <FcCancel
+          className={`${cardStatus === "Active" ? "on-hold" : "active"}`}
+        />
+      </p>
+      <h1 className="card-amount">₦{amount}</h1>
+      <p className="card-expiration">{expirationDate}</p>
+      <h5 className="card-cardHolder">{cardHolderName}</h5>
     </>
   );
 }

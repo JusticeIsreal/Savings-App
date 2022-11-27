@@ -37,9 +37,9 @@ body {
 
 // GLOBAL STYLES
 $shadow: 4px 4px 10px rgba(65, 105, 225, 0.089);
-$border: 2px solid rgb(214, 214, 214);
-$bg: rgba(13, 21, 34, 0.694);
-$Sides: rgba(18, 29, 47, 0.694);
+$darkBg: rgb(2, 107, 115);
+$bg: rgb(238, 253, 254);
+$darkBorderColor: rgb(2, 107, 115);
 $hover-Text-Color: #444444;
 $text-Color: rgb(68, 68, 68);
 $special-text-Color: royalblue;
@@ -80,7 +80,7 @@ $special-Color: #4c5eff;
 
 // TOPBAR SESSION
 .topbar-container {
-  border-bottom: 1px solid rgb(174, 171, 171);
+  // border-bottom: 1px solid rgb(174, 171, 171);
   @include flexDisplay(space-between, center, row);
   position: absolute;
   height: 60px;
@@ -89,7 +89,7 @@ $special-Color: #4c5eff;
   top: 0;
   right: 0;
   position: fixed;
-  background-color: whitesmoke;
+  background-color: $bg;
   z-index: 2;
   @include responsive(bigphone) {
     // position: relative;
@@ -104,6 +104,7 @@ $special-Color: #4c5eff;
   .sidebar-logo {
     width: 120px;
     cursor: pointer;
+
     @include responsive(bigphone) {
       width: 150px;
     }
@@ -111,36 +112,23 @@ $special-Color: #4c5eff;
       width: 100%;
     }
   }
-  input {
-    width: 300px;
-    height: 40px;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 10px;
-    display: none;
-    @include responsive(bigphone) {
-      width: 300px;
-      height: 40px;
-      border-radius: 5px;
-      padding: 10px;
-      display: block;
-    }
-  }
 
   .topbar-icons-img {
-    @include flexDisplay(space-between, center, row);
+    @include flexDisplay(space-around, center, row);
     width: 130px;
-
+    // border: 2px solid red;
     .icon-top {
       position: relative;
       font-size: 20px;
       cursor: pointer;
       border-radius: 50%;
+      @include flexDisplay(space-around, center, row);
+      // border: 2px solid red;
       span {
         position: absolute;
         top: -10px;
         right: -3px;
-        background-color: black;
+        background-color: rgb(2, 107, 115);
         color: white;
         font-size: 15px;
         height: 15px;
@@ -148,13 +136,23 @@ $special-Color: #4c5eff;
         text-align: center;
         border-radius: 50%;
       }
+      .bell-icon {
+        color: rgb(2, 107, 115);
+      }
+
       img {
         width: 50px;
         height: 50px;
-        border: 1px solid black;
+        border: 1px solid rgb(87, 222, 232);
         border-radius: 50%;
         cursor: pointer;
       }
+    }
+    .topbar-account-icon {
+      font-size: 30px;
+      margin-left: -13px;
+      color: rgb(2, 107, 115);
+      cursor: pointer;
     }
   }
 }
@@ -170,15 +168,16 @@ $special-Color: #4c5eff;
 
   .sidebar-container {
     @include flexDisplay(space-between, center, row);
-
+    // border: 5px solid red;
     position: absolute;
     width: 100vw;
     height: 60px;
     bottom: 0;
     position: fixed;
     padding: 10px;
-    background-color: whitesmoke;
+    background-color: $bg;
     z-index: 2;
+    // display: none;
 
     @include responsive(bigphone) {
       @include flexDisplay(space-between, center, column);
@@ -187,18 +186,19 @@ $special-Color: #4c5eff;
       height: 100vh;
       max-width: 300px;
       padding: 10px;
-
+      // display: none;
       //   position: fixed;
       overflow-y: scroll;
     }
 
-    h1 {
+    img {
       display: none;
 
       @include responsive(bigphone) {
         text-align: center;
-        margin-top: 50px;
+        margin-top: -30px;
         display: block;
+        width: 120px;
       }
     }
 
@@ -226,16 +226,17 @@ $special-Color: #4c5eff;
             cursor: pointer;
             border-radius: 5px;
             padding: 0 5px;
+            color: $darkBg;
 
             &:hover {
-              background-color: black;
-              color: white;
+              background-color: $darkBg;
+              color: $bg;
             }
             @include responsive(bigphone) {
               @include flexDisplay(flex-start, center, row);
               font-size: 14px;
               font-weight: 500;
-              border: 1px solid gray;
+              border: 1px solid $darkBg;
               border-radius: 5px;
               margin: 20px;
               padding: 10px;
@@ -307,7 +308,19 @@ $special-Color: #4c5eff;
       height: calc(100vh - 70px);
       // overflow-y: scroll;
     }
-
+    .Wallet-Overview {
+      // border: 2px solid red;
+      position: absolute;
+      top: 20px;
+      z-index: 5;
+      color: $darkBg;
+      @include responsive(smallPhone) {
+        font-size: 15px;
+      }
+    }
+    .total-savings{
+      margin-top: 30px;
+    }
     .cardMap {
       @include flexDisplay(space-between, center, row);
       margin: 0 auto;
@@ -315,13 +328,16 @@ $special-Color: #4c5eff;
       overflow-y: scroll;
       width: 100%;
       .card {
-        // border: 5px solid red;
-        margin: 5px;
+        border: 1px solid $darkBg;
+        border-radius: 7px;
+        background-color: $darkBg;
+        margin: 7px;
         width: 30%;
-        min-width: 300px;
+        min-width: 250px;
         max-width: 500px;
+        height: 140px;
         position: relative;
-        color: gray;
+        color: $bg;
         transition: all 0.8s ease;
 
         &:hover {
@@ -330,37 +346,47 @@ $special-Color: #4c5eff;
         @include responsive(bigphone) {
           min-width: 320px;
           margin: 15px;
+          height: 170px;
         }
-        .card-img {
-          width: 100%;
-          border-radius: 10px;
-          box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-        }
-        .bankName {
+
+        .logo {
           position: absolute;
           width: 70px;
-          left: 10px;
-          top: -15px;
+          right: 10px;
+          bottom: -15px;
         }
-        .card-type {
+        .walletName {
           position: absolute;
           right: 10px;
           top: 5px;
-          font-size: 10px;
+          font-size: 12px;
         }
-        .card-network {
+        .card-status {
           position: absolute;
-          width: 70px;
-          left: 50px;
-          top: 35%;
-          color: rgb(52, 53, 54);
-          transform: rotate(90deg);
-          font-size: 20px;
+          top: 5px;
+          font-size: 13px;
+          left: 20px;
+          background-color: $bg;
+          color: $darkBg;
+          padding: 2px 5px;
+          border-radius: 10px;
+
+          .active {
+            margin-left: 2px;
+            margin-bottom: -2px;
+          }
+
+          .on-hold {
+            margin-left: 2px;
+            margin-bottom: -2px;
+            display: none;
+          }
         }
+
         .card-amount {
           position: absolute;
-          top: 30%;
-          right: 10px;
+          top: 55%;
+          left: 20px;
         }
         .card-number {
           position: absolute;
