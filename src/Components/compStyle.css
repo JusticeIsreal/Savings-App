@@ -418,6 +418,10 @@ body {
 .sidebar .home .cardMap .add-wallet-icon-container {
   border: 2px dashed rgb(2, 107, 115);
   border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 7px;
   width: 30%;
   min-width: 250px;
@@ -438,17 +442,10 @@ body {
   }
 }
 .sidebar .home .cardMap .add-wallet-icon-container .add-wallet-icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
   font-size: 50px;
-  margin: 0 auto;
   color: rgb(2, 107, 115);
   -webkit-animation: bounce 2s linear infinite;
           animation: bounce 2s linear infinite;
-  margin-top: 15%;
-  border: 1px solid red;
 }
 @-webkit-keyframes bounce {
   0% {

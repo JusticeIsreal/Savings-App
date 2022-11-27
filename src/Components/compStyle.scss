@@ -444,6 +444,8 @@ $special-Color: #4c5eff;
       .add-wallet-icon-container {
         border: 2px dashed $darkBg;
         border-radius: 7px;
+        @include flexDisplay(center, center, column);
+
         // background-color: $darkBg;
         margin: 7px;
         width: 30%;
@@ -464,13 +466,13 @@ $special-Color: #4c5eff;
         }
 
         .add-wallet-icon {
-          @include flexDisplay(space-between, center, row);
+          // @include flexDisplay(space-around, center, row);
           font-size: 50px;
-          margin: 0 auto;
+          // margin: 0 auto;
           color: $darkBg;
           animation: bounce 2s linear infinite;
-          margin-top: 15%;
-          border: 1px solid red;
+          // margin-top: 15%;
+          // border: 1px solid red;
         }
 
         @keyframes bounce {
