@@ -321,24 +321,35 @@ $special-Color: #4c5eff;
     .total-savings {
       margin-top: 20px;
       @include flexDisplay(flex-start, center, row);
-             
+
       // border: 1px solid red;
       color: $darkBg;
       @include responsive(bigphone) {
         margin-top: 50px;
       }
 
-      .total-savings-icon{
+      .total-savings-icon {
         margin-bottom: -5px;
-        font-size: 30px
-      }
-      .hide-total-savings-icon{
-        // margin-bottom: -10px;
         font-size: 30px;
-        margin-left: 10px;
+        cursor: pointer;
       }
     }
+    sup {
+      color: $darkBg;
+      font-size: 12px;
+    }
+    .total-savings-amount {
+      @include flexDisplay(flex-start, center, row);
+      font-size: 20px;
+      color: $darkBg;
 
+      .hide-total-savings-icon {
+        // margin-bottom: -10px;
+        font-size: 30px;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+    }
     .cardMap {
       @include flexDisplay(space-between, center, row);
       margin: 0 auto;
@@ -352,7 +363,7 @@ $special-Color: #4c5eff;
       }
       .card {
         border: 1px solid $darkBg;
-        border-radius: 7px;
+        border-radius: 10px;
         background-color: $darkBg;
         margin: 7px;
         width: 30%;
@@ -431,32 +442,51 @@ $special-Color: #4c5eff;
         }
       }
       .add-wallet-icon-container {
-        border: 1px solid gray;
-        background-color: #7c7c7c;
+        border: 2px dashed $darkBg;
+        border-radius: 7px;
+        // background-color: $darkBg;
+        margin: 7px;
+        width: 30%;
+        min-width: 250px;
+        max-width: 500px;
+        height: 140px;
+        position: relative;
+        color: $bg;
+        transition: all 0.8s ease;
 
-        margin: 0 auto;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
+        &:hover {
+          transform: scale(1.05);
+        }
+        @include responsive(bigphone) {
+          min-width: 320px;
+          margin: 15px;
+          height: 170px;
+        }
 
         .add-wallet-icon {
           @include flexDisplay(space-between, center, row);
-          font-size: 80px;
+          font-size: 50px;
           margin: 0 auto;
-          color: whitesmoke;
-          animation: bounce 3s linear infinite;
+          color: $darkBg;
+          animation: bounce 2s linear infinite;
+          margin-top: 15%;
         }
 
         @keyframes bounce {
           0% {
-            transform: scale(0.95);
+            transform: scale(1);
           }
           50% {
             transform: scale(1.1);
           }
           100% {
-            transform: scale(0.95);
+            transform: scale(1);
           }
+        }
+        p {
+          color: $darkBg;
+          text-align: center;
+          font-size: 10px;
         }
       }
     }
@@ -535,7 +565,42 @@ $special-Color: #4c5eff;
     @include responsive(desktop) {
       margin-top: 50px;
     }
+    .Tabs {
+      // border: 2px solid red;
+      width: 100%;
 
+      .overview-porfolio {
+        // border: 2px solid $darkBorderColor;
+        background-color: $bg;
+        @include flexDisplay(space-between, center, row);
+        padding: 0 15px;
+        border-radius: 40px;
+        width: 100%;
+        height: 70px;
+        @include responsive(bigphone) {
+          width: 400px;
+          height: 80px;
+        }
+        .overview {
+          // border: 2px solid red;
+          width: 48%;
+          color: $darkBg;
+          font-weight: 600;
+          // background-color: #fff;
+          border-radius: 40px;
+          height: 80%;
+        }
+        .portfolio {
+          // border: 2px solid red;
+          width: 48%;
+          color: $darkBg;
+          font-weight: 600;
+          // background-color: #fff;
+          border-radius: 40px;
+          height: 80%;
+        }
+      }
+    }
     // HOME PAGE LOWER CARDS
     .stats-card {
       // border: 2px solid red;

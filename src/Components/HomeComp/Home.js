@@ -20,6 +20,9 @@ import "../compStyle.css";
 import Test from "../WalletComponent/Test";
 import { Link } from "react-router-dom";
 
+// mantine ui for switch tab
+import { Tabs } from "@mantine/core";
+
 function Home() {
   // total savings amount
   let yy = cardDetails.reduce(function (acc, card) {
@@ -135,11 +138,14 @@ function Home() {
       {/* HOME PAGE */}
       <div className="home">
         <h2 className="Wallet-Overview">Wallet Overview</h2>
-        <h3 className="total-savings">
+        <h2 className="total-savings">
           Total savings <RiArrowUpSFill className="total-savings-icon" />
+        </h2>
+        <sup>You have {cardDetails.length} wallets</sup>
+        <div className="total-savings-amount">
           <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
-          {/* <AiFillEye className="hide-total-savings-icon" /> */}
-        </h3>
+          <AiFillEye className="hide-total-savings-icon" />
+        </div>
         {/*card wallet container */}
         <div className="cardMap">
           {cardDetails.map((card) => (
@@ -147,64 +153,88 @@ function Home() {
               <SavingsCard {...card} />
             </div>
           ))}
-          <span className="add-wallet-icon-container">
+          <div className="add-wallet-icon-container">
             <HiPlus className="add-wallet-icon" />
-          </span>
+            <p>Create wallet</p>
+          </div>
         </div>
         {/* end of card wallet  */}
 
         {/* Fund details container*/}
         <div className="homeLowerPart">
-          <div className="stats-card">
-            <div className="stats-card1">
-              <FaMoneyCheck className="stats-card1-total-savings" />
+          <Tabs
+            color="cyan"
+            variant="pills"
+            radius="md"
+            defaultValue="gallery"
+            className="Tabs"
+          >
+            <Tabs.List className="overview-porfolio">
+              <Tabs.Tab value="gallery" className="overview">
+                Overview
+              </Tabs.Tab>
+              <Tabs.Tab value="messages" className="portfolio">
+                Portfolio
+              </Tabs.Tab>
+            </Tabs.List>
 
-              <div className="total-savings-details-con">
-                <h4>Total Saving</h4>
-                <sup>{cardDetails.length} Wallets</sup>
-                <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
-              </div>
-            </div>
-            <div className="stats-card2">
-              <VscGraph className="stats-card2-icon" />
-              <div className="stats-card2-details">
-                <h4>{month}</h4>
-                <sup>Savings:</sup>
-                <h1 style={{ textAlign: "center" }}>₦ {186}</h1>
-                <sub>Target: ₦{yy}</sub>
-              </div>
-            </div>
-            <div className="stats-card3">
-              <GrMoney className="stats-card2-icon" />
+            <Tabs.Panel value="gallery" pt="xs">
+              Gallery tab content
+            </Tabs.Panel>
 
-              <div className="total-savings-details-con">
-                <h4>Investment</h4>
-                <sup>Profits:</sup>
-                <h1>₦ 500</h1>
-                <div className="progress-range">
-                  <div className="progress-range-figures">
-                    <span className="progress-range-value">
-                      {((yy * 100) / zz).toFixed(1)}%
-                    </span>
-                    <span> / ₦{zz}</span>
+            <Tabs.Panel value="messages" pt="xs">
+              <div className="stats-card">
+                <div className="stats-card1">
+                  <FaMoneyCheck className="stats-card1-total-savings" />
+
+                  <div className="total-savings-details-con">
+                    <h4>Total Saving</h4>
+                    <sup>{cardDetails.length} Wallets</sup>
+                    <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
                   </div>
+                </div>
+                <div className="stats-card2">
+                  <VscGraph className="stats-card2-icon" />
+                  <div className="stats-card2-details">
+                    <h4>{month}</h4>
+                    <sup>Savings:</sup>
+                    <h1 style={{ textAlign: "center" }}>₦ {186}</h1>
+                    <sub>Target: ₦{yy}</sub>
+                  </div>
+                </div>
+                <div className="stats-card3">
+                  <GrMoney className="stats-card2-icon" />
 
-                  <Slider
-                    defaultValue={((yy * 100) / zz).toFixed(1)}
-                    size="sm"
-                    thumbSize={1}
-                  />
+                  <div className="total-savings-details-con">
+                    <h4>Investment</h4>
+                    <sup>Profits:</sup>
+                    <h1>₦ 500</h1>
+                    <div className="progress-range">
+                      <div className="progress-range-figures">
+                        <span className="progress-range-value">
+                          {((yy * 100) / zz).toFixed(1)}%
+                        </span>
+                        <span> / ₦{zz}</span>
+                      </div>
+
+                      <Slider
+                        defaultValue={((yy * 100) / zz).toFixed(1)}
+                        size="sm"
+                        thumbSize={1}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="stats-card4">
+                  {" "}
+                  <MdMoney className="stats-card2-icon" />
+                  <div className="total-savings-details-con">
+                    <h4>Offers</h4>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="stats-card4">
-              {" "}
-              <MdMoney className="stats-card2-icon" />
-              <div className="total-savings-details-con">
-                <h4>Offers</h4>
-              </div>
-            </div>
-          </div>
+            </Tabs.Panel>
+          </Tabs>
         </div>
       </div>
     </section>
