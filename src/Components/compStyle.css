@@ -290,7 +290,12 @@ body {
   }
 }
 .sidebar .home .total-savings {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .home {
+    margin-top: 30px;
+  }
 }
 .sidebar .home .cardMap {
   display: flex;
@@ -300,6 +305,12 @@ body {
   margin: 0 auto;
   overflow-y: scroll;
   width: 100%;
+  height: 200px;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .home .cardMap {
+    height: 250px;
+  }
 }
 .sidebar .home .cardMap .card {
   border: 1px solid rgb(2, 107, 115);
