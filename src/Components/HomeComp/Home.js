@@ -10,6 +10,8 @@ import {
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import { FcCancel } from "react-icons/fc";
+import { RiArrowUpSFill } from "react-icons/ri";
+import { AiFillEye } from "react-icons/ai";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
@@ -133,7 +135,11 @@ function Home() {
       {/* HOME PAGE */}
       <div className="home">
         <h2 className="Wallet-Overview">Wallet Overview</h2>
-        <h3 className="total-savings">Total wallets</h3>
+        <h3 className="total-savings">
+          Total savings <RiArrowUpSFill className="total-savings-icon" />
+          <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
+          {/* <AiFillEye className="hide-total-savings-icon" /> */}
+        </h3>
         {/*card wallet container */}
         <div className="cardMap">
           {cardDetails.map((card) => (

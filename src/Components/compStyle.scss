@@ -320,10 +320,25 @@ $special-Color: #4c5eff;
     }
     .total-savings {
       margin-top: 20px;
-    }
-    @include responsive(bigphone) {
-       margin-top: 30px;
+      @include flexDisplay(flex-start, center, row);
+             
+      // border: 1px solid red;
+      color: $darkBg;
+      @include responsive(bigphone) {
+        margin-top: 50px;
       }
+
+      .total-savings-icon{
+        margin-bottom: -5px;
+        font-size: 30px
+      }
+      .hide-total-savings-icon{
+        // margin-bottom: -10px;
+        font-size: 30px;
+        margin-left: 10px;
+      }
+    }
+
     .cardMap {
       @include flexDisplay(space-between, center, row);
       margin: 0 auto;
