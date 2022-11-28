@@ -43,13 +43,30 @@ body {
 }
 @media only screen and (min-width: 750px) {
   .topbar-container {
-    width: 70%;
+    width: 100vw;
     margin: 0 auto;
-    max-width: 1000px;
-    min-width: calc(100vw - 300px);
     margin-left: auto;
     padding: 0 10px;
   }
+}
+.topbar-container .logo-menu-container {
+  width: 200px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  display: none;
+  margin-left: 1.5%;
+  z-index: 2;
+}
+@media only screen and (min-width: 750px) {
+  .topbar-container .logo-menu-container {
+    display: block;
+  }
+}
+.topbar-container .logo-menu-container .logo {
+  width: 125px;
 }
 .topbar-container .sidebar-logo {
   width: 120px;
@@ -69,6 +86,7 @@ body {
   align-items: center;
   flex-direction: row;
   width: 130px;
+  margin-left: auto;
 }
 .topbar-container .topbar-icons-img .icon-top {
   position: relative;
@@ -140,21 +158,34 @@ body {
     flex-direction: column;
     position: relative;
     width: 30%;
-    height: 100vh;
+    height: calc(100vh - 60px);
     max-width: 300px;
     padding: 10px;
+    overflow: hidden;
+    margin-top: auto;
     overflow-y: scroll;
   }
 }
-.sidebar .sidebar-container img {
+.sidebar .sidebar-container .logo-container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 45px;
   display: none;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar .sidebar-container img {
-    text-align: center;
-    margin-top: -30px;
+  .sidebar .sidebar-container .logo-container {
     display: block;
-    width: 120px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .sidebar-container .logo-container h3 {
+    color: rgb(2, 107, 115);
+    text-align: center;
   }
 }
 .sidebar .sidebar-container .sidebar-nav-container {
@@ -208,12 +239,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     border: 1px solid rgb(2, 107, 115);
     border-radius: 5px;
-    margin: 20px;
-    padding: 10px;
+    margin: 10px;
+    padding: 5px;
     width: 200px;
   }
 }
@@ -223,7 +254,7 @@ body {
 @media only screen and (min-width: 750px) {
   .sidebar .sidebar-container .sidebar-nav-container Nav ul li span {
     padding: 5px;
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 .sidebar .sidebar-container .sidebar-nav-container Nav .support-settings {
@@ -239,6 +270,7 @@ body {
     position: relative;
     margin: 17px;
     top: 0;
+    height: 45px;
   }
 }
 .sidebar .sidebar-container .sidebar-nav-container Nav .support {
@@ -279,17 +311,33 @@ body {
   }
 }
 .sidebar .home .Wallet-Overview {
-  position: absolute;
   top: 20px;
   z-index: 5;
   color: rgb(2, 107, 115);
+  position: absolute;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .home .Wallet-Overview {
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 380px) {
   .sidebar .home .Wallet-Overview {
     font-size: 15px;
   }
 }
-.sidebar .home .total-savings {
+.sidebar .home .total-wallet-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.sidebar .home .total-wallet-container .total-savings {
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
@@ -298,20 +346,20 @@ body {
   color: rgb(2, 107, 115);
 }
 @media only screen and (min-width: 750px) {
-  .sidebar .home .total-savings {
+  .sidebar .home .total-wallet-container .total-savings {
     margin-top: 50px;
   }
 }
-.sidebar .home .total-savings .total-savings-icon {
+.sidebar .home .total-wallet-container .total-savings .total-savings-icon {
   margin-bottom: -5px;
   font-size: 30px;
   cursor: pointer;
 }
-.sidebar .home sup {
+.sidebar .home .total-wallet-container sup {
   color: rgb(2, 107, 115);
   font-size: 12px;
 }
-.sidebar .home .total-savings-amount {
+.sidebar .home .total-wallet-container .total-savings-amount {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -319,10 +367,72 @@ body {
   font-size: 20px;
   color: rgb(2, 107, 115);
 }
-.sidebar .home .total-savings-amount .hide-total-savings-icon {
+.sidebar .home .total-wallet-container .total-savings-amount .hide-total-savings-icon {
   font-size: 30px;
   margin-left: 15px;
   cursor: pointer;
+}
+.sidebar .home .total-wallet-container .add-wallet-icon-container {
+  border: 2px dashed rgb(2, 107, 115);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 7px;
+  width: 270px;
+  height: 60px;
+  position: relative;
+  color: rgb(238, 253, 254);
+  transition: all 0.8s ease;
+  cursor: pointer;
+  margin-top: auto;
+  display: none;
+}
+.sidebar .home .total-wallet-container .add-wallet-icon-container:hover {
+  transform: scale(1.05);
+}
+@media only screen and (min-width: 1280px) {
+  .sidebar .home .total-wallet-container .add-wallet-icon-container {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.sidebar .home .total-wallet-container .add-wallet-icon-container .add-wallet-icon {
+  font-size: 50px;
+  color: rgb(2, 107, 115);
+  -webkit-animation: bounce 2s linear infinite;
+          animation: bounce 2s linear infinite;
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.sidebar .home .total-wallet-container .add-wallet-icon-container p {
+  color: rgb(2, 107, 115);
+  text-align: center;
+  font-size: 10px;
 }
 .sidebar .home .cardMap {
   display: flex;
@@ -415,66 +525,6 @@ body {
   position: absolute;
   top: 82%;
   left: 20px;
-}
-.sidebar .home .cardMap .add-wallet-icon-container {
-  border: 2px dashed rgb(2, 107, 115);
-  border-radius: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 7px;
-  width: 30%;
-  min-width: 250px;
-  max-width: 500px;
-  height: 140px;
-  position: relative;
-  color: rgb(238, 253, 254);
-  transition: all 0.8s ease;
-  cursor: pointer;
-}
-.sidebar .home .cardMap .add-wallet-icon-container:hover {
-  transform: scale(1.05);
-}
-@media only screen and (min-width: 750px) {
-  .sidebar .home .cardMap .add-wallet-icon-container {
-    min-width: 320px;
-    margin: 15px;
-    height: 170px;
-  }
-}
-.sidebar .home .cardMap .add-wallet-icon-container .add-wallet-icon {
-  font-size: 50px;
-  color: rgb(2, 107, 115);
-  -webkit-animation: bounce 2s linear infinite;
-          animation: bounce 2s linear infinite;
-}
-@-webkit-keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.sidebar .home .cardMap .add-wallet-icon-container p {
-  color: rgb(2, 107, 115);
-  text-align: center;
-  font-size: 10px;
 }
 .sidebar .home .home-chart {
   margin-top: 10px;

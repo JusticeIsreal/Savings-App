@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import cardDetails from "./data";
 import { FaHome, FaChartLine, FaChartBar, FaMoneyCheck } from "react-icons/fa";
 import {
@@ -10,7 +10,8 @@ import {
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import { FcCancel } from "react-icons/fc";
-import { RiArrowUpSFill } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
 import { AiFillEye } from "react-icons/ai";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
@@ -73,12 +74,15 @@ function Home() {
     <section className="sidebar">
       {/*HOME SIDE BAR */}
       <main className="sidebar-container">
-        <img src={logo} alt="logo" />
+        <div className="logo-container">
+          {/* <img src={logo} alt="logo" className="logo" /> */}
+          <h3>Hello Justice</h3>
+        </div>
+        {/* <img src={logo} alt="logo" /> */}
         <div className="sidebar-nav-container">
           <nav>
             <ul style={{ listStyle: "none" }}>
               <Link to="/">
-                {" "}
                 <li
                   style={{
                     backgroundColor: "rgb(2, 107, 115)",
@@ -138,25 +142,33 @@ function Home() {
       {/* HOME PAGE */}
       <div className="home">
         <h2 className="Wallet-Overview">Wallet Overview</h2>
-        <h2 className="total-savings">
-          Total savings <RiArrowUpSFill className="total-savings-icon" />
-        </h2>
-        <sup>You have {cardDetails.length} wallets</sup>
-        <div className="total-savings-amount">
-          <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
-          <AiFillEye className="hide-total-savings-icon" />
+        <div className="total-wallet-container">
+          <div>
+            <h2 className="total-savings">
+              Total savings <RiArrowDownSFill className="total-savings-icon" />
+            </h2>
+            <sup>You have {cardDetails.length} wallets</sup>
+            <div className="total-savings-amount">
+              <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
+              <AiFillEye className="hide-total-savings-icon" />
+            </div>
+          </div>{" "}
+          <div className="add-wallet-icon-container">
+            <HiPlus className="add-wallet-icon" />
+            <p>Create wallet</p>
+          </div>
         </div>
         {/*card wallet container */}
         <div className="cardMap">
+          {/* <div className="add-wallet-icon-container">
+            <HiPlus className="add-wallet-icon" />
+            <p>Create wallet</p>
+          </div> */}
           {cardDetails.map((card) => (
             <div className="card" key={card.id}>
               <SavingsCard {...card} />
             </div>
           ))}
-          <div className="add-wallet-icon-container">
-            <HiPlus className="add-wallet-icon" />
-            <p>Create wallet</p>
-          </div>
         </div>
         {/* end of card wallet  */}
 

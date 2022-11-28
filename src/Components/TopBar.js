@@ -1,5 +1,6 @@
 import { FaEnvelope, FaBell } from "react-icons/fa";
 import { RiArrowDownSFill, RiArrowUpSFill } from "react-icons/ri";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import "./compStyle.css";
 const logo =
@@ -11,16 +12,11 @@ function TopBar() {
   return (
     <>
       <div className="topbar-container">
-        <div className="sidebar-logo">
-          {/* <img src={logo} alt="logo" /> */}
+        <div className="logo-menu-container">
+          {/* <GiHamburgerMenu className="bugger-menu" /> */}
+          <img src={logo} alt="logo" className="logo" />
         </div>
-
-        {/* <input type="text" placeholder="Search..." /> */}
         <div className="topbar-icons-img">
-          {/* <div className="icon-top">
-            <span>0</span>
-            <FaEnvelope />
-          </div> */}
           <div className="icon-top">
             <span>0</span>
             <FaBell className="bell-icon" />
@@ -28,7 +24,7 @@ function TopBar() {
           <div className="icon-top">
             <img src={profileImage} alt="logo" />
           </div>
-          <RiArrowUpSFill className="topbar-account-icon" />
+          <RiArrowDownSFill className="topbar-account-icon" />
         </div>
       </div>
     </>
