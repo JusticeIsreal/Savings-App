@@ -7,9 +7,11 @@ import {
   MdOutlineMenuOpen,
   MdMoney,
   MdRadioButtonChecked,
+  MdLocalOffer,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import { FcCancel } from "react-icons/fc";
+import { GiCoins } from "react-icons/gi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
 import { AiFillEye } from "react-icons/ai";
@@ -141,7 +143,6 @@ function Home() {
 
       {/* HOME PAGE */}
       <div className="home">
-        
         <div className="total-wallet-container">
           <div>
             <h2 className="total-savings">
@@ -208,51 +209,45 @@ function Home() {
             <Tabs.Panel value="gallery" pt="xs">
               <div className="stats-card">
                 <div className="stats-card1">
-                  <FaMoneyCheck className="stats-card1-total-savings" />
+                  <FaChartBar className="stats-card1-investment-icon" />
 
                   <div className="total-savings-details-con">
-                    <h4>Total Saving</h4>
-                    <sup>{cardDetails.length} Wallets</sup>
-                    <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
+                    <h3>
+                      {month}
+                      <br /> Savings:
+                    </h3>
+                    <sup> ₦ 10,000</sup>
                   </div>
                 </div>
-                <div className="stats-card2">
-                  <VscGraph className="stats-card2-icon" />
-                  <div className="stats-card2-details">
-                    <h4>{month}</h4>
-                    <sup>Savings:</sup>
-                    <h1 style={{ textAlign: "center" }}>₦ {186}</h1>
-                    <sub>Target: ₦{yy}</sub>
-                  </div>
-                </div>
-                <div className="stats-card3">
-                  <GrMoney className="stats-card2-icon" />
+
+                <div className="stats-card1">
+                  <GiCoins className="stats-card1-investment-icon" />
 
                   <div className="total-savings-details-con">
-                    <h4>Investment</h4>
-                    <sup>Profits:</sup>
-                    <h1>₦ 500</h1>
-                    <div className="progress-range">
-                      <div className="progress-range-figures">
-                        <span className="progress-range-value">
-                          {((yy * 100) / zz).toFixed(1)}%
-                        </span>
-                        <span> / ₦{zz}</span>
-                      </div>
+                    <h3>
+                      Your <br /> Investments
+                    </h3>
+                    <sup>Profit:₦ 5,000</sup>
+                  </div>
+                </div>
 
-                      <Slider
-                        defaultValue={((yy * 100) / zz).toFixed(1)}
-                        size="sm"
-                        thumbSize={1}
-                      />
-                    </div>
+                <div className="stats-card1">
+                  <MdLocalOffer className="stats-card1-investment-icon" />
+
+                  <div className="total-savings-details-con">
+                    <h3>
+                      Investments <br /> offers
+                    </h3>
+                    {/* <sup>Profit:₦ 5,000</sup> */}
                   </div>
                 </div>
               </div>
             </Tabs.Panel>
 
             <Tabs.Panel value="messages" pt="xs">
-              bbb
+              <div className="home-chart">
+                <Test />
+              </div>
             </Tabs.Panel>
           </Tabs>
         </div>

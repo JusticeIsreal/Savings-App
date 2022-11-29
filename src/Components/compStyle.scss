@@ -41,7 +41,8 @@ $bg: #f1feff;
 $darkBorderColor: rgb(2, 107, 115);
 $text-Color: #009daf;
 $cardbg: #009daf;
-$special-Color: #4c5eff;
+$secondCardBg: #adf4fc;
+$darkestBg: #025760;
 
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
   display: flex;
@@ -173,6 +174,7 @@ $special-Color: #4c5eff;
     @include flexDisplay(space-around, center, row);
     width: 130px;
     margin-left: auto;
+    cursor: pointer;
     // border: 2px solid red;
     .icon-top {
       position: relative;
@@ -200,7 +202,7 @@ $special-Color: #4c5eff;
       img {
         width: 50px;
         height: 50px;
-        border: 1px solid rgb(87, 222, 232);
+        border: 1px solid $darkBg;
         border-radius: 50%;
         cursor: pointer;
       }
@@ -305,6 +307,7 @@ $special-Color: #4c5eff;
             border-radius: 5px;
             padding: 0 5px;
             color: $cardbg;
+            cursor: pointer;
 
             &:hover {
               background-color: $cardbg;
@@ -515,7 +518,7 @@ $special-Color: #4c5eff;
 
         // background-color: $darkBg;
         margin: 7px;
-        width: 97%;
+        width: 90%;
         // min-width: 250px;
         // max-width: 500px;
         height: 60px;
@@ -815,11 +818,6 @@ $special-Color: #4c5eff;
           }
         }
       }
-      .Conceive-it-Achieve-it {
-        color: $darkBg;
-        margin-top: 20px;
-        margin-left: 20px;
-      }
     }
     // HOME PAGE LOWER CARDS
     .stats-card {
@@ -854,13 +852,18 @@ $special-Color: #4c5eff;
         height: 150px;
         // min-width: 350px;
         // max-width: 300px;
+        cursor: pointer;
         padding: 0 5px;
         position: relative;
-        border: 1px solid gray;
+        // border: 1px solid gray;
         color: gray;
         border-radius: 8px;
-        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-        border: 1px solid rgba(90, 90, 90, 0.112);
+        // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        // border: 1px solid rgba(90, 90, 90, 0.112);
+        background: $secondCardBg;
+        color: $darkestBg;
+        @include flexDisplay(space-around, center, row);
+
         // border: 2px solid red;
         @include responsive(smallPhone) {
           // border: 2px solid red;
@@ -877,36 +880,31 @@ $special-Color: #4c5eff;
         }
 
         // card 1 properties
-        .stats-card1-total-savings {
+        .stats-card1-investment-icon {
           // border: 2px solid red;
-          font-size: 40px;
-
-          @include responsive(bigphone) {
-            font-size: 40px;
-          }
-          @include responsive(desktop) {
-          }
+          font-size: 100px;
+          color: $darkestBg;
         }
         .total-savings-details-con {
           // border: 2px solid red;
-          height: calc(100% - 50px);
+          // height: calc(100% - 50px);
           position: relative;
 
-          h4 {
+          h3 {
             margin-top: 0;
-            font-size: 15px;
+            font-size: 20px;
           }
           sup {
             font-size: 10px;
           }
 
           @include responsive(bigphone) {
-            h4 {
-              margin-top: 0;
+            h3 {
+              // margin-top: 0;
               font-size: 20px;
             }
             sup {
-              font-size: 15px;
+              font-size: 13px;
             }
           }
 

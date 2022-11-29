@@ -120,6 +120,7 @@ body {
   flex-direction: row;
   width: 130px;
   margin-left: auto;
+  cursor: pointer;
 }
 .topbar-container .topbar-icons-img .icon-top {
   position: relative;
@@ -149,7 +150,7 @@ body {
 .topbar-container .topbar-icons-img .icon-top img {
   width: 50px;
   height: 50px;
-  border: 1px solid rgb(87, 222, 232);
+  border: 1px solid rgb(2, 107, 115);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -261,6 +262,7 @@ body {
   border-radius: 5px;
   padding: 0 5px;
   color: #009daf;
+  cursor: pointer;
 }
 .sidebar .sidebar-container .sidebar-nav-container Nav ul li:hover {
   background-color: #009daf;
@@ -471,7 +473,7 @@ body {
   align-items: center;
   flex-direction: column;
   margin: 7px;
-  width: 97%;
+  width: 90%;
   height: 60px;
   position: relative;
   color: #f1feff;
@@ -746,11 +748,6 @@ body {
     width: 100%;
   }
 }
-.sidebar .homeLowerPart .Tabs .Conceive-it-Achieve-it {
-  color: rgb(2, 107, 115);
-  margin-top: 20px;
-  margin-left: 20px;
-}
 .sidebar .homeLowerPart .stats-card {
   display: flex;
   justify-content: space-around;
@@ -774,13 +771,17 @@ body {
   width: 100%;
   margin: 5px;
   height: 150px;
+  cursor: pointer;
   padding: 0 5px;
   position: relative;
-  border: 1px solid gray;
   color: gray;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-  border: 1px solid rgba(90, 90, 90, 0.112);
+  background: #adf4fc;
+  color: #025760;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .stats-card .stats-card1,
@@ -801,33 +802,25 @@ body {
     height: 210px;
   }
 }
-.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card1-total-savings,
-.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card1-total-savings,
-.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card1-total-savings,
-.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card1-total-savings {
-  font-size: 40px;
-}
-@media only screen and (min-width: 750px) {
-  .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card1-total-savings,
-.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card1-total-savings,
-.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card1-total-savings,
-.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card1-total-savings {
-    font-size: 40px;
-  }
+.sidebar .homeLowerPart .stats-card .stats-card1 .stats-card1-investment-icon,
+.sidebar .homeLowerPart .stats-card .stats-card2 .stats-card1-investment-icon,
+.sidebar .homeLowerPart .stats-card .stats-card3 .stats-card1-investment-icon,
+.sidebar .homeLowerPart .stats-card .stats-card4 .stats-card1-investment-icon {
+  font-size: 100px;
+  color: #025760;
 }
 .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con,
 .sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con,
 .sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con,
 .sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con {
-  height: calc(100% - 50px);
   position: relative;
 }
-.sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con h4,
-.sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con h4,
-.sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con h4,
-.sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con h4 {
+.sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con h3,
+.sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con h3,
+.sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con h3,
+.sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con h3 {
   margin-top: 0;
-  font-size: 15px;
+  font-size: 20px;
 }
 .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con sup,
 .sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con sup,
@@ -836,18 +829,17 @@ body {
   font-size: 10px;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con h4,
-.sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con h4,
-.sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con h4,
-.sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con h4 {
-    margin-top: 0;
+  .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con h3,
+.sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con h3,
+.sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con h3,
+.sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con h3 {
     font-size: 20px;
   }
   .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con sup,
 .sidebar .homeLowerPart .stats-card .stats-card2 .total-savings-details-con sup,
 .sidebar .homeLowerPart .stats-card .stats-card3 .total-savings-details-con sup,
 .sidebar .homeLowerPart .stats-card .stats-card4 .total-savings-details-con sup {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 .sidebar .homeLowerPart .stats-card .stats-card1 .total-savings-details-con h1,
