@@ -16,6 +16,7 @@ function TopBar() {
           {/* <GiHamburgerMenu className="bugger-menu" /> */}
           <img src={logo} alt="logo" className="logo" />
         </div>
+        <h2 className="Wallet-Overview">Wallet Overview</h2>
         <div className="topbar-icons-img">
           <div className="icon-top">
             <span>0</span>

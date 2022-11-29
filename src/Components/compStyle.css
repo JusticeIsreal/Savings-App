@@ -27,6 +27,7 @@ body {
 }
 
 .topbar-container {
+  border-bottom: 1px solid rgb(174, 171, 171);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,8 +47,39 @@ body {
   .topbar-container {
     width: 100vw;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-left: auto;
     padding: 0 10px;
+  }
+}
+.topbar-container .Wallet-Overview {
+  top: 20px;
+  z-index: 5;
+  color: rgb(2, 107, 115);
+  position: absolute;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 49px;
+  /* identical to box height */
+  /* AJIS DARK */
+  color: #009daf;
+}
+@media only screen and (min-width: 750px) {
+  .topbar-container .Wallet-Overview {
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .topbar-container .Wallet-Overview {
+    font-size: 15px;
   }
 }
 .topbar-container .logo-menu-container {
@@ -311,35 +343,6 @@ body {
     height: calc(100vh - 70px);
   }
 }
-.sidebar .home .Wallet-Overview {
-  top: 20px;
-  z-index: 5;
-  color: rgb(2, 107, 115);
-  position: absolute;
-  font-family: "Satoshi";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 49px;
-  /* identical to box height */
-  /* AJIS DARK */
-  color: #009daf;
-}
-@media only screen and (min-width: 750px) {
-  .sidebar .home .Wallet-Overview {
-    font-size: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 380px) {
-  .sidebar .home .Wallet-Overview {
-    font-size: 15px;
-  }
-}
 .sidebar .home .total-wallet-container {
   display: flex;
   justify-content: space-between;
@@ -391,6 +394,7 @@ body {
   cursor: pointer;
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container {
+  border: 2px dashed rgb(2, 107, 115);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -400,16 +404,21 @@ body {
   width: 270px;
   height: 60px;
   position: relative;
-  color: #f1feff;
+  color: rgb(2, 107, 115);
   transition: all 0.8s ease;
   cursor: pointer;
   margin-top: auto;
   display: none;
   padding: 5px 0;
-  background-color: rgb(2, 107, 115);
+  -webkit-animation: bounce 2s linear infinite;
+          animation: bounce 2s linear infinite;
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container:hover {
-  transform: scale(1.05);
+  background-color: rgb(2, 107, 115);
+}
+.sidebar .home .total-wallet-container .add-wallet-icon-container:hover .add-wallet-icon,
+.sidebar .home .total-wallet-container .add-wallet-icon-container:hover p {
+  color: #f1feff;
 }
 @media only screen and (min-width: 1280px) {
   .sidebar .home .total-wallet-container .add-wallet-icon-container {
@@ -422,7 +431,7 @@ body {
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container .add-wallet-icon {
   font-size: 50px;
-  color: #f1feff;
+  color: rgb(2, 107, 115);
   -webkit-animation: bounce 2s linear infinite;
           animation: bounce 2s linear infinite;
 }
@@ -449,7 +458,7 @@ body {
   }
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container p {
-  color: #f1feff;
+  color: rgb(2, 107, 115);
   text-align: center;
   font-size: 13px;
 }
@@ -462,15 +471,23 @@ body {
   flex-direction: column;
   margin: 7px;
   width: 97%;
-  height: 50px;
+  height: 60px;
   position: relative;
   color: #f1feff;
   transition: all 0.8s ease;
   cursor: pointer;
   margin: 0 auto;
-  margin-top: -30px;
+  margin-top: -24px;
   padding: 5px 0;
-  background: #025760;
+  -webkit-animation: bounce 2s linear infinite;
+          animation: bounce 2s linear infinite;
+}
+.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover {
+  background-color: rgb(2, 107, 115);
+}
+.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover .add-wallet-icon-tablet-below,
+.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover p {
+  color: #f1feff;
 }
 .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover {
   transform: scale(1.05);
@@ -491,24 +508,24 @@ body {
   }
 }
 .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below .add-wallet-icon-tablet-below {
-  font-size: 50px;
-  color: #f1feff;
-  -webkit-animation: bounce 2s linear infinite;
-          animation: bounce 2s linear infinite;
+  font-size: 60px;
+  color: rgb(2, 107, 115);
+  -webkit-animation: bounce 3s linear infinite;
+          animation: bounce 3s linear infinite;
 }
 @keyframes bounce {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.03);
   }
   100% {
     transform: scale(1);
   }
 }
 .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below p {
-  color: #f1feff;
+  color: rgb(2, 107, 115);
   text-align: center;
   font-size: 13px;
 }

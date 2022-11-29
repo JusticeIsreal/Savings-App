@@ -141,7 +141,7 @@ function Home() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <h2 className="Wallet-Overview">Wallet Overview</h2>
+        
         <div className="total-wallet-container">
           <div>
             <h2 className="total-savings">

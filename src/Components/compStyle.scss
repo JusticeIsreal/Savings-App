@@ -78,7 +78,7 @@ $special-Color: #4c5eff;
 
 // TOPBAR SESSION
 .topbar-container {
-  // border-bottom: 1px solid rgb(174, 171, 171);
+  border-bottom: 1px solid rgb(174, 171, 171);
   @include flexDisplay(space-between, center, row);
   position: absolute;
   height: 70px;
@@ -94,12 +94,43 @@ $special-Color: #4c5eff;
     // position: relative;
     width: 100vw;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     // max-width: 1000px;
     // min-width: calc(100vw - 300px);
     margin-left: auto;
     padding: 0 10px;
   }
+  .Wallet-Overview {
+    top: 20px;
+    z-index: 5;
+    color: $darkBg;
+    position: absolute;
 
+    // font-family: "Satoshi";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 49px;
+    /* identical to box height */
+
+    /* AJIS DARK */
+
+    color: $text-Color;
+
+    @include responsive(bigphone) {
+      font-size: 35px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+    @include responsive(smallPhone) {
+      font-size: 15px;
+    }
+  }
   .logo-menu-container {
     // border: 2px solid red;
     width: 200px;
@@ -358,35 +389,6 @@ $special-Color: #4c5eff;
       height: calc(100vh - 70px);
       // overflow-y: scroll;
     }
-    .Wallet-Overview {
-      top: 20px;
-      z-index: 5;
-      color: $darkBg;
-      position: absolute;
-
-      font-family: "Satoshi";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 36px;
-      line-height: 49px;
-      /* identical to box height */
-
-      /* AJIS DARK */
-
-      color: $text-Color;
-
-      @include responsive(bigphone) {
-        font-size: 35px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-      }
-      @include responsive(smallPhone) {
-        font-size: 15px;
-      }
-    }
 
     .total-wallet-container {
       // border: 2px solid red;
@@ -398,7 +400,7 @@ $special-Color: #4c5eff;
 
         // border: 1px solid red;
         color: $darkBg;
-
+        //
         font-family: "Quicksand";
         font-style: normal;
         font-weight: 500;
@@ -439,7 +441,7 @@ $special-Color: #4c5eff;
       }
 
       .add-wallet-icon-container {
-        // border: 2px dashed $darkBg;
+        border: 2px dashed $darkBg;
         border-radius: 10px;
         @include flexDisplay(center, center, column);
 
@@ -449,16 +451,25 @@ $special-Color: #4c5eff;
         // max-width: 500px;
         height: 60px;
         position: relative;
-        color: $bg;
+        color: $darkBg;
         transition: all 0.8s ease;
         cursor: pointer;
         margin-top: auto;
         display: none;
         padding: 5px 0;
-        background-color: $darkBg;
+        animation: bounce 2s linear infinite;
+        // background-color: $darkBg;
 
         &:hover {
-          transform: scale(1.05);
+          background-color: $darkBg;
+
+          .add-wallet-icon,
+          p {
+            // @include flexDisplay(space-around, center, row);
+            // font-size: 50px;
+            // margin: 0 auto;
+            color: $bg;
+          }
         }
         @include responsive(desktop) {
           // min-width: 320px;
@@ -473,7 +484,7 @@ $special-Color: #4c5eff;
           // @include flexDisplay(space-around, center, row);
           font-size: 50px;
           // margin: 0 auto;
-          color: $bg;
+          color: $darkBg;
           animation: bounce 2s linear infinite;
         }
 
@@ -489,7 +500,7 @@ $special-Color: #4c5eff;
           }
         }
         p {
-          color: $bg;
+          color: $darkBg;
           text-align: center;
           font-size: 13px;
         }
@@ -507,17 +518,28 @@ $special-Color: #4c5eff;
         width: 97%;
         // min-width: 250px;
         // max-width: 500px;
-        height: 50px;
+        height: 60px;
         position: relative;
         color: $bg;
         transition: all 0.8s ease;
         cursor: pointer;
         margin: 0 auto;
-        margin-top: -30px;
+        margin-top: -24px;
         padding: 5px 0;
-        background: #025760;
+        animation: bounce 2s linear infinite;
+        // background-color: $darkBg;
 
-        // display: none;
+        &:hover {
+          background-color: $darkBg;
+
+          .add-wallet-icon-tablet-below,
+          p {
+            // @include flexDisplay(space-around, center, row);
+            // font-size: 50px;
+            // margin: 0 auto;
+            color: $bg;
+          }
+        }
 
         &:hover {
           transform: scale(1.05);
@@ -536,11 +558,11 @@ $special-Color: #4c5eff;
 
         .add-wallet-icon-tablet-below {
           // @include flexDisplay(space-around, center, row);
-          font-size: 50px;
+          font-size: 60px;
           // margin: 0 auto;
-          color: $bg;
+          color: $darkBg;
 
-          animation: bounce 2s linear infinite;
+          animation: bounce 3s linear infinite;
         }
 
         @keyframes bounce {
@@ -548,14 +570,14 @@ $special-Color: #4c5eff;
             transform: scale(1);
           }
           50% {
-            transform: scale(1.1);
+            transform: scale(1.03);
           }
           100% {
             transform: scale(1);
           }
         }
         p {
-          color: $bg;
+          color: $darkBg;
           text-align: center;
           font-size: 13px;
         }
@@ -746,8 +768,8 @@ $special-Color: #4c5eff;
         span {
           background: whitesmoke;
           width: 138px;
-            height: 41.17px;
-            border-radius: 30px;
+          height: 41.17px;
+          border-radius: 30px;
           .overview {
             // border: 2px solid red;
             width: 48%;
