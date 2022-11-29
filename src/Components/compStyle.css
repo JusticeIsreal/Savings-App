@@ -330,11 +330,11 @@ body {
   width: 100%;
   height: calc(100vh - 120px);
   max-width: 2000px;
+  overflow-y: scroll;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .home {
     width: 70%;
-    overflow-y: scroll;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -414,7 +414,8 @@ body {
           animation: bounce 2s linear infinite;
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container:hover {
-  background-color: rgb(2, 107, 115);
+  background-color: #009daf;
+  border: none;
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container:hover .add-wallet-icon,
 .sidebar .home .total-wallet-container .add-wallet-icon-container:hover p {
@@ -483,7 +484,8 @@ body {
           animation: bounce 2s linear infinite;
 }
 .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover {
-  background-color: rgb(2, 107, 115);
+  background-color: #009daf;
+  border: none;
 }
 .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover .add-wallet-icon-tablet-below,
 .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover p {
@@ -494,7 +496,7 @@ body {
 }
 @media only screen and (min-width: 750px) {
   .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below {
-    width: 90%;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -697,11 +699,21 @@ body {
   width: 315px;
   height: 71px;
 }
+@media only screen and (max-width: 380px) {
+  .sidebar .homeLowerPart .Tabs .overview-porfolio {
+    width: 100%;
+  }
+}
 .sidebar .homeLowerPart .Tabs .overview-porfolio span {
   background: whitesmoke;
   width: 138px;
   height: 41.17px;
   border-radius: 30px;
+}
+@media only screen and (max-width: 380px) {
+  .sidebar .homeLowerPart .Tabs .overview-porfolio span {
+    width: 48%;
+  }
 }
 .sidebar .homeLowerPart .Tabs .overview-porfolio span .overview {
   width: 48%;
@@ -713,6 +725,11 @@ body {
   height: 41.17px;
   border-radius: 30px;
 }
+@media only screen and (max-width: 380px) {
+  .sidebar .homeLowerPart .Tabs .overview-porfolio span .overview {
+    width: 100%;
+  }
+}
 .sidebar .homeLowerPart .Tabs .overview-porfolio span .portfolio {
   width: 48%;
   color: rgb(2, 107, 115);
@@ -723,6 +740,11 @@ body {
   height: 41.17px;
   border-radius: 30px;
 }
+@media only screen and (max-width: 380px) {
+  .sidebar .homeLowerPart .Tabs .overview-porfolio span .portfolio {
+    width: 100%;
+  }
+}
 .sidebar .homeLowerPart .Tabs .Conceive-it-Achieve-it {
   color: rgb(2, 107, 115);
   margin-top: 20px;
@@ -730,7 +752,7 @@ body {
 }
 .sidebar .homeLowerPart .stats-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
@@ -742,14 +764,13 @@ body {
 @media only screen and (max-width: 380px) {
   .sidebar .homeLowerPart .stats-card {
     margin-top: 10px;
-    padding-bottom: 100px;
   }
 }
 .sidebar .homeLowerPart .stats-card .stats-card1,
 .sidebar .homeLowerPart .stats-card .stats-card2,
 .sidebar .homeLowerPart .stats-card .stats-card3,
 .sidebar .homeLowerPart .stats-card .stats-card4 {
-  width: 30%;
+  width: 100%;
   margin: 5px;
   height: 150px;
   padding: 0 5px;
@@ -760,20 +781,23 @@ body {
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   border: 1px solid rgba(90, 90, 90, 0.112);
 }
-@media only screen and (max-width: 380px) {
-  .sidebar .homeLowerPart .stats-card .stats-card1,
-.sidebar .homeLowerPart .stats-card .stats-card2,
-.sidebar .homeLowerPart .stats-card .stats-card3,
-.sidebar .homeLowerPart .stats-card .stats-card4 {
-    width: 45%;
-  }
-}
 @media only screen and (min-width: 750px) {
   .sidebar .homeLowerPart .stats-card .stats-card1,
 .sidebar .homeLowerPart .stats-card .stats-card2,
 .sidebar .homeLowerPart .stats-card .stats-card3,
 .sidebar .homeLowerPart .stats-card .stats-card4 {
-    height: 250px;
+    width: 48%;
+    height: 210px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .sidebar .homeLowerPart .stats-card .stats-card1,
+.sidebar .homeLowerPart .stats-card .stats-card2,
+.sidebar .homeLowerPart .stats-card .stats-card3,
+.sidebar .homeLowerPart .stats-card .stats-card4 {
+    width: 32%;
+    min-width: 366px;
+    height: 210px;
   }
 }
 .sidebar .homeLowerPart .stats-card .stats-card1 .stats-card1-total-savings,

@@ -378,11 +378,11 @@ $special-Color: #4c5eff;
     width: 100%;
     height: calc(100vh - 120px);
     max-width: 2000px;
+    overflow-y: scroll;
 
     // overflow-y: hidden;
     @include responsive(bigphone) {
       width: 70%;
-      overflow-y: scroll;
     }
     @include responsive(desktop) {
       width: 80%;
@@ -461,8 +461,8 @@ $special-Color: #4c5eff;
         // background-color: $darkBg;
 
         &:hover {
-          background-color: $darkBg;
-
+          background-color: $cardbg;
+          border: none;
           .add-wallet-icon,
           p {
             // @include flexDisplay(space-around, center, row);
@@ -530,8 +530,8 @@ $special-Color: #4c5eff;
         // background-color: $darkBg;
 
         &:hover {
-          background-color: $darkBg;
-
+          background-color: $cardbg;
+          border: none;
           .add-wallet-icon-tablet-below,
           p {
             // @include flexDisplay(space-around, center, row);
@@ -545,7 +545,7 @@ $special-Color: #4c5eff;
           transform: scale(1.05);
         }
         @include responsive(bigphone) {
-          width: 90%;
+          width: 80%;
         }
         @include responsive(desktop) {
           // min-width: 320px;
@@ -756,7 +756,7 @@ $special-Color: #4c5eff;
       width: 100%;
 
       .overview-porfolio {
-        // border: 2px solid $darkBorderColor;
+        // border: 2px solid red;
         background-color: $bg;
         @include flexDisplay(space-between, center, row);
         padding: 0 15px;
@@ -765,11 +765,19 @@ $special-Color: #4c5eff;
         width: 315px;
         height: 71px;
 
+        @include responsive(smallPhone) {
+          width: 100%;
+        }
+
         span {
           background: whitesmoke;
           width: 138px;
           height: 41.17px;
           border-radius: 30px;
+
+          @include responsive(smallPhone) {
+            width: 48%;
+          }
           .overview {
             // border: 2px solid red;
             width: 48%;
@@ -782,6 +790,10 @@ $special-Color: #4c5eff;
             width: 138px;
             height: 41.17px;
             border-radius: 30px;
+
+            @include responsive(smallPhone) {
+              width: 100%;
+            }
           }
           .portfolio {
             // border: 2px solid red;
@@ -795,6 +807,10 @@ $special-Color: #4c5eff;
             width: 138px;
             height: 41.17px;
             border-radius: 30px;
+
+            @include responsive(smallPhone) {
+              width: 100%;
+            }
           }
         }
       }
@@ -807,7 +823,7 @@ $special-Color: #4c5eff;
     // HOME PAGE LOWER CARDS
     .stats-card {
       // border: 2px solid red;
-      @include flexDisplay(space-between, center, row);
+      @include flexDisplay(space-around, center, row);
       flex-wrap: wrap;
       border-radius: 5px;
       // order: 2;
@@ -823,7 +839,7 @@ $special-Color: #4c5eff;
       }
       @include responsive(smallPhone) {
         margin-top: 10px;
-        padding-bottom: 100px;
+        // padding-bottom: 100px;
         // border: 2px solid red;
       }
       // 4 CARDS
@@ -831,11 +847,11 @@ $special-Color: #4c5eff;
       .stats-card2,
       .stats-card3,
       .stats-card4 {
-        width: 30%;
+        width: 100%;
         // width: 45%;
         margin: 5px;
         height: 150px;
-        // min-width: 150px;
+        // min-width: 350px;
         // max-width: 300px;
         padding: 0 5px;
         position: relative;
@@ -847,13 +863,16 @@ $special-Color: #4c5eff;
         // border: 2px solid red;
         @include responsive(smallPhone) {
           // border: 2px solid red;
-          width: 45%;
+          // width: 45%;
         }
         @include responsive(bigphone) {
-          height: 250px;
+          width: 48%;
+          height: 210px;
         }
         @include responsive(desktop) {
-          // width: 40%;
+          width: 32%;
+          min-width: 366px;
+          height: 210px;
         }
 
         // card 1 properties
