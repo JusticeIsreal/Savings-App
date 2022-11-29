@@ -395,144 +395,6 @@ body {
   margin-left: 15px;
   cursor: pointer;
 }
-.sidebar .home .total-wallet-container .add-wallet-icon-container {
-  border: 2px dashed rgb(2, 107, 115);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 7px;
-  width: 270px;
-  height: 60px;
-  position: relative;
-  color: rgb(2, 107, 115);
-  transition: all 0.8s ease;
-  cursor: pointer;
-  margin-top: auto;
-  display: none;
-  padding: 5px 0;
-  -webkit-animation: bounce 2s linear infinite;
-          animation: bounce 2s linear infinite;
-}
-.sidebar .home .total-wallet-container .add-wallet-icon-container:hover {
-  background-color: #009daf;
-  border: none;
-}
-.sidebar .home .total-wallet-container .add-wallet-icon-container:hover .add-wallet-icon,
-.sidebar .home .total-wallet-container .add-wallet-icon-container:hover p {
-  color: #f1feff;
-}
-@media only screen and (min-width: 1280px) {
-  .sidebar .home .total-wallet-container .add-wallet-icon-container {
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-.sidebar .home .total-wallet-container .add-wallet-icon-container .add-wallet-icon {
-  font-size: 50px;
-  color: rgb(2, 107, 115);
-  -webkit-animation: bounce 2s linear infinite;
-          animation: bounce 2s linear infinite;
-}
-@-webkit-keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.sidebar .home .total-wallet-container .add-wallet-icon-container p {
-  color: rgb(2, 107, 115);
-  text-align: center;
-  font-size: 13px;
-}
-.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below {
-  border: 2px dashed rgb(2, 107, 115);
-  border-radius: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 7px;
-  width: 90%;
-  height: 60px;
-  position: relative;
-  color: #f1feff;
-  transition: all 0.8s ease;
-  cursor: pointer;
-  margin: 0 auto;
-  margin-top: -24px;
-  padding: 5px 0;
-  -webkit-animation: bounce 2s linear infinite;
-          animation: bounce 2s linear infinite;
-}
-.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover {
-  background-color: #009daf;
-  border: none;
-}
-.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover .add-wallet-icon-tablet-below,
-.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover p {
-  color: #f1feff;
-}
-.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover {
-  transform: scale(1.05);
-}
-@media only screen and (min-width: 750px) {
-  .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below {
-    width: 80%;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below {
-    display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    display: none;
-  }
-}
-.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below .add-wallet-icon-tablet-below {
-  font-size: 60px;
-  color: rgb(2, 107, 115);
-  -webkit-animation: bounce 3s linear infinite;
-          animation: bounce 3s linear infinite;
-}
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below p {
-  color: rgb(2, 107, 115);
-  text-align: center;
-  font-size: 13px;
-}
 .sidebar .home .card-slide-container .cardMap {
   display: flex;
   justify-content: space-between;
@@ -548,10 +410,37 @@ body {
     height: 250px;
   }
 }
-.sidebar .home .card-slide-container .cardMap .card {
-  border: 1px solid #009daf;
+.sidebar .home .card-slide-container .cardMap .add-wallet-icon-container {
+  border: 2px dashed #009daf;
   border-radius: 10px;
-  background-color: #009daf;
+  margin: 7px;
+  width: 30%;
+  min-width: 250px;
+  max-width: 500px;
+  height: 140px;
+  position: relative;
+  color: #009daf;
+  transition: all 0.8s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .home .card-slide-container .cardMap .add-wallet-icon-container {
+    min-width: 320px;
+    margin: 15px;
+    height: 170px;
+  }
+}
+.sidebar .home .card-slide-container .cardMap .add-wallet-icon-container .add-wallet-icon {
+  font-size: 50px;
+}
+.sidebar .home .card-slide-container .cardMap .add-wallet-icon-container p {
+  font-size: 13px;
+}
+.sidebar .home .card-slide-container .cardMap .main-card {
   margin: 7px;
   width: 30%;
   min-width: 250px;
@@ -559,32 +448,53 @@ body {
   height: 140px;
   position: relative;
   color: #f1feff;
-  transition: all 0.8s ease;
-  cursor: pointer;
-}
-.sidebar .home .card-slide-container .cardMap .card:hover {
-  transform: scale(1.05);
 }
 @media only screen and (min-width: 750px) {
-  .sidebar .home .card-slide-container .cardMap .card {
+  .sidebar .home .card-slide-container .cardMap .main-card {
     min-width: 320px;
     margin: 15px;
     height: 170px;
   }
 }
-.sidebar .home .card-slide-container .cardMap .card .logo {
+.sidebar .home .card-slide-container .cardMap .main-card:hover .card {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.sidebar .home .card-slide-container .cardMap .main-card .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+.sidebar .home .card-slide-container .cardMap .main-card .card .front,
+.sidebar .home .card-slide-container .cardMap .main-card .card .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: 1px solid #009daf;
+  border-radius: 10px;
+  background-color: #009daf;
+}
+.sidebar .home .card-slide-container .cardMap .main-card .card .back {
+  transform: rotateY(180deg);
+  background-color: #009daf;
+}
+.sidebar .home .card-slide-container .cardMap .main-card .card .logo {
   position: absolute;
   width: 70px;
   right: 10px;
   bottom: -15px;
 }
-.sidebar .home .card-slide-container .cardMap .card .walletName {
+.sidebar .home .card-slide-container .cardMap .main-card .card .walletName {
   position: absolute;
   right: 10px;
   top: 5px;
   font-size: 12px;
 }
-.sidebar .home .card-slide-container .cardMap .card .card-status {
+.sidebar .home .card-slide-container .cardMap .main-card .card .card-status {
   position: absolute;
   top: 5px;
   font-size: 13px;
@@ -594,33 +504,33 @@ body {
   padding: 2px 5px;
   border-radius: 10px;
 }
-.sidebar .home .card-slide-container .cardMap .card .card-status .active {
+.sidebar .home .card-slide-container .cardMap .main-card .card .card-status .active {
   margin-left: 2px;
   margin-bottom: -2px;
 }
-.sidebar .home .card-slide-container .cardMap .card .card-status .on-hold {
+.sidebar .home .card-slide-container .cardMap .main-card .card .card-status .on-hold {
   margin-left: 2px;
   margin-bottom: -2px;
   display: none;
 }
-.sidebar .home .card-slide-container .cardMap .card .card-amount {
+.sidebar .home .card-slide-container .cardMap .main-card .card .card-amount {
   position: absolute;
   top: 55%;
   left: 20px;
 }
-.sidebar .home .card-slide-container .cardMap .card .card-number {
+.sidebar .home .card-slide-container .cardMap .main-card .card .card-number {
   position: absolute;
   top: 60%;
   font-size: 13px;
   left: 20px;
 }
-.sidebar .home .card-slide-container .cardMap .card .card-expiration {
+.sidebar .home .card-slide-container .cardMap .main-card .card .card-expiration {
   position: absolute;
   top: 73%;
   font-size: 8px;
   left: 20px;
 }
-.sidebar .home .card-slide-container .cardMap .card .card-cardHolder {
+.sidebar .home .card-slide-container .cardMap .main-card .card .card-cardHolder {
   position: absolute;
   top: 82%;
   left: 20px;
@@ -675,18 +585,12 @@ body {
   margin-top: 0px;
 }
 .sidebar .homeLowerPart {
-  margin-top: 50px;
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-}
-@media only screen and (min-width: 1280px) {
-  .sidebar .homeLowerPart {
-    margin-top: 50px;
-  }
 }
 .sidebar .homeLowerPart .Tabs {
   width: 100%;
@@ -712,6 +616,14 @@ body {
   width: 138px;
   height: 41.17px;
   border-radius: 30px;
+}
+.sidebar .homeLowerPart .Tabs .overview-porfolio span:hover .overview {
+  background: #009daf;
+  color: #f1feff;
+}
+.sidebar .homeLowerPart .Tabs .overview-porfolio span:hover .portfolio {
+  background: #009daf;
+  color: #f1feff;
 }
 @media only screen and (max-width: 380px) {
   .sidebar .homeLowerPart .Tabs .overview-porfolio span {

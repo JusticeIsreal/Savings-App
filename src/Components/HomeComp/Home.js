@@ -153,30 +153,34 @@ function Home() {
               <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
               <AiFillEye className="hide-total-savings-icon" />
             </div>
-          </div>{" "}
-          <div className="add-wallet-icon-container">
-            <HiPlus className="add-wallet-icon" />
-            <p>Create new wallet</p>
           </div>
         </div>
         {/*card wallet container */}
         <div className="card-slide-container">
           {" "}
           <div className="cardMap">
-            {/* <div className="add-wallet-icon-container">
-            <HiPlus className="add-wallet-icon" />
-            <p>Create wallet</p>
-          </div> */}
+            <div className="add-wallet-icon-container">
+              <HiPlus className="add-wallet-icon" />
+              <p>Create new wallet</p>
+            </div>
             {cardDetails.map((card) => (
-              <div className="card" key={card.id}>
-                <SavingsCard {...card} />
+              <div className="main-card">
+                {" "}
+                <div className="card" key={card.id}>
+                  <div className="front">
+                    <SavingsCard {...card} />
+                  </div>
+                  <div className="back">
+                    <CardBack {...card} />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-          <div className="add-wallet-icon-container-tablet-below">
+          {/* <div className="add-wallet-icon-container-tablet-below">
             <HiPlus className="add-wallet-icon-tablet-below" />
             <p>Create new wallet</p>
-          </div>
+          </div> */}
         </div>
 
         {/* end of card wallet  */}
@@ -281,6 +285,34 @@ function SavingsCard({
       <h1 className="card-amount">₦{amount}</h1>
       <p className="card-expiration">{expirationDate}</p>
       <h5 className="card-cardHolder">{cardHolderName}</h5>
+    </>
+  );
+}
+
+function CardBack({
+  logo,
+  walletName,
+  amount,
+  cardStatus,
+  expirationDate,
+  cardHolderName,
+}) {
+  return (
+    <>
+      <img src={logo} alt="" className="logo" />
+      <h3 className="walletName">{walletName}</h3>
+      <p className="card-status">
+        {cardStatus !== "Active" ? "On-hold" : cardStatus}
+        <MdRadioButtonChecked
+          className={`${cardStatus === "Active" ? "active" : "on-hold"}`}
+        />
+        <FcCancel
+          className={`${cardStatus === "Active" ? "on-hold" : "active"}`}
+        />
+      </p>
+      {/* <h1 className="card-amount">₦{amount}</h1> */}
+      {/* <p className="card-expiration">{expirationDate}</p> */}
+      {/* <h5 className="card-cardHolder">{cardHolderName}</h5> */}
     </>
   );
 }
