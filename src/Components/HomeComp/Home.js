@@ -85,8 +85,8 @@ function Home() {
               <Link to="/">
                 <li
                   style={{
-                    backgroundColor: "rgb(2, 107, 115)",
-                    color: "rgb(238, 253, 254)",
+                    backgroundColor: "#009daf",
+                    color: "#f1feff",
                   }}
                 >
                   <span>
@@ -155,21 +155,29 @@ function Home() {
           </div>{" "}
           <div className="add-wallet-icon-container">
             <HiPlus className="add-wallet-icon" />
-            <p>Create wallet</p>
+            <p>Create new wallet</p>
           </div>
         </div>
         {/*card wallet container */}
-        <div className="cardMap">
-          {/* <div className="add-wallet-icon-container">
+        <div className="card-slide-container">
+          {" "}
+          <div className="cardMap">
+            {/* <div className="add-wallet-icon-container">
             <HiPlus className="add-wallet-icon" />
             <p>Create wallet</p>
           </div> */}
-          {cardDetails.map((card) => (
-            <div className="card" key={card.id}>
-              <SavingsCard {...card} />
-            </div>
-          ))}
+            {cardDetails.map((card) => (
+              <div className="card" key={card.id}>
+                <SavingsCard {...card} />
+              </div>
+            ))}
+          </div>
+          <div className="add-wallet-icon-container-tablet-below">
+            <HiPlus className="add-wallet-icon-tablet-below" />
+            <p>Create new wallet</p>
+          </div>
         </div>
+
         {/* end of card wallet  */}
 
         {/* Fund details container*/}
@@ -182,16 +190,21 @@ function Home() {
             className="Tabs"
           >
             <Tabs.List className="overview-porfolio">
-              <Tabs.Tab value="gallery" className="overview">
-                Overview
-              </Tabs.Tab>
-              <Tabs.Tab value="messages" className="portfolio">
-                Portfolio
-              </Tabs.Tab>
+              <span>
+                <Tabs.Tab value="gallery" className="overview">
+                  Overview
+                </Tabs.Tab>
+              </span>
+              <span>
+                {" "}
+                <Tabs.Tab value="messages" className="portfolio">
+                  Portfolio
+                </Tabs.Tab>
+              </span>
             </Tabs.List>
-            <h2 className="Conceive-it-Achieve-it">
+            {/* <h2 className="Conceive-it-Achieve-it">
               Conceive it, Achieve it ...
-            </h2>
+            </h2> */}
             <Tabs.Panel value="gallery" pt="xs">
               <div className="stats-card">
                 <div className="stats-card1">

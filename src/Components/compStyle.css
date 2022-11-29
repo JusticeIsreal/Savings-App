@@ -32,13 +32,14 @@ body {
   align-items: center;
   flex-direction: row;
   position: absolute;
-  height: 60px;
+  height: 70px;
   width: 100%;
   padding: 0 5px;
   top: 0;
   right: 0;
   position: fixed;
-  background-color: rgb(238, 253, 254);
+  background-color: #f1feff;
+  border-radius: 20px 20px 0px 0px;
   z-index: 2;
 }
 @media only screen and (min-width: 750px) {
@@ -147,7 +148,7 @@ body {
   bottom: 0;
   position: fixed;
   padding: 10px;
-  background-color: rgb(238, 253, 254);
+  background-color: #f1feff;
   z-index: 2;
 }
 @media only screen and (min-width: 750px) {
@@ -184,7 +185,7 @@ body {
 }
 @media only screen and (min-width: 750px) {
   .sidebar .sidebar-container .logo-container h3 {
-    color: rgb(2, 107, 115);
+    color: #009daf;
     text-align: center;
   }
 }
@@ -227,11 +228,11 @@ body {
   cursor: pointer;
   border-radius: 5px;
   padding: 0 5px;
-  color: rgb(2, 107, 115);
+  color: #009daf;
 }
 .sidebar .sidebar-container .sidebar-nav-container Nav ul li:hover {
-  background-color: rgb(2, 107, 115);
-  color: rgb(238, 253, 254);
+  background-color: #009daf;
+  color: #f1feff;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .sidebar-container .sidebar-nav-container Nav ul li {
@@ -241,7 +242,7 @@ body {
     flex-direction: row;
     font-size: 16px;
     font-weight: 500;
-    border: 1px solid rgb(2, 107, 115);
+    border: 1px solid #009daf;
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
@@ -315,6 +316,14 @@ body {
   z-index: 5;
   color: rgb(2, 107, 115);
   position: absolute;
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  /* identical to box height */
+  /* AJIS DARK */
+  color: #009daf;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .home .Wallet-Overview {
@@ -344,10 +353,19 @@ body {
   align-items: center;
   flex-direction: row;
   color: rgb(2, 107, 115);
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  /* identical to box height */
+  /* AJIS MAIN */
+  color: #009daf;
 }
 @media only screen and (min-width: 750px) {
   .sidebar .home .total-wallet-container .total-savings {
     margin-top: 50px;
+    font-size: 23px;
   }
 }
 .sidebar .home .total-wallet-container .total-savings .total-savings-icon {
@@ -356,7 +374,7 @@ body {
   cursor: pointer;
 }
 .sidebar .home .total-wallet-container sup {
-  color: rgb(2, 107, 115);
+  color: #009daf;
   font-size: 12px;
 }
 .sidebar .home .total-wallet-container .total-savings-amount {
@@ -365,7 +383,7 @@ body {
   align-items: center;
   flex-direction: row;
   font-size: 20px;
-  color: rgb(2, 107, 115);
+  color: #009daf;
 }
 .sidebar .home .total-wallet-container .total-savings-amount .hide-total-savings-icon {
   font-size: 30px;
@@ -373,8 +391,7 @@ body {
   cursor: pointer;
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container {
-  border: 2px dashed rgb(2, 107, 115);
-  border-radius: 7px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -383,11 +400,13 @@ body {
   width: 270px;
   height: 60px;
   position: relative;
-  color: rgb(238, 253, 254);
+  color: #f1feff;
   transition: all 0.8s ease;
   cursor: pointer;
   margin-top: auto;
   display: none;
+  padding: 5px 0;
+  background-color: rgb(2, 107, 115);
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container:hover {
   transform: scale(1.05);
@@ -403,7 +422,7 @@ body {
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container .add-wallet-icon {
   font-size: 50px;
-  color: rgb(2, 107, 115);
+  color: #f1feff;
   -webkit-animation: bounce 2s linear infinite;
           animation: bounce 2s linear infinite;
 }
@@ -430,11 +449,70 @@ body {
   }
 }
 .sidebar .home .total-wallet-container .add-wallet-icon-container p {
-  color: rgb(2, 107, 115);
+  color: #f1feff;
   text-align: center;
-  font-size: 10px;
+  font-size: 13px;
 }
-.sidebar .home .cardMap {
+.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below {
+  border: 2px dashed rgb(2, 107, 115);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 7px;
+  width: 97%;
+  height: 50px;
+  position: relative;
+  color: #f1feff;
+  transition: all 0.8s ease;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-top: -30px;
+  padding: 5px 0;
+  background: #025760;
+}
+.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below:hover {
+  transform: scale(1.05);
+}
+@media only screen and (min-width: 750px) {
+  .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+  }
+}
+.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below .add-wallet-icon-tablet-below {
+  font-size: 50px;
+  color: #f1feff;
+  -webkit-animation: bounce 2s linear infinite;
+          animation: bounce 2s linear infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.sidebar .home .card-slide-container .add-wallet-icon-container-tablet-below p {
+  color: #f1feff;
+  text-align: center;
+  font-size: 13px;
+}
+.sidebar .home .card-slide-container .cardMap {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -445,83 +523,83 @@ body {
   height: 200px;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar .home .cardMap {
+  .sidebar .home .card-slide-container .cardMap {
     height: 250px;
   }
 }
-.sidebar .home .cardMap .card {
-  border: 1px solid rgb(2, 107, 115);
+.sidebar .home .card-slide-container .cardMap .card {
+  border: 1px solid #009daf;
   border-radius: 10px;
-  background-color: rgb(2, 107, 115);
+  background-color: #009daf;
   margin: 7px;
   width: 30%;
   min-width: 250px;
   max-width: 500px;
   height: 140px;
   position: relative;
-  color: rgb(238, 253, 254);
+  color: #f1feff;
   transition: all 0.8s ease;
   cursor: pointer;
 }
-.sidebar .home .cardMap .card:hover {
+.sidebar .home .card-slide-container .cardMap .card:hover {
   transform: scale(1.05);
 }
 @media only screen and (min-width: 750px) {
-  .sidebar .home .cardMap .card {
+  .sidebar .home .card-slide-container .cardMap .card {
     min-width: 320px;
     margin: 15px;
     height: 170px;
   }
 }
-.sidebar .home .cardMap .card .logo {
+.sidebar .home .card-slide-container .cardMap .card .logo {
   position: absolute;
   width: 70px;
   right: 10px;
   bottom: -15px;
 }
-.sidebar .home .cardMap .card .walletName {
+.sidebar .home .card-slide-container .cardMap .card .walletName {
   position: absolute;
   right: 10px;
   top: 5px;
   font-size: 12px;
 }
-.sidebar .home .cardMap .card .card-status {
+.sidebar .home .card-slide-container .cardMap .card .card-status {
   position: absolute;
   top: 5px;
   font-size: 13px;
   left: 20px;
-  background-color: rgb(238, 253, 254);
+  background-color: #f1feff;
   color: rgb(2, 107, 115);
   padding: 2px 5px;
   border-radius: 10px;
 }
-.sidebar .home .cardMap .card .card-status .active {
+.sidebar .home .card-slide-container .cardMap .card .card-status .active {
   margin-left: 2px;
   margin-bottom: -2px;
 }
-.sidebar .home .cardMap .card .card-status .on-hold {
+.sidebar .home .card-slide-container .cardMap .card .card-status .on-hold {
   margin-left: 2px;
   margin-bottom: -2px;
   display: none;
 }
-.sidebar .home .cardMap .card .card-amount {
+.sidebar .home .card-slide-container .cardMap .card .card-amount {
   position: absolute;
   top: 55%;
   left: 20px;
 }
-.sidebar .home .cardMap .card .card-number {
+.sidebar .home .card-slide-container .cardMap .card .card-number {
   position: absolute;
   top: 60%;
   font-size: 13px;
   left: 20px;
 }
-.sidebar .home .cardMap .card .card-expiration {
+.sidebar .home .card-slide-container .cardMap .card .card-expiration {
   position: absolute;
   top: 73%;
   font-size: 8px;
   left: 20px;
 }
-.sidebar .home .cardMap .card .card-cardHolder {
+.sidebar .home .card-slide-container .cardMap .card .card-cardHolder {
   position: absolute;
   top: 82%;
   left: 20px;
@@ -576,7 +654,7 @@ body {
   margin-top: 0px;
 }
 .sidebar .homeLowerPart {
-  margin-top: 0px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -592,35 +670,41 @@ body {
   width: 100%;
 }
 .sidebar .homeLowerPart .Tabs .overview-porfolio {
-  background-color: rgb(238, 253, 254);
+  background-color: #f1feff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   padding: 0 15px;
   border-radius: 40px;
-  width: 100%;
-  height: 70px;
+  width: 315px;
+  height: 71px;
 }
-@media only screen and (min-width: 750px) {
-  .sidebar .homeLowerPart .Tabs .overview-porfolio {
-    width: 400px;
-    height: 80px;
-  }
+.sidebar .homeLowerPart .Tabs .overview-porfolio span {
+  background: whitesmoke;
+  width: 138px;
+  height: 41.17px;
+  border-radius: 30px;
 }
-.sidebar .homeLowerPart .Tabs .overview-porfolio .overview {
+.sidebar .homeLowerPart .Tabs .overview-porfolio span .overview {
   width: 48%;
   color: rgb(2, 107, 115);
   font-weight: 600;
   border-radius: 40px;
   height: 80%;
+  width: 138px;
+  height: 41.17px;
+  border-radius: 30px;
 }
-.sidebar .homeLowerPart .Tabs .overview-porfolio .portfolio {
+.sidebar .homeLowerPart .Tabs .overview-porfolio span .portfolio {
   width: 48%;
   color: rgb(2, 107, 115);
   font-weight: 600;
   border-radius: 40px;
   height: 80%;
+  width: 138px;
+  height: 41.17px;
+  border-radius: 30px;
 }
 .sidebar .homeLowerPart .Tabs .Conceive-it-Achieve-it {
   color: rgb(2, 107, 115);

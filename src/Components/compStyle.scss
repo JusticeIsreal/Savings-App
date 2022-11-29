@@ -36,13 +36,11 @@ body {
 }
 
 // GLOBAL STYLES
-$shadow: 4px 4px 10px rgba(65, 105, 225, 0.089);
 $darkBg: rgb(2, 107, 115);
-$bg: rgb(238, 253, 254);
+$bg: #f1feff;
 $darkBorderColor: rgb(2, 107, 115);
-$hover-Text-Color: #444444;
-$text-Color: rgb(68, 68, 68);
-$special-text-Color: royalblue;
+$text-Color: #009daf;
+$cardbg: #009daf;
 $special-Color: #4c5eff;
 
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
@@ -83,13 +81,14 @@ $special-Color: #4c5eff;
   // border-bottom: 1px solid rgb(174, 171, 171);
   @include flexDisplay(space-between, center, row);
   position: absolute;
-  height: 60px;
+  height: 70px;
   width: 100%;
   padding: 0 5px;
   top: 0;
   right: 0;
   position: fixed;
   background-color: $bg;
+  border-radius: 20px 20px 0px 0px;
   z-index: 2;
   @include responsive(bigphone) {
     // position: relative;
@@ -243,7 +242,7 @@ $special-Color: #4c5eff;
       h3 {
         @include responsive(bigphone) {
           // width: 120px;
-          color: $darkBorderColor;
+          color: $text-Color;
           // margin-top: 30px;
           text-align: center;
         }
@@ -274,17 +273,17 @@ $special-Color: #4c5eff;
             cursor: pointer;
             border-radius: 5px;
             padding: 0 5px;
-            color: $darkBg;
+            color: $cardbg;
 
             &:hover {
-              background-color: $darkBg;
+              background-color: $cardbg;
               color: $bg;
             }
             @include responsive(bigphone) {
               @include flexDisplay(flex-start, center, row);
               font-size: 16px;
               font-weight: 500;
-              border: 1px solid $darkBg;
+              border: 1px solid $cardbg;
               border-radius: 5px;
               margin: 10px;
               padding: 5px;
@@ -365,6 +364,17 @@ $special-Color: #4c5eff;
       color: $darkBg;
       position: absolute;
 
+      font-family: "Satoshi";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 49px;
+      /* identical to box height */
+
+      /* AJIS DARK */
+
+      color: $text-Color;
+
       @include responsive(bigphone) {
         font-size: 35px;
         margin-left: auto;
@@ -388,24 +398,37 @@ $special-Color: #4c5eff;
 
         // border: 1px solid red;
         color: $darkBg;
+
+        font-family: "Quicksand";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+        /* identical to box height */
+
+        /* AJIS MAIN */
+
+        color: #009daf;
         @include responsive(bigphone) {
           margin-top: 50px;
+          font-size: 23px;
         }
 
         .total-savings-icon {
           margin-bottom: -5px;
           font-size: 30px;
+
           cursor: pointer;
         }
       }
       sup {
-        color: $darkBg;
+        color: $text-Color;
         font-size: 12px;
       }
       .total-savings-amount {
         @include flexDisplay(flex-start, center, row);
         font-size: 20px;
-        color: $darkBg;
+        color: $text-Color;
 
         .hide-total-savings-icon {
           // margin-bottom: -10px;
@@ -416,11 +439,10 @@ $special-Color: #4c5eff;
       }
 
       .add-wallet-icon-container {
-        border: 2px dashed $darkBg;
-        border-radius: 7px;
+        // border: 2px dashed $darkBg;
+        border-radius: 10px;
         @include flexDisplay(center, center, column);
 
-        // background-color: $darkBg;
         margin: 7px;
         width: 270px;
         // min-width: 250px;
@@ -432,6 +454,8 @@ $special-Color: #4c5eff;
         cursor: pointer;
         margin-top: auto;
         display: none;
+        padding: 5px 0;
+        background-color: $darkBg;
 
         &:hover {
           transform: scale(1.05);
@@ -449,7 +473,7 @@ $special-Color: #4c5eff;
           // @include flexDisplay(space-around, center, row);
           font-size: 50px;
           // margin: 0 auto;
-          color: $darkBg;
+          color: $bg;
           animation: bounce 2s linear infinite;
         }
 
@@ -465,103 +489,168 @@ $special-Color: #4c5eff;
           }
         }
         p {
-          color: $darkBg;
+          color: $bg;
           text-align: center;
-          font-size: 10px;
+          font-size: 13px;
         }
       }
     }
-
-    .cardMap {
-      @include flexDisplay(space-between, center, row);
-      margin: 0 auto;
+    .card-slide-container {
       // border: 5px solid red;
-      overflow-y: scroll;
-      width: 100%;
-      height: 200px;
+      .add-wallet-icon-container-tablet-below {
+        border: 2px dashed $darkBg;
+        border-radius: 7px;
+        @include flexDisplay(center, center, column);
 
-      @include responsive(bigphone) {
-        height: 250px;
-      }
-      .card {
-        border: 1px solid $darkBg;
-        border-radius: 10px;
-        background-color: $darkBg;
+        // background-color: $darkBg;
         margin: 7px;
-        width: 30%;
-        min-width: 250px;
-        max-width: 500px;
-        height: 140px;
+        width: 97%;
+        // min-width: 250px;
+        // max-width: 500px;
+        height: 50px;
         position: relative;
         color: $bg;
         transition: all 0.8s ease;
         cursor: pointer;
+        margin: 0 auto;
+        margin-top: -30px;
+        padding: 5px 0;
+        background: #025760;
+
+        // display: none;
 
         &:hover {
           transform: scale(1.05);
         }
         @include responsive(bigphone) {
-          min-width: 320px;
-          margin: 15px;
-          height: 170px;
+          width: 90%;
+        }
+        @include responsive(desktop) {
+          // min-width: 320px;
+          display: block;
+          @include flexDisplay(center, center, column);
+          display: none;
+          // margin: 15px;
+          // height: 170px;
         }
 
-        .logo {
-          position: absolute;
-          width: 70px;
-          right: 10px;
-          bottom: -15px;
+        .add-wallet-icon-tablet-below {
+          // @include flexDisplay(space-around, center, row);
+          font-size: 50px;
+          // margin: 0 auto;
+          color: $bg;
+
+          animation: bounce 2s linear infinite;
         }
-        .walletName {
-          position: absolute;
-          right: 10px;
-          top: 5px;
-          font-size: 12px;
+
+        @keyframes bounce {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(1);
+          }
         }
-        .card-status {
-          position: absolute;
-          top: 5px;
+        p {
+          color: $bg;
+          text-align: center;
           font-size: 13px;
-          left: 20px;
-          background-color: $bg;
-          color: $darkBg;
-          padding: 2px 5px;
+        }
+      }
+      .cardMap {
+        @include flexDisplay(space-between, center, row);
+        margin: 0 auto;
+        // border: 5px solid red;
+        overflow-y: scroll;
+        width: 100%;
+        height: 200px;
+
+        @include responsive(bigphone) {
+          height: 250px;
+        }
+        .card {
+          border: 1px solid $cardbg;
           border-radius: 10px;
+          background-color: $cardbg;
+          margin: 7px;
+          width: 30%;
+          min-width: 250px;
+          max-width: 500px;
+          height: 140px;
+          position: relative;
+          color: $bg;
+          transition: all 0.8s ease;
+          cursor: pointer;
 
-          .active {
-            margin-left: 2px;
-            margin-bottom: -2px;
+          &:hover {
+            transform: scale(1.05);
+          }
+          @include responsive(bigphone) {
+            min-width: 320px;
+            margin: 15px;
+            height: 170px;
           }
 
-          .on-hold {
-            margin-left: 2px;
-            margin-bottom: -2px;
-            display: none;
+          .logo {
+            position: absolute;
+            width: 70px;
+            right: 10px;
+            bottom: -15px;
           }
-        }
+          .walletName {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 12px;
+          }
+          .card-status {
+            position: absolute;
+            top: 5px;
+            font-size: 13px;
+            left: 20px;
+            background-color: $bg;
+            color: $darkBg;
+            padding: 2px 5px;
+            border-radius: 10px;
 
-        .card-amount {
-          position: absolute;
-          top: 55%;
-          left: 20px;
-        }
-        .card-number {
-          position: absolute;
-          top: 60%;
-          font-size: 13px;
-          left: 20px;
-        }
-        .card-expiration {
-          position: absolute;
-          top: 73%;
-          font-size: 8px;
-          left: 20px;
-        }
-        .card-cardHolder {
-          position: absolute;
-          top: 82%;
-          //   font-size: 10px;
-          left: 20px;
+            .active {
+              margin-left: 2px;
+              margin-bottom: -2px;
+            }
+
+            .on-hold {
+              margin-left: 2px;
+              margin-bottom: -2px;
+              display: none;
+            }
+          }
+
+          .card-amount {
+            position: absolute;
+            top: 55%;
+            left: 20px;
+          }
+          .card-number {
+            position: absolute;
+            top: 60%;
+            font-size: 13px;
+            left: 20px;
+          }
+          .card-expiration {
+            position: absolute;
+            top: 73%;
+            font-size: 8px;
+            left: 20px;
+          }
+          .card-cardHolder {
+            position: absolute;
+            top: 82%;
+            //   font-size: 10px;
+            left: 20px;
+          }
         }
       }
     }
@@ -634,7 +723,7 @@ $special-Color: #4c5eff;
   }
   .homeLowerPart {
     // border: 2px solid red;
-    margin-top: 0px;
+    margin-top: 50px;
     @include flexDisplay(space-between, center, row);
     flex-wrap: wrap;
     @include responsive(desktop) {
@@ -650,29 +739,41 @@ $special-Color: #4c5eff;
         @include flexDisplay(space-between, center, row);
         padding: 0 15px;
         border-radius: 40px;
-        width: 100%;
-        height: 70px;
-        @include responsive(bigphone) {
-          width: 400px;
-          height: 80px;
-        }
-        .overview {
-          // border: 2px solid red;
-          width: 48%;
-          color: $darkBg;
-          font-weight: 600;
-          // background-color: #fff;
-          border-radius: 40px;
-          height: 80%;
-        }
-        .portfolio {
-          // border: 2px solid red;
-          width: 48%;
-          color: $darkBg;
-          font-weight: 600;
-          // background-color: #fff;
-          border-radius: 40px;
-          height: 80%;
+
+        width: 315px;
+        height: 71px;
+
+        span {
+          background: whitesmoke;
+          width: 138px;
+            height: 41.17px;
+            border-radius: 30px;
+          .overview {
+            // border: 2px solid red;
+            width: 48%;
+            color: $darkBg;
+            font-weight: 600;
+            // background-color: #fff;
+            border-radius: 40px;
+            height: 80%;
+
+            width: 138px;
+            height: 41.17px;
+            border-radius: 30px;
+          }
+          .portfolio {
+            // border: 2px solid red;
+            width: 48%;
+            color: $darkBg;
+            font-weight: 600;
+            // background-color: #fff;
+            border-radius: 40px;
+            height: 80%;
+
+            width: 138px;
+            height: 41.17px;
+            border-radius: 30px;
+          }
         }
       }
       .Conceive-it-Achieve-it {
