@@ -746,6 +746,7 @@ $special-Color: #4c5eff;
   .homeLowerPart {
     // border: 2px solid red;
     margin-top: 50px;
+    padding-bottom: 30px;
     @include flexDisplay(space-between, center, row);
     flex-wrap: wrap;
     @include responsive(desktop) {

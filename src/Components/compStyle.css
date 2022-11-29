@@ -674,6 +674,7 @@ body {
 }
 .sidebar .homeLowerPart {
   margin-top: 50px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
