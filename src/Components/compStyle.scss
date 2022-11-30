@@ -79,7 +79,7 @@ $darkestBg: #025760;
 
 // TOPBAR SESSION
 .topbar-container {
-  border-bottom: 1px solid rgb(174, 171, 171);
+  // border-bottom: 1px solid rgb(174, 171, 171);
   @include flexDisplay(space-between, center, row);
   position: absolute;
   height: 70px;

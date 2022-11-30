@@ -61,7 +61,7 @@ const cardDetails = [
   },
   {
     id: 6,
-    walletName: "Upkeep",
+    walletName: "New laptop",
     logo:
       "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
     amount: 90400,
@@ -73,7 +73,7 @@ const cardDetails = [
   },
   {
     id: 7,
-    walletName: "Upkeep",
+    walletName: "Siblings",
     logo:
       "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
     amount: 8000,
@@ -85,7 +85,7 @@ const cardDetails = [
   },
   {
     id: 8,
-    walletName: "Upkeep",
+    walletName: "Vacation",
     logo:
       "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
     amount: 40600,
@@ -97,12 +97,12 @@ const cardDetails = [
   },
   {
     id: 9,
-    walletName: "Upkeep",
+    walletName: "New phone",
     logo:
       "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
     amount: 5600,
     target: 10000,
-    cardStatus: "Active",
+    cardStatus: "Activ",
     expirationDate: "02/12/22",
     cardHolderName: "JUSTICE AGBOMA",
     transactionStatus: "Success",
