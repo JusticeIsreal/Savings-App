@@ -59,5 +59,53 @@ const cardDetails = [
     cardHolderName: "JUSTICE AGBOMA",
     transactionStatus: "Success",
   },
+  {
+    id: 6,
+    walletName: "Upkeep",
+    logo:
+      "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
+    amount: 90400,
+    target: 17000,
+    cardStatus: "Active",
+    expirationDate: "02/12/22",
+    cardHolderName: "JUSTICE AGBOMA",
+    transactionStatus: "Success",
+  },
+  {
+    id: 7,
+    walletName: "Upkeep",
+    logo:
+      "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
+    amount: 8000,
+    target: 20000,
+    cardStatus: "Active",
+    expirationDate: "02/12/22",
+    cardHolderName: "JUSTICE AGBOMA",
+    transactionStatus: "Success",
+  },
+  {
+    id: 8,
+    walletName: "Upkeep",
+    logo:
+      "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
+    amount: 40600,
+    target: 1009000,
+    cardStatus: "Active",
+    expirationDate: "02/12/22",
+    cardHolderName: "JUSTICE AGBOMA",
+    transactionStatus: "Success",
+  },
+  {
+    id: 9,
+    walletName: "Upkeep",
+    logo:
+      "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png",
+    amount: 5600,
+    target: 10000,
+    cardStatus: "Active",
+    expirationDate: "02/12/22",
+    cardHolderName: "JUSTICE AGBOMA",
+    transactionStatus: "Success",
+  },
 ];
 export default cardDetails;

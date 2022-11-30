@@ -15,7 +15,7 @@ import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
 import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
 import "../compStyle.css";
-import Test from "../WalletComponent/Test";
+import Test from "./Test";
 
 function Wallet() {
   // total savings amount

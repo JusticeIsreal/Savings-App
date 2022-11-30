@@ -2,17 +2,17 @@ import { useState } from "react";
 
 import BarChart from "./BarChart";
 import { ChartData } from "./ChartData";
-import cardDetails from "../HomeComp/data";
+import cardDetails from "../HomeComp/data.js";
 
 function Test() {
   const [userData, setUserData] = useState({
-    labels: cardDetails.map((data) => data.savingsType),
+    labels: cardDetails.map((data) => data.walletName),
     datasets: [
       {
         label: "Savings",
         data: cardDetails.map((data) => data.amount),
-        backgroundColor: cardDetails.map((data) => data.backgroundColor),
-        borderColor: "rgba(0, 0, 0, 0.1)",
+        backgroundColor: "#009daf",
+        borderColor: "#009daf",
         borderWidth: 0.5,
         barPercentage: 0.8,
         borderRadius: 10,
