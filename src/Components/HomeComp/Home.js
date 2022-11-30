@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useContext } from "react";
 import cardDetails from "./data";
 import { FaHome, FaChartLine, FaChartBar, FaMoneyCheck } from "react-icons/fa";
 import {
@@ -11,10 +11,11 @@ import {
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
 import { FcCancel } from "react-icons/fc";
+import { SiDraugiemdotlv } from "react-icons/si";
 import { GiCoins } from "react-icons/gi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
-import { AiFillEye } from "react-icons/ai";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
@@ -22,11 +23,13 @@ import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
 import "../compStyle.css";
 import Test from "../WalletComponent/Test";
 import { Link } from "react-router-dom";
+import AppContext from "../../StateManagement/AppProvider";
 
 // mantine ui for switch tab
 import { Tabs } from "@mantine/core";
 
 function Home() {
+  const { seeTotalFunc, seeAmount } = useContext(AppContext);
   // total savings amount
   let yy = cardDetails.reduce(function (acc, card) {
     return acc + card.amount;
@@ -150,8 +153,26 @@ function Home() {
             </h2>
             <sup>You have {cardDetails.length} wallets</sup>
             <div className="total-savings-amount">
-              <h1>₦ {(yy * d.getMonth()).toFixed(1)}</h1>
-              <AiFillEye className="hide-total-savings-icon" />
+              <h1>
+                ₦{" "}
+                {seeAmount
+                  ? (yy * d.getMonth()).toFixed(1)
+                  : [(yy * d.getMonth()).toFixed(1)]
+                      .join("")
+                      .split("")
+                      .fill("x")}
+              </h1>
+              {seeAmount ? (
+                <AiFillEye
+                  className="hide-total-savings-icon"
+                  onClick={() => seeTotalFunc(!seeAmount)}
+                />
+              ) : (
+                <AiFillEyeInvisible
+                  className="hide-total-savings-icon"
+                  onClick={() => seeTotalFunc(!seeAmount)}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -164,7 +185,7 @@ function Home() {
               <p>Create new wallet</p>
             </div>
             {cardDetails.map((card) => (
-              <div className="main-card">
+              <div className="main-card" key={card.id}>
                 {" "}
                 <div className="card" key={card.id}>
                   <div className="front">
@@ -269,6 +290,7 @@ function SavingsCard({
   expirationDate,
   cardHolderName,
 }) {
+  const { seeAmount } = useContext(AppContext);
   return (
     <>
       <img src={logo} alt="" className="logo" />
@@ -282,7 +304,9 @@ function SavingsCard({
           className={`${cardStatus === "Active" ? "on-hold" : "active"}`}
         />
       </p>
-      <h1 className="card-amount">₦{amount}</h1>
+      <h1 className="card-amount">
+        ₦{seeAmount ? amount : [amount].join("").split("").fill("x")}
+      </h1>
       <p className="card-expiration">{expirationDate}</p>
       <h5 className="card-cardHolder">{cardHolderName}</h5>
     </>
@@ -299,7 +323,10 @@ function CardBack({
 }) {
   return (
     <>
-      <img src={logo} alt="" className="logo" />
+      <h3>Hey vicki</h3>
+      <p>What info do u suggest i put here</p>
+
+      {/* <img src={logo} alt="" className="logo" />
       <h3 className="walletName">{walletName}</h3>
       <p className="card-status">
         {cardStatus !== "Active" ? "On-hold" : cardStatus}
@@ -309,8 +336,10 @@ function CardBack({
         <FcCancel
           className={`${cardStatus === "Active" ? "on-hold" : "active"}`}
         />
-      </p>
-      {/* <h1 className="card-amount">₦{amount}</h1> */}
+      </p> */}
+      {/* <h1 className="card-amount">
+        <SiDraugiemdotlv />
+      </h1> */}
       {/* <p className="card-expiration">{expirationDate}</p> */}
       {/* <h5 className="card-cardHolder">{cardHolderName}</h5> */}
     </>
