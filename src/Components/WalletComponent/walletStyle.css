@@ -62,6 +62,27 @@ body {
     margin-left: 25px;
   }
 }
+.dynamic-wallet-main-container .dynamic-waller-header {
+  color: #025760;
+  margin: 10px;
+  margin-top: 29px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+}
+.dynamic-wallet-main-container .dynamic-waller-header span {
+  color: #009daf;
+  text-decoration: underline;
+}
+@media only screen and (min-width: 750px) {
+  .dynamic-wallet-main-container .dynamic-waller-header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 86px;
+    margin-left: 20px;
+  }
+}
 .dynamic-wallet-main-container .dynamic-wallet {
   display: flex;
   justify-content: flex-start;
@@ -78,14 +99,17 @@ body {
     flex-direction: row;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-retails {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details {
+  border: 2px solid red;
   width: 100%;
+  margin: 0 auto;
   margin-top: 40px;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-retails {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details {
     width: calc(100% - 450px);
-    margin-top: -150px;
+    margin-top: -130px;
+    height: 100%;
   }
 }
 .dynamic-wallet-main-container .dynamic-wallet .main-card {
@@ -99,14 +123,14 @@ body {
   position: relative;
   color: #f1feff;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 20px;
   transition: all 0.8s ease;
   cursor: pointer;
 }
 @media only screen and (min-width: 750px) {
   .dynamic-wallet-main-container .dynamic-wallet .main-card {
     margin-top: 30px;
-    margin-left: 0;
+    margin-left: 20px;
     width: 400px;
     height: 200px;
   }

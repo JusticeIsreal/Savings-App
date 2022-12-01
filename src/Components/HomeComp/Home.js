@@ -32,18 +32,12 @@ import { Tabs } from "@mantine/core";
 function Home() {
   // const { id } = useParams();
   const { seeTotalFunc, seeAmount } = useContext(AppContext);
-  // total savings amount
-  let yy = cardDetails.reduce(function (acc, card) {
-    return acc + card.amount;
-  }, 0);
-  parseInt(yy);
 
   // total target amount
   let zz = cardDetails.reduce(function (acc, card) {
     return acc + card.target;
   }, 0);
   parseInt(zz);
-
   // officia logo
   const logo =
     "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png";
@@ -66,6 +60,15 @@ function Home() {
 
   const d = new Date();
   let month = months[d.getMonth()];
+  // Wallet total
+  let numberOfMonths = months.indexOf(month) + 1;
+
+  // total savings amount
+  let yy = cardDetails.reduce(function (acc, card) {
+    return acc + card.amount;
+  }, 0);
+  parseInt(yy);
+
   // Transaction table
   const rows = cardDetails.map((element) => (
     <tr key={element.id}>
@@ -82,7 +85,6 @@ function Home() {
       {/*HOME SIDE BAR */}
       <main className="sidebar-container">
         <div className="logo-container">
-          {/* <img src={logo} alt="logo" className="logo" /> */}
           <h3>Hello Justice</h3>
         </div>
         {/* <img src={logo} alt="logo" /> */}
@@ -158,10 +160,10 @@ function Home() {
               <sup>You have {cardDetails.length} wallets</sup>
               <div className="total-savings-amount">
                 <h1>
-                  ₦{" "}
+                  ₦
                   {seeAmount
-                    ? (yy * d.getMonth()).toFixed(1)
-                    : [(yy * d.getMonth()).toFixed(1)]
+                    ? (yy ).toFixed(1)
+                    : [(yy ).toFixed(1)]
                         .join("")
                         .split("")
                         .fill("x")}
@@ -297,7 +299,26 @@ function SavingsCard({
   cardHolderName,
   id,
 }) {
-  // const { id } = useParams();
+  // date
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const d = new Date();
+  let month = months[d.getMonth()];
+  // Wallet total
+  let numberOfMonths = months.indexOf(month) + 1;
 
   const { seeAmount } = useContext(AppContext);
   return (
@@ -315,7 +336,10 @@ function SavingsCard({
           />
         </p>
         <h1 className="card-amount">
-          ₦{seeAmount ? amount : [amount].join("").split("").fill("x")}
+          ₦
+          {seeAmount
+            ? amount 
+            : [amount].join("").split("").fill("x")}
         </h1>
         <p className="card-expiration">{expirationDate}</p>
         <h5 className="card-cardHolder">{cardHolderName}</h5>

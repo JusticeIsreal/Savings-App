@@ -110,6 +110,31 @@ $darkestBg: #025760;
       margin-left: 25px;
     }
   }
+
+  .dynamic-waller-header {
+    color: $darkestBg;
+    // text-transform: uppercase;
+    margin: 10px;
+    margin-top: 29px;
+    // font-family: "Satoshi";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    // line-height: 86px;
+    span {
+      color: $cardbg;
+      text-decoration: underline;
+    }
+
+    @include responsive(bigphone) {
+      //   font-family: "Satoshi";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 86px;
+      margin-left: 20px;
+    }
+  }
   .dynamic-wallet {
     @include flexDisplay(flex-start, flex-start, column);
     // border: 2px solid red;
@@ -122,14 +147,16 @@ $darkestBg: #025760;
       @include flexDisplay(space-around, center, row);
     }
 
-    .dynamic-card-retails {
-    //   border: 2px solid red;
+    .dynamic-card-details {
+      border: 2px solid red;
       width: 100%;
+      margin: 0 auto;
       margin-top: 40px;
 
       @include responsive(bigphone) {
         width: calc(100% - 450px);
-        margin-top: -150px;
+        margin-top: -130px;
+        height: 100%;
       }
       //   margin-right: calc(100% - 400px);
     }
@@ -145,13 +172,13 @@ $darkestBg: #025760;
       position: relative;
       color: $bg;
       margin: 0 auto;
-      margin-top: 50px;
+      margin-top: 20px;
       transition: all 0.8s ease;
       cursor: pointer;
 
       @include responsive(bigphone) {
         margin-top: 30px;
-        margin-left: 0;
+        margin-left: 20px;
         width: 400px;
         height: 200px;
       }
