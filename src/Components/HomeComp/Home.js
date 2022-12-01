@@ -19,16 +19,27 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
-import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
+import {
+  Slider,
+  RingProgress,
+  Table,
+  Text,
+  Group,
+  Modal,
+  Button,
+  Group,
+} from "@mantine/core";
 import "../compStyle.css";
 import Test from "../WalletComponent/Test";
-import { Link } from "react-router-dom";
+
+import { Link, useParams } from "react-router-dom";
 import AppContext from "../../StateManagement/AppProvider";
 
 // mantine ui for switch tab
 import { Tabs } from "@mantine/core";
 
 function Home() {
+  // const { id } = useParams();
   const { seeTotalFunc, seeAmount } = useContext(AppContext);
   // total savings amount
   let yy = cardDetails.reduce(function (acc, card) {
@@ -146,62 +157,66 @@ function Home() {
 
       {/* HOME PAGE */}
       <div className="home">
-        <div className="total-wallet-container">
-          <div>
-            <h2 className="total-savings">
-              Total savings <RiArrowDownSFill className="total-savings-icon" />
-            </h2>
-            <sup>You have {cardDetails.length} wallets</sup>
-            <div className="total-savings-amount">
-              <h1>
-                ₦{" "}
-                {seeAmount
-                  ? (yy * d.getMonth()).toFixed(1)
-                  : [(yy * d.getMonth()).toFixed(1)]
-                      .join("")
-                      .split("")
-                      .fill("x")}
-              </h1>
-              {seeAmount ? (
-                <AiFillEye
-                  className="hide-total-savings-icon"
-                  onClick={() => seeTotalFunc(!seeAmount)}
-                />
-              ) : (
-                <AiFillEyeInvisible
-                  className="hide-total-savings-icon"
-                  onClick={() => seeTotalFunc(!seeAmount)}
-                />
-              )}
-            </div>
-          </div>
-        </div>
-        {/*card wallet container */}
-        <div className="card-slide-container">
-          {" "}
-          <div className="cardMap">
-            <div className="add-wallet-icon-container">
-              <HiPlus className="add-wallet-icon" />
-              <p>Create new wallet</p>
-            </div>
-            {cardDetails.map((card) => (
-              <div className="main-card" key={card.id}>
-                {" "}
-                <div className="card" key={card.id}>
-                  <div className="front">
-                    <SavingsCard {...card} />
-                  </div>
-                  <div className="back">
-                    <CardBack {...card} />
-                  </div>
-                </div>
+        <div className="oo">
+          <div className="total-wallet-container">
+            <div>
+              <h2 className="total-savings">
+                Total savings{" "}
+                <RiArrowDownSFill className="total-savings-icon" />
+              </h2>
+              <sup>You have {cardDetails.length} wallets</sup>
+              <div className="total-savings-amount">
+                <h1>
+                  ₦{" "}
+                  {seeAmount
+                    ? (yy * d.getMonth()).toFixed(1)
+                    : [(yy * d.getMonth()).toFixed(1)]
+                        .join("")
+                        .split("")
+                        .fill("x")}
+                </h1>
+                {seeAmount ? (
+                  <AiFillEye
+                    className="hide-total-savings-icon"
+                    onClick={() => seeTotalFunc(!seeAmount)}
+                  />
+                ) : (
+                  <AiFillEyeInvisible
+                    className="hide-total-savings-icon"
+                    onClick={() => seeTotalFunc(!seeAmount)}
+                  />
+                )}
               </div>
-            ))}
+            </div>
           </div>
-          {/* <div className="add-wallet-icon-container-tablet-below">
+          {/*card wallet container */}
+          <div className="card-slide-container">
+            {" "}
+            <div className="cardMap">
+              <div className="add-wallet-icon-container">
+                <HiPlus className="add-wallet-icon" />
+                <p>Create new wallet</p>
+              </div>
+              {cardDetails.map((card) => (
+                <SavingsCard className="main-card" key={card.id} {...card} />
+                // <div className="main-card" key={card.id}>
+                //   {" "}
+                //   <div className="card" key={card.id}>
+                //     <div className="front">
+                //       <SavingsCard {...card} key={card.id} />
+                //     </div>
+                //     <div className="back">
+                //       <CardBack {...card} />
+                //     </div>
+                //   </div>
+                // </div>
+              ))}
+            </div>
+            {/* <div className="add-wallet-icon-container-tablet-below">
             <HiPlus className="add-wallet-icon-tablet-below" />
             <p>Create new wallet</p>
           </div> */}
+          </div>
         </div>
 
         {/* end of card wallet  */}
@@ -289,27 +304,32 @@ function SavingsCard({
   cardStatus,
   expirationDate,
   cardHolderName,
+  id,
 }) {
+  // const { id } = useParams();
+
   const { seeAmount } = useContext(AppContext);
   return (
-    <>
-      <img src={logo} alt="" className="logo" />
-      <h3 className="walletName">{walletName}</h3>
-      <p className="card-status">
-        {cardStatus !== "Active" ? "On-hold" : cardStatus}
-        <MdRadioButtonChecked
-          className={`${cardStatus === "Active" ? "active" : "on-hold"}`}
-        />
-        <FcCancel
-          className={`${cardStatus === "Active" ? "on-hold" : "active"}`}
-        />
-      </p>
-      <h1 className="card-amount">
-        ₦{seeAmount ? amount : [amount].join("").split("").fill("x")}
-      </h1>
-      <p className="card-expiration">{expirationDate}</p>
-      <h5 className="card-cardHolder">{cardHolderName}</h5>
-    </>
+    <Link to={`/wall/${id}`}>
+      <div className="main-card">
+        <img src={logo} alt="" className="logo" />
+        <h3 className="walletName">{walletName}</h3>
+        <p className="card-status">
+          {cardStatus !== "Active" ? "On-hold" : cardStatus}
+          <MdRadioButtonChecked
+            className={`${cardStatus === "Active" ? "active" : "on-hold"}`}
+          />
+          <FcCancel
+            className={`${cardStatus === "Active" ? "on-hold" : "active"}`}
+          />
+        </p>
+        <h1 className="card-amount">
+          ₦{seeAmount ? amount : [amount].join("").split("").fill("x")}
+        </h1>
+        <p className="card-expiration">{expirationDate}</p>
+        <h5 className="card-cardHolder">{cardHolderName}</h5>
+      </div>
+    </Link>
   );
 }
 

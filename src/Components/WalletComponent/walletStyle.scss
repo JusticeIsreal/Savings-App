@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+// global variables
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Orbitron", sans-serif;
+  // font-family: poppins;
+}
+
+body {
+  //   height: 100vh;
+  // border: 5px solid red;
+  //   max-width: 2000px;
+  margin: 0 auto;
+  //   max-height: 1500px;
+  //   background-color: black;
+  //   color: #4c5eff;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1px;
+  background-color: rgba(65, 105, 225, 0);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(245, 245, 245, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(65, 105, 225, 0);
+}
+
+// GLOBAL STYLES
+$darkBg: rgb(2, 107, 115);
+$bg: #f1feff;
+$darkBorderColor: rgb(2, 107, 115);
+$text-Color: #009daf;
+$cardbg: #009daf;
+$secondCardBg: #adf4fc;
+$darkestBg: #025760;
+
+@mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
+  display: flex;
+  justify-content: $justifyProp;
+  align-items: $alignProp;
+  flex-direction: $flexDirection;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint==smallPhone {
+    @media only screen and (max-width: 380px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (min-width: 850px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==bigphone {
+    @media only screen and (min-width: 750px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: 1281px) {
+      @content;
+    }
+  }
+}
+
+.dynamic-wallet-main-container {
+  //   @include flexDisplay(space-between, center, row);
+  //   border: 1px solid red;
+  margin-top: 70px;
+  padding: 3px;
+  width: 100vw;
+  max-width: 2000px;
+  height: calc(100vh - 70px);
+  position: relative;
+
+  @include responsive(bigphone) {
+    padding: 10px;
+  }
+
+  .go-back {
+    @include flexDisplay(space-between, center, row);
+    width: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px;
+    border: 1px solid $cardbg;
+    border-radius: 5px;
+    padding: 2px 3px;
+    color: $darkBg;
+    line-height: 18px;
+    cursor: pointer;
+    background-color: transparent;
+
+    @include responsive(bigphone) {
+      margin-top: 35px;
+      margin-left: 25px;
+    }
+  }
+  .dynamic-wallet {
+    @include flexDisplay(flex-start, flex-start, column);
+    // border: 2px solid red;
+    // margin-top: 70px;
+    width: 100%;
+    //   height: calc(100vh - 70px);
+    position: relative;
+
+    @include responsive(bigphone) {
+      @include flexDisplay(space-around, center, row);
+    }
+
+    .dynamic-card-retails {
+    //   border: 2px solid red;
+      width: 100%;
+      margin-top: 40px;
+
+      @include responsive(bigphone) {
+        width: calc(100% - 450px);
+        margin-top: -150px;
+      }
+      //   margin-right: calc(100% - 400px);
+    }
+    .main-card {
+      border: 1px solid $cardbg;
+      border-radius: 10px;
+      background-color: $cardbg;
+      //   margin: 7px;
+      width: 80%;
+      min-width: 250px;
+      max-width: 550px;
+      height: 180px;
+      position: relative;
+      color: $bg;
+      margin: 0 auto;
+      margin-top: 50px;
+      transition: all 0.8s ease;
+      cursor: pointer;
+
+      @include responsive(bigphone) {
+        margin-top: 30px;
+        margin-left: 0;
+        width: 400px;
+        height: 200px;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .logo {
+        position: absolute;
+        width: 70px;
+        right: 10px;
+        bottom: -15px;
+        @include responsive(bigphone) {
+          width: 80px;
+        }
+      }
+      .walletName {
+        position: absolute;
+        left: 20px;
+        top: 5px;
+        font-size: 12px;
+        @include responsive(bigphone) {
+          font-size: 15px;
+        }
+      }
+      .card-status {
+        position: absolute;
+        top: 5px;
+        font-size: 13px;
+        right: 10px;
+        background-color: $bg;
+        color: $darkBg;
+        padding: 2px 5px;
+        border-radius: 10px;
+
+        .active {
+          margin-left: 2px;
+          margin-bottom: -2px;
+        }
+
+        .on-hold {
+          margin-left: 2px;
+          margin-bottom: -2px;
+          display: none;
+        }
+      }
+
+      .card-amount {
+        position: absolute;
+        top: 55%;
+        left: 20px;
+      }
+      .card-number {
+        position: absolute;
+        top: 60%;
+        font-size: 13px;
+        left: 20px;
+      }
+      .card-expiration {
+        position: absolute;
+        top: 73%;
+        font-size: 8px;
+        left: 20px;
+      }
+      .card-cardHolder {
+        position: absolute;
+        top: 82%;
+        //   font-size: 10px;
+        left: 20px;
+      }
+    }
+  }
+}

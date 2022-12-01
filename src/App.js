@@ -4,6 +4,7 @@ import TopBar from "./Components/TopBar";
 import HomePage from ".//Pages/HomePage";
 import WalletPage from "./Pages/WalletPage";
 import TransactionPage from "./Pages/TransactionPage";
+import DynamicWallet from "./Components/WalletComponent/DynamicWallet";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/WalletPage" element={<WalletPage />} />
           <Route path="/TransactionPage" element={<TransactionPage />} />
+          <Route path="/wall/:id" element={<DynamicWallet />} />
         </Routes>
       </Router>
     </div>
