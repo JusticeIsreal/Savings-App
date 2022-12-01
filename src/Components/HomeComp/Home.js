@@ -19,16 +19,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { GrMoney } from "react-icons/gr";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
-import {
-  Slider,
-  RingProgress,
-  Table,
-  Text,
-  Group,
-  Modal,
-  Button,
-  Group,
-} from "@mantine/core";
+import { Slider, RingProgress, Table, Text, Group } from "@mantine/core";
 import "../compStyle.css";
 import Test from "../WalletComponent/Test";
 
