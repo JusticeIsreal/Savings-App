@@ -40,9 +40,7 @@ function DynamicWallet() {
       <button className="go-back" onClick={() => history(-1)}>
         <IoIosArrowBack /> back
       </button>
-      <h3 className="dynamic-waller-header">
-        <span>{fullDetails.walletName}</span> <br /> Wallet details
-      </h3>
+      <h3 className="dynamic-waller-header">Here is your Wallet details</h3>
       <div className="dynamic-wallet">
         <div className="main-card">
           <img src={fullDetails.logo} alt="" className="logo" />
@@ -67,15 +65,28 @@ function DynamicWallet() {
           <h5 className="card-cardHolder">{fullDetails.cardHolderName}</h5>
         </div>
         <div className="dynamic-card-details">
-          <div>Commitment</div>
-          <div>Target</div>
-          <div>Duration</div>
-          <div>Start Date</div>
-          <div>End Date</div>
-          <div>Card Status</div>
-        </div>
-        <div className="dynmic-card-details">
-          <div>Payment method</div>
+          <div className="dynamic-card-detail">
+            <div>
+              <h4>Saving</h4>
+              <p>5,000.00</p>
+            </div>
+            <div>
+              <h4>Total savings</h4>
+              <p>20,000.00</p>
+            </div>
+            <div>
+              <h4>Target</h4>
+              <p>500,000.00</p>
+            </div>
+            <div>
+              <h4>Duration</h4>
+              <p>1 year</p>
+            </div>
+            <div>Card Status</div>
+          </div>
+          <div className="dynmic-card-details">
+            <div>Payment method</div>
+          </div>
         </div>
       </div>
     </div>

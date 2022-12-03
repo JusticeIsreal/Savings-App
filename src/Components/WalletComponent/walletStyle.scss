@@ -79,13 +79,14 @@ $darkestBg: #025760;
 
 .dynamic-wallet-main-container {
   //   @include flexDisplay(space-between, center, row);
-  //   border: 1px solid red;
+  border: 1px solid red;
   margin-top: 70px;
   padding: 3px;
   width: 100vw;
   max-width: 2000px;
   height: calc(100vh - 70px);
   position: relative;
+  overflow-y: scroll;
 
   @include responsive(bigphone) {
     padding: 10px;
@@ -113,6 +114,8 @@ $darkestBg: #025760;
 
   .dynamic-waller-header {
     color: $darkestBg;
+    // border: 1px solid red;
+
     // text-transform: uppercase;
     margin: 10px;
     margin-top: 29px;
@@ -128,6 +131,7 @@ $darkestBg: #025760;
 
     @include responsive(bigphone) {
       //   font-family: "Satoshi";
+      width: 450px;
       font-style: normal;
       font-weight: 700;
       font-size: 64px;
@@ -137,27 +141,49 @@ $darkestBg: #025760;
   }
   .dynamic-wallet {
     @include flexDisplay(flex-start, flex-start, column);
-    // border: 2px solid red;
+    border: 2px solid red;
     // margin-top: 70px;
     width: 100%;
     //   height: calc(100vh - 70px);
     position: relative;
 
     @include responsive(bigphone) {
-      @include flexDisplay(space-around, center, row);
+      @include flexDisplay(flex-start, flex-start, row);
     }
 
     .dynamic-card-details {
-      border: 2px solid red;
-      width: 100%;
+      // border: 2px solid red;
+      width: 95%;
       margin: 0 auto;
       margin-top: 40px;
 
+      @include flexDisplay(flex-start, flex-start, column);
       @include responsive(bigphone) {
         width: calc(100% - 450px);
-        margin-top: -130px;
+        margin-top: 0px;
         height: 100%;
       }
+      .dynamic-card-detail {
+        @include flexDisplay(space-between, flex-start, row);
+        width: 90%;
+        // width: 80%;
+        min-width: 250px;
+        max-width: 550px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        padding: 0;
+        border: 2px solid red;
+
+        @include responsive(bigphone) {
+          @include flexDisplay(flex-start, flex-start, row);
+        }
+        div {
+          margin: 15px;
+          width: 30%;
+          border: 2px solid red;
+        }
+      }
+
       //   margin-right: calc(100% - 400px);
     }
     .main-card {
