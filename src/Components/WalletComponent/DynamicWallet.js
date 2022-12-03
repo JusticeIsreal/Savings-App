@@ -68,23 +68,34 @@ function DynamicWallet() {
           <div className="dynamic-card-detail">
             <div>
               <h4>Saving</h4>
-              <p>5,000.00</p>
+              <p>₦ 5,000.00</p>
             </div>
             <div>
               <h4>Total savings</h4>
-              <p>20,000.00</p>
+              <p>₦ 20,000.00</p>
             </div>
             <div>
               <h4>Target</h4>
-              <p>500,000.00</p>
+              <p>₦ 500,000.00</p>
             </div>
             <div>
-              <h4>Duration</h4>
-              <p>1 year</p>
+              <h4>Frequency</h4>
+              <p>Monthly</p>
             </div>
-            <div>Card Status</div>
+            <div>
+              <h4>Start Date</h4>
+              <p>11-05-2022</p>
+            </div>
+            <div>
+              <h4>End Date</h4>
+              <p>11-05-2022</p>
+            </div>
+            <div>
+              <h4>Card Status</h4>
+              <p>11-05-2022</p>
+            </div>
           </div>
-          <div className="dynmic-card-details">
+          <div className="dynmic-payment-method">
             <div>Payment method</div>
           </div>
         </div>

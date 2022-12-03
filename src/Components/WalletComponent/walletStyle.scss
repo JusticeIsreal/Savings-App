@@ -141,7 +141,7 @@ $darkestBg: #025760;
   }
   .dynamic-wallet {
     @include flexDisplay(flex-start, flex-start, column);
-    border: 2px solid red;
+    // border: 2px solid red;
     // margin-top: 70px;
     width: 100%;
     //   height: calc(100vh - 70px);
@@ -152,8 +152,9 @@ $darkestBg: #025760;
     }
 
     .dynamic-card-details {
-      // border: 2px solid red;
-      width: 95%;
+      border: 1px solid $text-Color;
+      width: 80%;
+      border-radius: 10px;
       margin: 0 auto;
       margin-top: 40px;
 
@@ -165,22 +166,31 @@ $darkestBg: #025760;
       }
       .dynamic-card-detail {
         @include flexDisplay(space-between, flex-start, row);
-        width: 90%;
+        // width: 90%;
         // width: 80%;
-        min-width: 250px;
-        max-width: 550px;
+
         margin: 0 auto;
         flex-wrap: wrap;
         padding: 0;
-        border: 2px solid red;
+        // border: 2px solid red;
 
         @include responsive(bigphone) {
           @include flexDisplay(flex-start, flex-start, row);
+          margin-right: auto;
         }
         div {
           margin: 15px;
           width: 30%;
-          border: 2px solid red;
+          // border: 2px solid red;
+
+          h4 {
+            font-size: 15px;
+            // font-weight: 500;
+            color: $darkestBg;
+          }
+          p {
+            color: $text-Color;
+          }
         }
       }
 
