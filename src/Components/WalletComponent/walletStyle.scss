@@ -79,7 +79,7 @@ $darkestBg: #025760;
 
 .dynamic-wallet-main-container {
   //   @include flexDisplay(space-between, center, row);
-  border: 1px solid red;
+  // border: 1px solid red;
   margin-top: 70px;
   padding: 3px;
   width: 100vw;
@@ -143,33 +143,36 @@ $darkestBg: #025760;
     @include flexDisplay(flex-start, flex-start, column);
     // border: 2px solid red;
     // margin-top: 70px;
-    width: 100%;
+    // width: 100%;
     //   height: calc(100vh - 70px);
     position: relative;
 
     @include responsive(bigphone) {
-      @include flexDisplay(flex-start, flex-start, row);
+      @include flexDisplay(center, flex-start, row);
     }
 
-    .dynamic-card-details {
-      border: 1px solid $text-Color;
+    .dynamic-card-details-con {
       width: 80%;
-      border-radius: 10px;
+      // border: 1px solid red;
       margin: 0 auto;
       margin-top: 40px;
 
-      @include flexDisplay(flex-start, flex-start, column);
+      // @include flexDisplay(flex-start, flex-start, column);
       @include responsive(bigphone) {
         width: calc(100% - 450px);
+        // margin-left: 20px;
         margin-top: 0px;
-        height: 100%;
+        // margin-right: calc(100% - 450px);
+        // height: 100%;
       }
       .dynamic-card-detail {
+        border: 1px solid $text-Color;
+        border-radius: 10px;
         @include flexDisplay(space-between, flex-start, row);
         // width: 90%;
         // width: 80%;
 
-        margin: 0 auto;
+        // margin: 0 auto;
         flex-wrap: wrap;
         padding: 0;
         // border: 2px solid red;
@@ -177,6 +180,8 @@ $darkestBg: #025760;
         @include responsive(bigphone) {
           @include flexDisplay(flex-start, flex-start, row);
           margin-right: auto;
+          border-radius: 10px;
+          width: 400px;
         }
         div {
           margin: 15px;
@@ -210,17 +215,13 @@ $darkestBg: #025760;
       margin: 0 auto;
       margin-top: 20px;
       transition: all 0.8s ease;
-      cursor: pointer;
+      // cursor: pointer;
 
       @include responsive(bigphone) {
-        margin-top: 30px;
+        margin-top: 0px;
         margin-left: 20px;
         width: 400px;
         height: 200px;
-      }
-
-      &:hover {
-        transform: scale(1.05);
       }
 
       .logo {

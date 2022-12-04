@@ -64,11 +64,15 @@ function DynamicWallet() {
           <p className="card-expiration">{fullDetails.expirationDate}</p>
           <h5 className="card-cardHolder">{fullDetails.cardHolderName}</h5>
         </div>
-        <div className="dynamic-card-details">
+        <div className="dynamic-card-details-con">
           <div className="dynamic-card-detail">
             <div>
               <h4>Saving</h4>
               <p>₦ 5,000.00</p>
+            </div>
+            <div>
+              <h4>Frequency</h4>
+              <p>Monthly</p>
             </div>
             <div>
               <h4>Total savings</h4>
@@ -78,17 +82,14 @@ function DynamicWallet() {
               <h4>Target</h4>
               <p>₦ 500,000.00</p>
             </div>
-            <div>
-              <h4>Frequency</h4>
-              <p>Monthly</p>
-            </div>
+
             <div>
               <h4>Start Date</h4>
               <p>11-05-2022</p>
             </div>
             <div>
               <h4>End Date</h4>
-              <p>11-05-2022</p>
+              <p>11-05-2023</p>
             </div>
             <div>
               <h4>Card Status</h4>

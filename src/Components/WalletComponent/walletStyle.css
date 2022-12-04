@@ -27,7 +27,6 @@ body {
 }
 
 .dynamic-wallet-main-container {
-  border: 1px solid red;
   margin-top: 70px;
   padding: 3px;
   width: 100vw;
@@ -91,62 +90,57 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  width: 100%;
   position: relative;
 }
 @media only screen and (min-width: 750px) {
   .dynamic-wallet-main-container .dynamic-wallet {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: row;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details {
-  border: 1px solid #009daf;
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con {
   width: 80%;
-  border-radius: 10px;
   margin: 0 auto;
   margin-top: 40px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con {
     width: calc(100% - 450px);
     margin-top: 0px;
-    height: 100%;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details .dynamic-card-detail {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail {
+  border: 1px solid #009daf;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
-  margin: 0 auto;
   flex-wrap: wrap;
   padding: 0;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details .dynamic-card-detail {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
     margin-right: auto;
+    border-radius: 10px;
+    width: 400px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details .dynamic-card-detail div {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail div {
   margin: 15px;
   width: 30%;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details .dynamic-card-detail div h4 {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail div h4 {
   font-size: 15px;
   color: #025760;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details .dynamic-card-detail div p {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail div p {
   color: #009daf;
 }
 .dynamic-wallet-main-container .dynamic-wallet .main-card {
@@ -162,18 +156,14 @@ body {
   margin: 0 auto;
   margin-top: 20px;
   transition: all 0.8s ease;
-  cursor: pointer;
 }
 @media only screen and (min-width: 750px) {
   .dynamic-wallet-main-container .dynamic-wallet .main-card {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-left: 20px;
     width: 400px;
     height: 200px;
   }
-}
-.dynamic-wallet-main-container .dynamic-wallet .main-card:hover {
-  transform: scale(1.05);
 }
 .dynamic-wallet-main-container .dynamic-wallet .main-card .logo {
   position: absolute;
