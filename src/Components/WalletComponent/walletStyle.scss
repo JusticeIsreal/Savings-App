@@ -244,91 +244,126 @@ $darkestBg: #025760;
 
       //   margin-right: calc(100% - 400px);
     }
-    .main-card {
-      border: 1px solid $cardbg;
-      border-radius: 10px;
-      background-color: $cardbg;
-      //   margin: 7px;
-      width: 80%;
-      min-width: 250px;
-      max-width: 550px;
-      height: 180px;
-      position: relative;
-      color: $bg;
-      margin: 0 auto;
-      margin-top: 20px;
-      transition: all 0.8s ease;
-      // cursor: pointer;
+
+    .dynamic-con {
+      // border: 2px solid red;
+      @include flexDisplay(space-between, flex-start, column);
+      width: 100%;
 
       @include responsive(bigphone) {
         margin-top: 0px;
         margin-left: 20px;
         width: 400px;
-        height: 200px;
+        height: 300px;
       }
+      .withdraw-delete-con {
+        // border: 2px solid red;
+        @include flexDisplay(space-between, flex-start, row);
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 20px;
 
-      .logo {
-        position: absolute;
-        width: 70px;
-        right: 10px;
-        bottom: -15px;
-        @include responsive(bigphone) {
-          width: 80px;
+        button {
+          width: 40%;
+          height: 40px;
+          border: 1px solid $cardbg;
+          border-radius: 5px;
+          color: $darkestBg;
+          font-weight: 600;
+          background-color: white;
+          cursor: pointer;
+          &:hover {
+            background-color: $text-Color;
+            color: white;
+          }
         }
       }
-      .walletName {
-        position: absolute;
-        left: 20px;
-        top: 5px;
-        font-size: 12px;
-        @include responsive(bigphone) {
-          font-size: 15px;
-        }
-      }
-      .card-status {
-        position: absolute;
-        top: 5px;
-        font-size: 13px;
-        right: 10px;
-        background-color: $bg;
-        color: $darkBg;
-        padding: 2px 5px;
+      .main-card {
+        border: 1px solid $cardbg;
         border-radius: 10px;
+        background-color: $cardbg;
+        //   margin: 7px;
+        width: 95%;
+        min-width: 220px;
+        max-width: 550px;
+        height: 220px;
+        position: relative;
+        color: $bg;
+        margin: 0 auto;
+        margin-top: 0px;
+        // transition: all 0.8s ease;
+        // cursor: pointer;
 
-        .active {
-          margin-left: 2px;
-          margin-bottom: -2px;
+        @include responsive(bigphone) {
+          margin-top: 0px;
+          // margin-left: 20px;
+          width: 100%;
+          height: 220px;
         }
 
-        .on-hold {
-          margin-left: 2px;
-          margin-bottom: -2px;
-          display: none;
+        .logo {
+          position: absolute;
+          width: 70px;
+          right: 10px;
+          bottom: -15px;
+          @include responsive(bigphone) {
+            width: 80px;
+          }
         }
-      }
+        .walletName {
+          position: absolute;
+          left: 20px;
+          top: 5px;
+          font-size: 12px;
+          @include responsive(bigphone) {
+            font-size: 15px;
+          }
+        }
+        .card-status {
+          position: absolute;
+          top: 5px;
+          font-size: 13px;
+          right: 10px;
+          background-color: $bg;
+          color: $darkBg;
+          padding: 2px 5px;
+          border-radius: 10px;
 
-      .card-amount {
-        position: absolute;
-        top: 55%;
-        left: 20px;
-      }
-      .card-number {
-        position: absolute;
-        top: 60%;
-        font-size: 13px;
-        left: 20px;
-      }
-      .card-expiration {
-        position: absolute;
-        top: 73%;
-        font-size: 8px;
-        left: 20px;
-      }
-      .card-cardHolder {
-        position: absolute;
-        top: 82%;
-        //   font-size: 10px;
-        left: 20px;
+          .active {
+            margin-left: 2px;
+            margin-bottom: -2px;
+          }
+
+          .on-hold {
+            margin-left: 2px;
+            margin-bottom: -2px;
+            display: none;
+          }
+        }
+
+        .card-amount {
+          position: absolute;
+          top: 55%;
+          left: 20px;
+        }
+        .card-number {
+          position: absolute;
+          top: 60%;
+          font-size: 13px;
+          left: 20px;
+        }
+        .card-expiration {
+          position: absolute;
+          top: 73%;
+          font-size: 8px;
+          left: 20px;
+        }
+        .card-cardHolder {
+          position: absolute;
+          top: 82%;
+          //   font-size: 10px;
+          left: 20px;
+        }
       }
     }
   }
