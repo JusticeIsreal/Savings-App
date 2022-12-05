@@ -3,13 +3,20 @@ import cardDetails from "../HomeComp/data";
 import { useParams } from "react-router-dom";
 import "./walletStyle.css";
 import AppContext from "../../StateManagement/AppProvider";
-import { FaHome, FaChartLine, FaChartBar, FaMoneyCheck } from "react-icons/fa";
+import {
+  FaHome,
+  FaCcVisa,
+  FaChartLine,
+  FaChartBar,
+  FaMoneyCheck,
+} from "react-icons/fa";
 import {
   MdAccountBalance,
   MdContactSupport,
   MdOutlineMenuOpen,
   MdMoney,
   MdRadioButtonChecked,
+  MdKeyboardArrowRight,
   MdLocalOffer,
 } from "react-icons/md";
 import { IoMdSettings, IoIosWifi } from "react-icons/io";
@@ -68,7 +75,7 @@ function DynamicWallet() {
           </div>
           <div className="withdraw-delete-con">
             <button disabled>WITHDRAW</button>
-            <button>DELETE WALLET</button>
+            <button>DELETE</button>
           </div>
         </div>
 
@@ -116,7 +123,7 @@ function DynamicWallet() {
               <p>11-05-2023</p>
             </div>
             <div>
-              <h4>Card Status</h4>
+              <h4>Status</h4>
               <select>
                 <option value="" key="">
                   Select
@@ -131,8 +138,18 @@ function DynamicWallet() {
             </div>
           </div>
           <div className="dynmic-payment-method">
-            <div>Payment method</div>
+            <p>Payment method</p>
+            <div className="atm-details-con">
+              <span className="bank-card-icon">
+                <FaCcVisa />
+              </span>
+              Access Bank - 2345{" "}
+              <span className="change-bank-card">
+                Change <MdKeyboardArrowRight />
+              </span>
+            </div>
           </div>
+          <button className="save-wallet-btn">SAVE</button>
         </div>
       </div>
     </div>

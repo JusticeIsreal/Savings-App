@@ -113,7 +113,7 @@ body {
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail {
   border: 1px solid #009daf;
-  border-radius: 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -152,29 +152,76 @@ body {
   border: none;
   width: 87px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .progress-range {
-  margin-top: -10px;
-  width: 93%;
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  color: #025760;
+  margin-top: 20px;
+  width: 100%;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .progress-range .progress-range-value {
-  font-size: 12px;
+@media only screen and (min-width: 1280px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method {
+    width: 550px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method p {
+  font-size: 13px;
+}
+@media only screen and (min-width: 750px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method p {
+    font-size: 15px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-size: 13px;
+}
+@media only screen and (min-width: 750px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con {
+    font-size: 15px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con .bank-card-icon {
+  font-size: 25px;
+  margin: 0 5px;
+}
+@media only screen and (min-width: 750px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con .bank-card-icon {
+    font-size: 35px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con .change-bank-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   color: #009daf;
+  margin: 0 10px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .progress-range .progress-con {
-  width: 80%;
-  border: 1px solid #009daf;
-  height: 8px;
-  border-radius: 10px;
-  margin-top: auto;
-  margin-left: 0;
-}
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .progress-range .progress-con .progress {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .save-wallet-btn {
+  border: none;
   background-color: #009daf;
-  border-radius: 10px;
-  height: 6px;
-  width: 90%;
-  margin-top: 0;
-  margin-left: 0;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1280px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .save-wallet-btn {
+    width: 550px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .save-wallet-btn:hover {
+  background-color: #025760;
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-con {
   display: flex;
