@@ -25,6 +25,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { HiOutlineArrowsExpand, HiPlus } from "react-icons/hi";
 import { VscGraph } from "react-icons/vsc";
 import { Link, useNavigate } from "react-router-dom";
+import { Menu, Button, Text, Slider } from "@mantine/core";
 
 function DynamicWallet() {
   // back navigation
@@ -82,7 +83,23 @@ function DynamicWallet() {
               <h4>Target</h4>
               <p>₦ 500,000.00</p>
             </div>
-
+            {/* <div className="progress-range">
+              <span className="progress-range-value">
+                {((fullDetails.amount * 100) / fullDetails.target).toFixed(1)}%
+              </span>
+              <Slider className="progress"
+                disabled
+                defaultValue={(
+                  (fullDetails.amount * 100) /
+                  fullDetails.target
+                ).toFixed(1)}
+                size="sm"
+                thumbSize={1}
+              />
+              <div className="progress-con">
+                <div className="progress" style={{}}></div>
+              </div>
+            </div> */}
             <div>
               <h4>Start Date</h4>
               <p>11-05-2022</p>
@@ -93,7 +110,17 @@ function DynamicWallet() {
             </div>
             <div>
               <h4>Card Status</h4>
-              <p>11-05-2022</p>
+              <select>
+                <option value="" key="">
+                  Select
+                </option>
+                <option value="active" key="">
+                  Active
+                </option>
+                <option value="onhold" key="">
+                  on-hold
+                </option>
+              </select>
             </div>
           </div>
           <div className="dynmic-payment-method">
