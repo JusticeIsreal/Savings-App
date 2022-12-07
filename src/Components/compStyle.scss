@@ -220,10 +220,12 @@ $darkestBg: #025760;
 // SIDEBAR SECTION
 .sidebar {
   position: relative;
-  // border: 5px solid red;
+  border: 5px solid red;
   @include flexDisplay(space-between, top, row);
   display: flex;
   height: 100vh;
+
+  
 
   .sidebar-container {
     @include flexDisplay(space-between, center, row);
@@ -453,6 +455,7 @@ $darkestBg: #025760;
     }
     .card-slide-container {
       // border: 5px solid red;
+      position: relative;
 
       .cardMap {
         @include flexDisplay(space-between, center, row);

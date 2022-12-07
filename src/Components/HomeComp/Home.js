@@ -31,7 +31,8 @@ import { Tabs } from "@mantine/core";
 
 function Home() {
   // const { id } = useParams();
-  const { seeTotalFunc, seeAmount } = useContext(AppContext);
+  const { seeTotalFunc, seeAmount, creatWallet, creatWalletModal } =
+    useContext(AppContext);
 
   // total target amount
   let zz = cardDetails.reduce(function (acc, card) {
@@ -162,11 +163,8 @@ function Home() {
                 <h1>
                   ₦
                   {seeAmount
-                    ? (yy ).toFixed(1)
-                    : [(yy ).toFixed(1)]
-                        .join("")
-                        .split("")
-                        .fill("x")}
+                    ? yy.toFixed(1)
+                    : [yy.toFixed(1)].join("").split("").fill("x")}
                 </h1>
                 {seeAmount ? (
                   <AiFillEye
@@ -184,12 +182,18 @@ function Home() {
           </div>
           {/*card wallet container */}
           <div className="card-slide-container">
-            {" "}
             <div className="cardMap">
-              <div className="add-wallet-icon-container">
-                <HiPlus className="add-wallet-icon" />
-                <p>Create new wallet</p>
-              </div>
+              <Link to="/CreateWalletPage">
+                {" "}
+                <div
+                  className="add-wallet-icon-container"
+                  onClick={() => creatWallet()}
+                >
+                  <HiPlus className="add-wallet-icon" />
+                  <p>Create new wallet</p>
+                </div>
+              </Link>
+
               {cardDetails.map((card) => (
                 <SavingsCard className="main-card" key={card.id} {...card} />
                 // <div className="main-card" key={card.id}>
@@ -230,7 +234,6 @@ function Home() {
                 </Tabs.Tab>
               </span>
               <span>
-                {" "}
                 <Tabs.Tab value="messages" className="portfolio">
                   Portfolio
                 </Tabs.Tab>
@@ -336,10 +339,7 @@ function SavingsCard({
           />
         </p>
         <h1 className="card-amount">
-          ₦
-          {seeAmount
-            ? amount 
-            : [amount].join("").split("").fill("x")}
+          ₦{seeAmount ? amount : [amount].join("").split("").fill("x")}
         </h1>
         <p className="card-expiration">{expirationDate}</p>
         <h5 className="card-cardHolder">{cardHolderName}</h5>

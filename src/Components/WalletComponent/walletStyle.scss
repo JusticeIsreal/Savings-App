@@ -204,6 +204,56 @@ $darkestBg: #025760;
             width: 87px;
           }
         }
+
+        // create wallet form
+
+        form {
+          // border: 1px solid red;
+          background: rgb(255, 255, 255);
+          width: 100%;
+
+          // @include responsive(bigphone) {
+          //   width: 500px;
+          // }
+
+          @keyframes createWallet {
+            0% {
+              transform: scale(0);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+          .input-con {
+            @include flexDisplay(space-between, flex-start, column);
+
+            // border: 1px solid red;
+            // margin: 15px;
+            width: 90%;
+            label {
+              color: $darkestBg;
+              font-weight: 600;
+            }
+            p {
+              font-size: 13px;
+              font-style: italic;
+            }
+            input,
+            select {
+              width: 100%;
+              height: 40px;
+              border-radius: 5px;
+              padding: 5px;
+              border: 1px solid $text-Color;
+            }
+          }
+
+          .date {
+            padding: 0 0;
+            // border: 1px solid red;
+            @include flexDisplay(space-between, center, row);
+          }
+        }
       }
       .dynmic-payment-method {
         // border: 2px solid red;

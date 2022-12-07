@@ -162,6 +162,7 @@ body {
 
 .sidebar {
   position: relative;
+  border: 5px solid red;
   display: flex;
   justify-content: space-between;
   align-items: top;
@@ -396,6 +397,9 @@ body {
   font-size: 30px;
   margin-left: 15px;
   cursor: pointer;
+}
+.sidebar .home .card-slide-container {
+  position: relative;
 }
 .sidebar .home .card-slide-container .cardMap {
   display: flex;
