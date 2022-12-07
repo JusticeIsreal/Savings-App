@@ -220,10 +220,18 @@ body {
   }
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .date .end-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
   width: 45%;
   margin: 0;
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .date .start-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
   width: 45%;
   margin: 0;
 }
@@ -351,10 +359,18 @@ body {
   }
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date .end-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
   width: 45%;
   margin: 0;
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date .start-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
   width: 45%;
   margin: 0;
 }

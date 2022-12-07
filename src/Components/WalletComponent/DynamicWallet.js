@@ -70,7 +70,7 @@ function DynamicWallet() {
               />
             </p>
             <h1 className="card-amount">₦{fullDetails.amount}</h1>
-            <p className="card-expiration">{fullDetails.expirationDate}</p>
+            <p className="card-expiration">{fullDetails.endDate}</p>
             <h5 className="card-cardHolder">{fullDetails.cardHolderName}</h5>
           </div>
           <div className="withdraw-delete-con">
@@ -116,11 +116,11 @@ function DynamicWallet() {
             </div> */}
             <div>
               <h4>Start Date</h4>
-              <p>11-05-2022</p>
+              <p>{fullDetails.startDate}</p>
             </div>
             <div>
               <h4>End Date</h4>
-              <p>11-05-2023</p>
+              <p>{fullDetails.endDate}</p>
             </div>
             <div>
               <h4>Status</h4>
@@ -136,6 +136,10 @@ function DynamicWallet() {
                 </option>
               </select>
             </div>
+            <div>
+              <h4>Transaction</h4>
+              <p>{fullDetails.transactionMethod}</p>
+            </div>
           </div>
           <div className="dynmic-payment-method">
             <p>Payment method</p>
@@ -143,7 +147,7 @@ function DynamicWallet() {
               <span className="bank-card-icon">
                 <FaCcVisa />
               </span>
-              Access Bank - 2345{" "}
+              {fullDetails.transactionMethod} - 2345{" "}
               <span className="change-bank-card">
                 Change <MdKeyboardArrowRight />
               </span>

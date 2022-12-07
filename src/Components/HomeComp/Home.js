@@ -76,7 +76,7 @@ function Home() {
       <td>{element.savingsType}</td>
       <td>{element.amount}</td>
       <td>{element.target}</td>
-      <td>{element.expiration}</td>
+      <td>{element.endDate}</td>
     </tr>
   ));
 
@@ -298,7 +298,7 @@ function SavingsCard({
   walletName,
   amount,
   cardStatus,
-  expirationDate,
+  endDate,
   cardHolderName,
   id,
 }) {
@@ -341,7 +341,7 @@ function SavingsCard({
         <h1 className="card-amount">
           ₦{seeAmount ? amount : [amount].join("").split("").fill("x")}
         </h1>
-        <p className="card-expiration">{expirationDate}</p>
+        <p className="card-expiration">{endDate}</p>
         <h5 className="card-cardHolder">{cardHolderName}</h5>
       </div>
     </Link>
@@ -353,7 +353,7 @@ function CardBack({
   walletName,
   amount,
   cardStatus,
-  expirationDate,
+  endDate,
   cardHolderName,
 }) {
   return (

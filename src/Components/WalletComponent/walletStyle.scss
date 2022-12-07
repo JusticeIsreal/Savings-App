@@ -268,10 +268,14 @@ $darkestBg: #025760;
               font-size: 12px;
             }
             .end-date {
+              @include flexDisplay(space-between, flex-start, column);
+
               width: 45%;
               margin: 0;
             }
             .start-date {
+              @include flexDisplay(space-between, flex-start, column);
+
               width: 45%;
               margin: 0;
             }
@@ -380,10 +384,12 @@ $darkestBg: #025760;
               font-size: 12px;
             }
             .end-date {
+              @include flexDisplay(space-between, flex-start, column);
               width: 45%;
               margin: 0;
             }
             .start-date {
+              @include flexDisplay(space-between, flex-start, column);
               width: 45%;
               margin: 0;
             }
