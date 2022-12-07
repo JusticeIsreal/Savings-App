@@ -278,10 +278,87 @@ body {
   color: #009daf;
   margin: 0 10px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards {
-  width: 100px;
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .save-wallet-btn {
+@media only screen and (min-width: 750px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-right: auto;
+    border-radius: 10px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con {
+    width: 550px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .accepted-cards {
+  width: 80%;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 750px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .accepted-cards {
+    width: 200px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con form {
+  width: 97%;
+  margin: 0 auto;
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 15px;
+  width: 90%;
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con label {
+  color: #025760;
+  font-weight: 600;
+}
+@media only screen and (max-width: 380px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con label {
+    font-size: 12px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #009daf;
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 380px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date {
+    font-size: 12px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date .end-date {
+  width: 45%;
+  margin: 0;
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date .start-date {
+  width: 45%;
+  margin: 0;
+}
+.dynamic-wallet-main-container .dynamic-wallet .save-wallet-btn {
   border: none;
   background-color: #009daf;
   color: white;
@@ -294,14 +371,14 @@ body {
   cursor: pointer;
 }
 @media only screen and (min-width: 1280px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .save-wallet-btn {
+  .dynamic-wallet-main-container .dynamic-wallet .save-wallet-btn {
     width: 550px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .save-wallet-btn:hover {
+.dynamic-wallet-main-container .dynamic-wallet .save-wallet-btn:hover {
   background-color: #025760;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con {
+.dynamic-wallet-main-container .dynamic-con {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -309,14 +386,14 @@ body {
   width: 100%;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-con {
+  .dynamic-wallet-main-container .dynamic-con {
     margin-top: 0px;
     margin-left: 20px;
     width: 400px;
     height: 300px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .withdraw-delete-con {
+.dynamic-wallet-main-container .dynamic-con .withdraw-delete-con {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -325,7 +402,7 @@ body {
   margin: 0 auto;
   margin-top: 20px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .withdraw-delete-con button {
+.dynamic-wallet-main-container .dynamic-con .withdraw-delete-con button {
   width: 40%;
   height: 40px;
   border: 1px solid #009daf;
@@ -335,11 +412,11 @@ body {
   background-color: white;
   cursor: pointer;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .withdraw-delete-con button:hover {
+.dynamic-wallet-main-container .dynamic-con .withdraw-delete-con button:hover {
   background-color: #009daf;
   color: white;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card {
+.dynamic-wallet-main-container .dynamic-con .main-card {
   border: 1px solid #009daf;
   border-radius: 10px;
   background-color: #009daf;
@@ -353,35 +430,35 @@ body {
   margin-top: 0px;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card {
+  .dynamic-wallet-main-container .dynamic-con .main-card {
     margin-top: 0px;
     width: 100%;
     height: 220px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .logo {
+.dynamic-wallet-main-container .dynamic-con .main-card .logo {
   position: absolute;
   width: 70px;
   right: 10px;
   bottom: -15px;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .logo {
+  .dynamic-wallet-main-container .dynamic-con .main-card .logo {
     width: 80px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .walletName {
+.dynamic-wallet-main-container .dynamic-con .main-card .walletName {
   position: absolute;
   left: 20px;
   top: 5px;
   font-size: 12px;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .walletName {
+  .dynamic-wallet-main-container .dynamic-con .main-card .walletName {
     font-size: 15px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .card-status {
+.dynamic-wallet-main-container .dynamic-con .main-card .card-status {
   position: absolute;
   top: 5px;
   font-size: 13px;
@@ -391,33 +468,33 @@ body {
   padding: 2px 5px;
   border-radius: 10px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .card-status .active {
+.dynamic-wallet-main-container .dynamic-con .main-card .card-status .active {
   margin-left: 2px;
   margin-bottom: -2px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .card-status .on-hold {
+.dynamic-wallet-main-container .dynamic-con .main-card .card-status .on-hold {
   margin-left: 2px;
   margin-bottom: -2px;
   display: none;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .card-amount {
+.dynamic-wallet-main-container .dynamic-con .main-card .card-amount {
   position: absolute;
   top: 55%;
   left: 20px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .card-number {
+.dynamic-wallet-main-container .dynamic-con .main-card .card-number {
   position: absolute;
   top: 60%;
   font-size: 13px;
   left: 20px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .card-expiration {
+.dynamic-wallet-main-container .dynamic-con .main-card .card-expiration {
   position: absolute;
   top: 73%;
   font-size: 8px;
   left: 20px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-con .main-card .card-cardHolder {
+.dynamic-wallet-main-container .dynamic-con .main-card .card-cardHolder {
   position: absolute;
   top: 82%;
   left: 20px;
