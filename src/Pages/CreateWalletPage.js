@@ -40,9 +40,13 @@ function CreateWalletPage() {
   // back navigation
   const history = useNavigate();
   // official logo
-const logo =
-  "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png";
+  const logo =
+    "https://res.cloudinary.com/isreal/image/upload/v1663199426/banking%20app/AJIS_FILE_1_arvnbd_dqrxio.png";
 
+  // bank cardds accepted
+
+  const acceptedCards =
+    "https://res.cloudinary.com/isreal/image/upload/v1670407854/banking%20app/master_visa_verve_oakngi.png";
   // global context
   // const { seeTotalFunc, seeAmount } = useContext(AppContext);
   return (
@@ -68,12 +72,12 @@ const logo =
             <form>
               <div className="input-con">
                 <label>Wallet name</label>
-                <input type="text" placeholder="Example. New car ..." />
+                <input type="text" placeholder="New car ..." />
                 <p>What should this wallet be called ?</p>
               </div>
               <div className="input-con">
                 <label>Amount</label>
-                <input type="number" placeholder="Example. 500000 ..." />
+                <input type="number" placeholder="50,000 ..." />
                 <p>How much would be saving ?</p>
               </div>
               <div className="input-con date">
@@ -85,22 +89,35 @@ const logo =
                   <label>End date</label>
                   <input type="date" />
                 </div>
-                {/* <p>How long would you be saving ?</p> */}
+              </div>
+              <div className="input-con date">
+                <div className="start-date location">
+                  <label>Location</label>
+                  <input type="text" placeholder="Nigeria ..." />
+                </div>
+                <div className="end-date currency">
+                  <label>Currency</label>
+                  <select>
+                    <option value="">Select</option>
+                    <option value="naira">NRA</option>
+                    <option value="usDollar">USD</option>
+                    <option value="pound">GBP</option>
+                    <option value="euro">EURO</option>
+                  </select>
+                </div>
               </div>
               <div className="input-con">
                 <label>Payment method</label>
                 <select>
-                  <option value="automatic">
-                    I want to be debitted authomatically from my default card
-                  </option>
-                  <option value="manual">I want to save manually</option>
+                  <option value="automatic">Debitted authomatically</option>
+                  <option value="manual">Manually authorization</option>
                 </select>
                 <p>How should this money be saved ?</p>
               </div>
             </form>
           </div>
           <div className="dynmic-payment-method">
-            <p>Payment method</p>
+            <img src={acceptedCards} alt="" className="accepted-cards" />
             <div className="atm-details-con">
               <span className="bank-card-icon">
                 <FaCcVisa />

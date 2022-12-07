@@ -154,7 +154,8 @@ body {
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form {
   background: rgb(255, 255, 255);
-  width: 100%;
+  width: 97%;
+  margin: 0 auto;
 }
 @-webkit-keyframes createWallet {
   0% {
@@ -183,9 +184,19 @@ body {
   color: #025760;
   font-weight: 600;
 }
+@media only screen and (max-width: 380px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .input-con label {
+    font-size: 12px;
+  }
+}
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .input-con p {
   font-size: 13px;
   font-style: italic;
+}
+@media only screen and (max-width: 380px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .input-con p {
+    font-size: 12px;
+  }
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .input-con input,
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .input-con select {
@@ -196,11 +207,25 @@ body {
   border: 1px solid #009daf;
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .date {
-  padding: 0 0;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  padding: 0;
+}
+@media only screen and (max-width: 380px) {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .date {
+    font-size: 12px;
+  }
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .date .end-date {
+  width: 45%;
+  margin: 0;
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail form .date .start-date {
+  width: 45%;
+  margin: 0;
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method {
   display: flex;
@@ -252,6 +277,9 @@ body {
   flex-direction: row;
   color: #009daf;
   margin: 0 10px;
+}
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards {
+  width: 100px;
 }
 .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .save-wallet-btn {
   border: none;
