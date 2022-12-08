@@ -89,7 +89,7 @@ $darkestBg: #025760;
   right: 0;
   position: fixed;
   background-color: $bg;
-  border-radius: 20px 20px 0px 0px;
+  // border-radius: 20px 20px 0px 0px;
   z-index: 2;
   @include responsive(bigphone) {
     // position: relative;
@@ -220,12 +220,10 @@ $darkestBg: #025760;
 // SIDEBAR SECTION
 .sidebar {
   position: relative;
-  border: 5px solid red;
+  // border: 5px solid red;
   @include flexDisplay(space-between, top, row);
   display: flex;
   height: 100vh;
-
-  
 
   .sidebar-container {
     @include flexDisplay(space-between, center, row);
@@ -407,49 +405,51 @@ $darkestBg: #025760;
       // border: 2px solid red;
       @include flexDisplay(space-between, center, row);
 
-      .total-savings {
-        margin-top: 20px;
-        @include flexDisplay(flex-start, center, row);
+      .total-wallet-div {
+        .total-savings {
+          margin-top: 20px;
+          @include flexDisplay(flex-start, center, row);
 
-        // border: 1px solid red;
-        color: $darkBg;
-        //
-        font-family: "Quicksand";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 25px;
-        /* identical to box height */
+          // border: 1px solid red;
+          color: $darkBg;
+          //
+          font-family: "Quicksand";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 25px;
+          /* identical to box height */
 
-        /* AJIS MAIN */
+          /* AJIS MAIN */
 
-        color: #009daf;
-        @include responsive(bigphone) {
-          margin-top: 50px;
-          font-size: 23px;
+          color: #009daf;
+          @include responsive(bigphone) {
+            margin-top: 50px;
+            font-size: 23px;
+          }
+
+          .total-savings-icon {
+            margin-bottom: -5px;
+            font-size: 30px;
+
+            cursor: pointer;
+          }
         }
-
-        .total-savings-icon {
-          margin-bottom: -5px;
-          font-size: 30px;
-
-          cursor: pointer;
+        sup {
+          color: $text-Color;
+          font-size: 12px;
         }
-      }
-      sup {
-        color: $text-Color;
-        font-size: 12px;
-      }
-      .total-savings-amount {
-        @include flexDisplay(flex-start, center, row);
-        font-size: 20px;
-        color: $text-Color;
+        .total-savings-amount {
+          @include flexDisplay(flex-start, center, row);
+          font-size: 20px;
+          color: $text-Color;
 
-        .hide-total-savings-icon {
-          // margin-bottom: -10px;
-          font-size: 30px;
-          margin-left: 15px;
-          cursor: pointer;
+          .hide-total-savings-icon {
+            // margin-bottom: -10px;
+            font-size: 30px;
+            margin-left: 15px;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -473,8 +473,8 @@ $darkestBg: #025760;
           border-radius: 10px;
           // background-color: $cardbg;
           margin: 7px;
-          width: 30%;
-          min-width: 250px;
+          width: 90px;
+          // min-width: 250px;
           max-width: 500px;
           height: 140px;
           position: relative;

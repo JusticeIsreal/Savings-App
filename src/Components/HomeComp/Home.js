@@ -153,7 +153,7 @@ function Home() {
       <div className="home">
         <div className="oo">
           <div className="total-wallet-container">
-            <div>
+            <div className="total-wallet-div">
               <h2 className="total-savings">
                 Total savings{" "}
                 <RiArrowDownSFill className="total-savings-icon" />
@@ -190,7 +190,7 @@ function Home() {
                   onClick={() => creatWallet()}
                 >
                   <HiPlus className="add-wallet-icon" />
-                  <p>Create new wallet</p>
+                  <p>Create wallet</p>
                 </div>
               </Link>
 

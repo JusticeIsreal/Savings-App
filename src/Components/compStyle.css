@@ -39,7 +39,6 @@ body {
   right: 0;
   position: fixed;
   background-color: #f1feff;
-  border-radius: 20px 20px 0px 0px;
   z-index: 2;
 }
 @media only screen and (min-width: 750px) {
@@ -162,7 +161,6 @@ body {
 
 .sidebar {
   position: relative;
-  border: 5px solid red;
   display: flex;
   justify-content: space-between;
   align-items: top;
@@ -354,7 +352,7 @@ body {
   align-items: center;
   flex-direction: row;
 }
-.sidebar .home .total-wallet-container .total-savings {
+.sidebar .home .total-wallet-container .total-wallet-div .total-savings {
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
@@ -371,21 +369,21 @@ body {
   color: #009daf;
 }
 @media only screen and (min-width: 750px) {
-  .sidebar .home .total-wallet-container .total-savings {
+  .sidebar .home .total-wallet-container .total-wallet-div .total-savings {
     margin-top: 50px;
     font-size: 23px;
   }
 }
-.sidebar .home .total-wallet-container .total-savings .total-savings-icon {
+.sidebar .home .total-wallet-container .total-wallet-div .total-savings .total-savings-icon {
   margin-bottom: -5px;
   font-size: 30px;
   cursor: pointer;
 }
-.sidebar .home .total-wallet-container sup {
+.sidebar .home .total-wallet-container .total-wallet-div sup {
   color: #009daf;
   font-size: 12px;
 }
-.sidebar .home .total-wallet-container .total-savings-amount {
+.sidebar .home .total-wallet-container .total-wallet-div .total-savings-amount {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -393,7 +391,7 @@ body {
   font-size: 20px;
   color: #009daf;
 }
-.sidebar .home .total-wallet-container .total-savings-amount .hide-total-savings-icon {
+.sidebar .home .total-wallet-container .total-wallet-div .total-savings-amount .hide-total-savings-icon {
   font-size: 30px;
   margin-left: 15px;
   cursor: pointer;
@@ -420,8 +418,7 @@ body {
   border: 2px dashed #009daf;
   border-radius: 10px;
   margin: 7px;
-  width: 30%;
-  min-width: 250px;
+  width: 90px;
   max-width: 500px;
   height: 140px;
   position: relative;
