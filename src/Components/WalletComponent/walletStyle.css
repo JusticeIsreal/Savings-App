@@ -80,8 +80,7 @@ body {
     width: 450px;
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 86px;
+    font-size: 54px;
     margin-left: 20px;
   }
 }
@@ -121,6 +120,7 @@ body {
   width: 100%;
   flex-wrap: wrap;
   padding: 0;
+  padding-bottom: 10px;
 }
 @media only screen and (min-width: 750px) {
   .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail {
@@ -235,130 +235,119 @@ body {
   width: 45%;
   margin: 0;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   color: #025760;
-  margin-top: 20px;
+  margin: 0 auto;
   width: 100%;
 }
-@media only screen and (min-width: 1280px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method {
-    width: 550px;
-  }
-}
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method p {
-  font-size: 13px;
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method p {
+  font-size: 12px;
+  padding-left: 3px;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method p {
-    font-size: 15px;
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method p {
+    font-size: 14px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .atm-details-con {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
-  font-size: 13px;
+  flex-wrap: wrap;
+  padding-left: 3px;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con {
-    font-size: 15px;
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .atm-details-con {
+    font-size: 14px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con .bank-card-icon {
-  font-size: 25px;
-  margin: 0 5px;
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .atm-details-con .bank-card-icon {
+  font-size: 20px;
 }
-@media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con .bank-card-icon {
-    font-size: 35px;
-  }
-}
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .atm-details-con .change-bank-card {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .change-bank-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   color: #009daf;
-  margin: 0 10px;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  margin: 0 auto;
   flex-wrap: wrap;
-  padding: 0;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
-    margin-right: auto;
-    border-radius: 10px;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con {
-    width: 550px;
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con {
+    width: 100%;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .accepted-cards {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .accepted-cards {
   width: 80%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 750px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .accepted-cards {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .accepted-cards {
     width: 200px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con form {
-  width: 97%;
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con form {
+  width: 95%;
   margin: 0 auto;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .input-con {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
   margin: 15px;
-  width: 90%;
+  width: 100%;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con label {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .input-con label {
   color: #025760;
   font-weight: 600;
 }
 @media only screen and (max-width: 380px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con label {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .input-con label {
     font-size: 12px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .input-con input {
-  width: 100%;
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .input-con input {
+  width: 95%;
   height: 40px;
   border-radius: 5px;
   padding: 5px;
+  margin-right: auto;
   border: 1px solid #009daf;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .date {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 @media only screen and (max-width: 380px) {
-  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date {
+  .dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .date {
     font-size: 12px;
   }
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date .end-date {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .date .end-date {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -366,7 +355,7 @@ body {
   width: 45%;
   margin: 0;
 }
-.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynmic-payment-method .accepted-cards-con .date .start-date {
+.dynamic-wallet-main-container .dynamic-wallet .dynamic-card-details-con .dynamic-card-detail .dynmic-payment-method .accepted-cards-con .date .start-date {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -381,15 +370,11 @@ body {
   font-weight: 600;
   font-size: 15px;
   border-radius: 5px;
-  width: 100%;
+  width: 90%;
   height: 50px;
+  margin: 0 auto;
   margin-top: 20px;
   cursor: pointer;
-}
-@media only screen and (min-width: 1280px) {
-  .dynamic-wallet-main-container .dynamic-wallet .save-wallet-btn {
-    width: 550px;
-  }
 }
 .dynamic-wallet-main-container .dynamic-wallet .save-wallet-btn:hover {
   background-color: #025760;

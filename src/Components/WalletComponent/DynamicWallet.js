@@ -140,20 +140,20 @@ function DynamicWallet() {
               <h4>Transaction</h4>
               <p>{fullDetails.transactionMethod}</p>
             </div>
-          </div>
-          <div className="dynmic-payment-method">
-            <p>Payment method</p>
-            <div className="atm-details-con">
-              <span className="bank-card-icon">
-                <FaCcVisa />
-              </span>
-              {fullDetails.transactionMethod} - 2345{" "}
-              <span className="change-bank-card">
-                Change <MdKeyboardArrowRight />
-              </span>
+            <div className="dynmic-payment-method">
+              <p>Payment method</p>
+              <div className="atm-details-con">
+                <span className="bank-card-icon">
+                  <FaCcVisa />
+                </span>
+                {fullDetails.transactionMethod}
+                <span className="change-bank-card">
+                  Change <MdKeyboardArrowRight />
+                </span>
+              </div>
             </div>
+            <button className="save-wallet-btn">SAVE</button>
           </div>
-          <button className="save-wallet-btn">SAVE</button>
         </div>
       </div>
     </div>

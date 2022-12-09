@@ -115,33 +115,33 @@ function CreateWalletPage() {
                 <p>How should this money be saved ?</p>
               </div>
             </form>
-          </div>
-          <div className="dynmic-payment-method">
-            <div className="accepted-cards-con">
-              <img src={acceptedCards} alt="" className="accepted-cards" />
-              <form>
-                <div className="input-con">
-                  <label>Card holder names</label>
-                  <input type="text" placeholder="John Doe" />
-                </div>
-                <div className="input-con">
-                  <label>Card Number</label>
-                  <input type="number" placeholder="1234 4567 7890" />
-                </div>
-                <div className="input-con date">
-                  <div className="start-date">
-                    <label>Expiry</label>
-                    <input type="date" />
+            <div className="dynmic-payment-method">
+              <div className="accepted-cards-con">
+                <img src={acceptedCards} alt="" className="accepted-cards" />
+                <form>
+                  <div className="input-con">
+                    <label>Card holder names</label>
+                    <input type="text" placeholder="John Doe" />
                   </div>
-                  <div className="end-date">
-                    <label>CVV</label>
-                    <input type="text" placeholder="123"/>
+                  <div className="input-con">
+                    <label>Card Number</label>
+                    <input type="number" placeholder="1234 4567 7890" />
                   </div>
-                </div>
-              </form>
+                  <div className="input-con date">
+                    <div className="start-date">
+                      <label>Expiry</label>
+                      <input type="date" />
+                    </div>
+                    <div className="end-date">
+                      <label>CVV</label>
+                      <input type="text" placeholder="123" />
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
+            <button className="save-wallet-btn">SUBMIT</button>
           </div>
-          <button className="save-wallet-btn">SUBMIT</button>
         </div>
       </div>
     </div>
