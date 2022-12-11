@@ -92,7 +92,7 @@ function Home() {
         <div className="sidebar-nav-container">
           <nav>
             <ul style={{ listStyle: "none" }}>
-              <Link to="/">
+              <Link to="/HomePage">
                 <li
                   style={{
                     backgroundColor: "#009daf",

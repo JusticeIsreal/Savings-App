@@ -316,7 +316,7 @@ $darkestBg: #025760;
           }
           .change-bank-card {
             @include flexDisplay(space-between, center, row);
-color: $text-Color;
+            color: $text-Color;
             // border: 1px solid red;
           }
           .accepted-cards-con {

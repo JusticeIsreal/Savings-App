@@ -1,3 +1,4 @@
+import TopBar from "../TopBar";
 import { useState, useRef, useContext } from "react";
 import cardDetails from "../HomeComp/data";
 import { useParams } from "react-router-dom";
@@ -25,7 +26,7 @@ import { SiDraugiemdotlv } from "react-icons/si";
 import { GiCoins } from "react-icons/gi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiArrowUpSFill, RiArrowDownSFill } from "react-icons/ri";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { AiFillEye, AiFillEyeInvisible, AiOutlineMail } from "react-icons/ai";
 import { TiArrowBack } from "react-icons/ti";
 import { GrMoney } from "react-icons/gr";
 import { IoIosArrowBack } from "react-icons/io";
@@ -44,60 +45,62 @@ function DynamicWallet() {
   // global context
   const { seeTotalFunc, seeAmount } = useContext(AppContext);
   return (
-    <div className="dynamic-wallet-main-container">
-      <button className="go-back" onClick={() => history(-1)}>
-        <IoIosArrowBack /> back
-      </button>
-      <h3 className="dynamic-waller-header">Here is your Wallet details</h3>
-      <div className="dynamic-wallet">
-        <div className="dynamic-con">
-          <div className="main-card">
-            <img src={fullDetails.logo} alt="" className="logo" />
-            <h3 className="walletName">{fullDetails.walletName}</h3>
-            <p className="card-status">
-              {fullDetails.cardStatus !== "Active"
-                ? "On-hold"
-                : fullDetails.cardStatus}
-              <MdRadioButtonChecked
-                className={`${
-                  fullDetails.cardStatus === "Active" ? "active" : "on-hold"
-                }`}
-              />
-              <FcCancel
-                className={`${
-                  fullDetails.cardStatus === "Active" ? "on-hold" : "active"
-                }`}
-              />
-            </p>
-            <h1 className="card-amount">₦{fullDetails.amount}</h1>
-            <p className="card-expiration">{fullDetails.endDate}</p>
-            <h5 className="card-cardHolder">{fullDetails.cardHolderName}</h5>
+    <>
+      <TopBar />
+      <div className="dynamic-wallet-main-container">
+        <button className="go-back" onClick={() => history(-1)}>
+          <IoIosArrowBack /> back
+        </button>
+        <h3 className="dynamic-waller-header">Here is your Wallet details</h3>
+        <div className="dynamic-wallet">
+          <div className="dynamic-con">
+            <div className="main-card">
+              <img src={fullDetails.logo} alt="" className="logo" />
+              <h3 className="walletName">{fullDetails.walletName}</h3>
+              <p className="card-status">
+                {fullDetails.cardStatus !== "Active"
+                  ? "On-hold"
+                  : fullDetails.cardStatus}
+                <MdRadioButtonChecked
+                  className={`${
+                    fullDetails.cardStatus === "Active" ? "active" : "on-hold"
+                  }`}
+                />
+                <FcCancel
+                  className={`${
+                    fullDetails.cardStatus === "Active" ? "on-hold" : "active"
+                  }`}
+                />
+              </p>
+              <h1 className="card-amount">₦{fullDetails.amount}</h1>
+              <p className="card-expiration">{fullDetails.endDate}</p>
+              <h5 className="card-cardHolder">{fullDetails.cardHolderName}</h5>
+            </div>
+            <div className="withdraw-delete-con">
+              <button disabled>WITHDRAW</button>
+              <button>DELETE</button>
+            </div>
           </div>
-          <div className="withdraw-delete-con">
-            <button disabled>WITHDRAW</button>
-            <button>DELETE</button>
-          </div>
-        </div>
 
-        <div className="dynamic-card-details-con">
-          <div className="dynamic-card-detail">
-            <div>
-              <h4>Saving</h4>
-              <p>₦ 5,000.00</p>
-            </div>
-            <div>
-              <h4>Frequency</h4>
-              <p>Monthly</p>
-            </div>
-            <div>
-              <h4>Total savings</h4>
-              <p>₦ 20,000.00</p>
-            </div>
-            <div>
-              <h4>Target</h4>
-              <p>₦ 500,000.00</p>
-            </div>
-            {/* <div className="progress-range">
+          <div className="dynamic-card-details-con">
+            <div className="dynamic-card-detail">
+              <div>
+                <h4>Saving</h4>
+                <p>₦ 5,000.00</p>
+              </div>
+              <div>
+                <h4>Frequency</h4>
+                <p>Monthly</p>
+              </div>
+              <div>
+                <h4>Total savings</h4>
+                <p>₦ 20,000.00</p>
+              </div>
+              <div>
+                <h4>Target</h4>
+                <p>₦ 500,000.00</p>
+              </div>
+              {/* <div className="progress-range">
               <span className="progress-range-value">
                 {((fullDetails.amount * 100) / fullDetails.target).toFixed(1)}%
               </span>
@@ -114,49 +117,50 @@ function DynamicWallet() {
                 <div className="progress" style={{}}></div>
               </div>
             </div> */}
-            <div>
-              <h4>Start Date</h4>
-              <p>{fullDetails.startDate}</p>
-            </div>
-            <div>
-              <h4>End Date</h4>
-              <p>{fullDetails.endDate}</p>
-            </div>
-            <div>
-              <h4>Status</h4>
-              <select>
-                <option value="" key="">
-                  Select
-                </option>
-                <option value="active" key="">
-                  Active
-                </option>
-                <option value="onhold" key="">
-                  on-hold
-                </option>
-              </select>
-            </div>
-            <div>
-              <h4>Transaction</h4>
-              <p>{fullDetails.transactionMethod}</p>
-            </div>
-            <div className="dynmic-payment-method">
-              <p>Payment method</p>
-              <div className="atm-details-con">
-                <span className="bank-card-icon">
-                  <FaCcVisa />
-                </span>
-                {fullDetails.transactionMethod}
-                <span className="change-bank-card">
-                  Change <MdKeyboardArrowRight />
-                </span>
+              <div>
+                <h4>Start Date</h4>
+                <p>{fullDetails.startDate}</p>
               </div>
+              <div>
+                <h4>End Date</h4>
+                <p>{fullDetails.endDate}</p>
+              </div>
+              <div>
+                <h4>Status</h4>
+                <select>
+                  <option value="" key="">
+                    Select
+                  </option>
+                  <option value="active" key="">
+                    Active
+                  </option>
+                  <option value="onhold" key="">
+                    on-hold
+                  </option>
+                </select>
+              </div>
+              <div>
+                <h4>Transaction</h4>
+                <p>{fullDetails.transactionMethod}</p>
+              </div>
+              <div className="dynmic-payment-method">
+                <p>Payment method</p>
+                <div className="atm-details-con">
+                  <span className="bank-card-icon">
+                    <FaCcVisa />
+                  </span>
+                  {fullDetails.transactionMethod}
+                  <span className="change-bank-card">
+                    Change <MdKeyboardArrowRight />
+                  </span>
+                </div>
+              </div>
+              <button className="save-wallet-btn">SAVE</button>
             </div>
-            <button className="save-wallet-btn">SAVE</button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Orbitron", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1px;
+  background-color: rgba(65, 105, 225, 0);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(245, 245, 245, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(65, 105, 225, 0);
+}
+
+.login-page-con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.login-page-con .container {
+  width: 90%;
+  height: 550px;
+  perspective: 600px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 750px) {
+  .login-page-con .container {
+    width: 400px;
+  }
+}
+.login-page-con .container:hover .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+.login-page-con .container .card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+.login-page-con .container .card .front,
+.login-page-con .container .card .back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.login-page-con .container .card .front {
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #025760;
+  border-radius: 10px;
+}
+.login-page-con .container .card .front .sign-in-header {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #025760;
+}
+.login-page-con .container .card .front .input-main-con {
+  margin-right: auto;
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  margin: 30px 0;
+}
+.login-page-con .container .card .front .input-main-con label {
+  font-size: 15px;
+  color: #009daf;
+}
+.login-page-con .container .card .front .input-main-con .input-con {
+  border: 1px solid #009daf;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+}
+.login-page-con .container .card .front .input-main-con .input-con input {
+  width: 90%;
+  height: 90%;
+  border: none;
+  padding: 0 5px;
+}
+.login-page-con .container .card .front .input-main-con .input-con .input-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  color: #025760;
+}
+.login-page-con .container .card .front .input-main-con .validation-text {
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
+.login-page-con .container .card .front .checkbox-main-con {
+  margin-right: auto;
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+  margin: 20px 0;
+}
+.login-page-con .container .card .front .checkbox-main-con .checkbox-con {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.login-page-con .container .card .front .checkbox-main-con .checkbox-con span {
+  font-size: 15px;
+  color: #009daf;
+}
+.login-page-con .container .card .front .checkbox-main-con .validation-text {
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
+.login-page-con .container .card .front button {
+  border: none;
+  background-color: #009daf;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.login-page-con .container .card .front button:hover {
+  background-color: #025760;
+}
+.login-page-con .container .card .front .login-registration-link {
+  color: #009daf;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.login-page-con .container .card .front .login-registration-link span {
+  color: #025760;
+  font-weight: 600;
+  color: blue;
+}
+.login-page-con .container .card .back {
+  transform: rotateY(180deg);
+  background-color: red;
+}/*# sourceMappingURL=LoginStyle.css.map */

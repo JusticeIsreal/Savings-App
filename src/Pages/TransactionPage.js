@@ -1,10 +1,14 @@
-import React from 'react'
-import Transactions from "..//Components/TransactionComponent/Transactions"
+import React from "react";
+import Transactions from "..//Components/TransactionComponent/Transactions";
+import TopBar from "../Components/TopBar";
 
 function TransactionPage() {
   return (
-    <><Transactions /></>
-  )
+    <>
+      <TopBar />
+      <Transactions />
+    </>
+  );
 }
 
-export default TransactionPage
+export default TransactionPage;
