@@ -36,50 +36,47 @@ function Login() {
             </div>
             <button className="login-submit-btn">LOGIN</button>
             <p className="login-registration-link">
-              Already have an account ? <span>CLICK HERE</span>
+              You dont have an account ? <span>CLICK HERE</span>
             </p>
           </form>
           {/* back card for registration */}
           <form className="back">
-            <p>back</p>
-            <p>Create an account</p>
-            <div className="">
-              <div>
+            <p className="sign-in-header">Create an account</p>
+
+            <div className="input-main-con">
+              <div className="input-name-con">
                 <input type="text" placeholder="First name" />
                 <input type="text" placeholder="Last name" />
               </div>
-              <p>Validation test</p>
+              <p className="validation-text">Validation test</p>
             </div>
-            <div className="">
+            <div className="input-cont">
               <input type="email" placeholder="Enter email address" />
-              <p>Validation test</p>
+              <p className="validation-text">Validation test</p>
             </div>
-            <div className="">
+            <div className="input-cont">
               <input type="number" placeholder="Enter phone number" />
-              <p>Validation test</p>
+              <p className="validation-text">Validation test</p>
             </div>
-            <div className="">
-              <input type="password" placeholder="Enter password" />
-              <input type="password" placeholder="Confirm password" />
-              <p>Validation test</p>
+            <div className="input-main-con">
+              <div className="input-name-con">
+                <input type="password" placeholder="Enter password" />
+                <input type="password" placeholder="Confirm password" />
+              </div>
+
+              <p className="validation-text">Validation test</p>
             </div>
 
-            <div>
+            <div className="policy-checkbox-con">
               <input type="checkbox" />
               <span>
                 I agree to all <a href="/">Terms & Conditions</a>
               </span>
             </div>
             <button className="">SUBMIT</button>
-            <p>
+            <p className="login-registration-link">
               Already have an account ? <span>LOGIN</span>
             </p>
-
-            <p>or</p>
-
-            <div>
-              <span>icon</span> <button>Sign up with Google</button>
-            </div>
           </form>
         </div>
       </div>
