@@ -1,14 +1,24 @@
-import React from "react";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
 import "./LoginStyle.css";
 
 import { AiFillEye, AiFillEyeInvisible, AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
 
 function Login() {
+  let flipLogin = useRef();
+
+  // function to flip te login page to registration page
+  const flipLoginPage = () => {
+    flipLogin.current.style.transform = "rotateY(180deg)";
+  };
+  const flipRegPage = () => {
+    flipLogin.current.style.transform = "rotateY(0deg)";
+  };
   return (
     <div className="login-page-con">
       <div className="container">
-        <div className="card">
+        <div className="card" ref={flipLogin}>
           <form className="front">
             <p className="sign-in-header">Sign in to your account</p>
             <div className="input-main-con">
@@ -17,7 +27,7 @@ function Login() {
                 <AiOutlineMail className="input-icon" />
                 <input type="email" placeholder="Your Email" />
               </div>
-              <p className="validation-text">Validation test</p>
+              {/* <p className="validation-text">Validation test</p> */}
             </div>
             <div className="input-main-con">
               <label>Enter Password</label>
@@ -25,18 +35,20 @@ function Login() {
                 <RiLockPasswordLine className="input-icon" />
                 <input type="password" placeholder="Password" />
               </div>
-              <p className="validation-text">Validation test</p>
+              {/* <p className="validation-text">Validation test</p> */}
             </div>
             <div className="checkbox-main-con">
               <div className="checkbox-con">
-                <input type="checkbox" />
                 <span>Forgot Password ?</span>
               </div>
-              <p className="validation-text">Validation test</p>
+              {/* <p className="validation-text">Validation test</p> */}
             </div>
-            <button className="login-submit-btn">LOGIN</button>
+            <Link  to="/HomePage" className="login-btn-link">
+              <button className="login-submit-btn">LOGIN</button>
+            </Link>
             <p className="login-registration-link">
-              You dont have an account ? <span>CLICK HERE</span>
+              You dont have an account ?{" "}
+              <span onClick={() => flipLoginPage()}>CLICK HERE</span>
             </p>
           </form>
           {/* back card for registration */}
@@ -48,15 +60,15 @@ function Login() {
                 <input type="text" placeholder="First name" />
                 <input type="text" placeholder="Last name" />
               </div>
-              <p className="validation-text">Validation test</p>
+              {/* <p className="validation-text">Validation test</p> */}
             </div>
             <div className="input-cont">
               <input type="email" placeholder="Enter email address" />
-              <p className="validation-text">Validation test</p>
+              {/* <p className="validation-text">Validation test</p> */}
             </div>
             <div className="input-cont">
               <input type="number" placeholder="Enter phone number" />
-              <p className="validation-text">Validation test</p>
+              {/* <p className="validation-text">Validation test</p> */}
             </div>
             <div className="input-main-con">
               <div className="input-name-con">
@@ -64,7 +76,7 @@ function Login() {
                 <input type="password" placeholder="Confirm password" />
               </div>
 
-              <p className="validation-text">Validation test</p>
+              {/* <p className="validation-text">Validation test</p> */}
             </div>
 
             <div className="policy-checkbox-con">
@@ -75,7 +87,8 @@ function Login() {
             </div>
             <button className="">SUBMIT</button>
             <p className="login-registration-link">
-              Already have an account ? <span>LOGIN</span>
+              Already have an account ?{" "}
+              <span onClick={() => flipRegPage()}>LOGIN</span>
             </p>
           </form>
         </div>

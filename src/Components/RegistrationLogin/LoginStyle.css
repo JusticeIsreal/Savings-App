@@ -45,16 +45,12 @@ body {
     width: 400px;
   }
 }
-.login-page-con .container:hover .card {
-  cursor: pointer;
-}
 .login-page-con .container .card {
   height: 100%;
   width: 100%;
   position: relative;
   transition: transform 1500ms;
   transform-style: preserve-3d;
-  transform: rotateY(180deg);
 }
 .login-page-con .container .card .front,
 .login-page-con .container .card .back {
@@ -111,9 +107,14 @@ body {
 }
 .login-page-con .container .card .front .input-main-con .input-con .input-icon {
   position: absolute;
-  left: 10px;
+  left: 5px;
   font-size: 20px;
   color: #025760;
+}
+@media only screen and (max-width: 380px) {
+  .login-page-con .container .card .front .input-main-con .input-con .input-icon {
+    font-size: 15px;
+  }
 }
 .login-page-con .container .card .front .input-main-con .validation-text {
   color: red;
@@ -121,44 +122,40 @@ body {
   font-style: italic;
 }
 .login-page-con .container .card .front .checkbox-main-con {
-  margin-right: auto;
   width: 80%;
-  height: 40px;
   margin: 0 auto;
-  margin: 20px 0;
-}
-.login-page-con .container .card .front .checkbox-main-con .checkbox-con {
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
 }
-.login-page-con .container .card .front .checkbox-main-con .checkbox-con span {
+.login-page-con .container .card .front .checkbox-main-con span {
   font-size: 15px;
   color: #009daf;
+  cursor: pointer;
 }
 .login-page-con .container .card .front .checkbox-main-con .validation-text {
   color: red;
   font-size: 12px;
   font-style: italic;
 }
-.login-page-con .container .card .front button {
+.login-page-con .container .card .front .login-btn-link {
+  width: 80%;
+}
+.login-page-con .container .card .front .login-submit-btn {
   border: none;
   background-color: #009daf;
   color: white;
   font-weight: 600;
   font-size: 15px;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   height: 50px;
   margin: 0 auto;
   margin-top: 20px;
   cursor: pointer;
 }
-.login-page-con .container .card .front button:hover {
+.login-page-con .container .card .front .login-submit-btn:hover {
   background-color: #025760;
 }
 .login-page-con .container .card .front .login-registration-link {
@@ -170,6 +167,7 @@ body {
   color: #025760;
   font-weight: 600;
   color: blue;
+  cursor: pointer;
 }
 .login-page-con .container .card .back {
   transform: rotateY(180deg);
@@ -284,4 +282,5 @@ body {
   color: #025760;
   font-weight: 600;
   color: blue;
+  cursor: pointer;
 }/*# sourceMappingURL=LoginStyle.css.map */
