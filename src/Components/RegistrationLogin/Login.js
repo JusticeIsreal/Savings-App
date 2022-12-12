@@ -94,7 +94,10 @@ function Login() {
                 I agree to all <a href="/">Terms & Conditions</a>
               </span>
             </div>
-            <button className="">Create Account</button>
+
+            <Link className="login-btn-link">
+              <div className="login-submit-btn">Create Account</div>
+            </Link>
             <p className="login-registration-link">
               Already have an account ?{" "}
               <span onClick={() => flipRegPage()}>Log in</span>
