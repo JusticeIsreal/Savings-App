@@ -4,6 +4,7 @@ import "./LoginStyle.css";
 
 import { AiFillEye, AiFillEyeInvisible, AiOutlineMail } from "react-icons/ai";
 import { RiLockPasswordLine } from "react-icons/ri";
+import { IoIosArrowBack } from "react-icons/io";
 
 function Login() {
   let flipLogin = useRef();
@@ -20,6 +21,9 @@ function Login() {
       <div className="container">
         <div className="card" ref={flipLogin}>
           <form className="front">
+            <button className="go-back">
+              <IoIosArrowBack />
+            </button>
             <p className="sign-in-header">Sign in to your account</p>
             <div className="input-main-con">
               <label>Enter Email</label>
@@ -34,27 +38,32 @@ function Login() {
               <div className="input-con">
                 <RiLockPasswordLine className="input-icon" />
                 <input type="password" placeholder="Password" />
+                <AiFillEye className="input-icon eye" />
               </div>
               {/* <p className="validation-text">Validation test</p> */}
             </div>
             <div className="checkbox-main-con">
               <div className="checkbox-con">
-                <span>Forgot Password ?</span>
+                <Link to="/ForgetPassword">
+                  <span>Forgot Password ?</span>
+                </Link>
               </div>
               {/* <p className="validation-text">Validation test</p> */}
             </div>
-            <Link  to="/HomePage" className="login-btn-link">
-              <button className="login-submit-btn">LOGIN</button>
+            <Link to="/HomePage" className="login-btn-link">
+              <button className="login-submit-btn">Sign in</button>
             </Link>
             <p className="login-registration-link">
               You dont have an account ?{" "}
-              <span onClick={() => flipLoginPage()}>CLICK HERE</span>
+              <span onClick={() => flipLoginPage()}>Sign up</span>
             </p>
           </form>
           {/* back card for registration */}
           <form className="back">
             <p className="sign-in-header">Create an account</p>
-
+            <button className="go-back">
+              <IoIosArrowBack />
+            </button>
             <div className="input-main-con">
               <div className="input-name-con">
                 <input type="text" placeholder="First name" />
@@ -85,10 +94,10 @@ function Login() {
                 I agree to all <a href="/">Terms & Conditions</a>
               </span>
             </div>
-            <button className="">SUBMIT</button>
+            <button className="">Create Account</button>
             <p className="login-registration-link">
               Already have an account ?{" "}
-              <span onClick={() => flipRegPage()}>LOGIN</span>
+              <span onClick={() => flipRegPage()}>Log in</span>
             </p>
           </form>
         </div>

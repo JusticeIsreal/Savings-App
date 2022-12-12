@@ -109,13 +109,120 @@ $darkestBg: #025760;
         width: 100%;
         position: absolute;
         backface-visibility: hidden;
-      }
+        border: 1px solid $cardbg;
 
+        .go-back {
+          @include flexDisplay(space-between, center, row);
+          position: absolute;
+          width: 20px;
+          height: 20px;
+
+          font-size: 16px;
+          font-weight: 500;
+          left: 10px;
+          top: 20px;
+          margin: 10px;
+          border: none;
+          border-radius: 50%;
+          padding: 2px 3px;
+          color: white;
+          background: $darkestBg;
+          font-weight: 600;
+          line-height: 18px;
+        //   margin-top: 20px;
+          cursor: pointer;
+          //   background-color: transparent;
+        }
+
+        .session-note {
+          //   border: 2px solid red;
+          width: 80%;
+          text-align: center;
+          font-size: 13px;
+          margin-top: -35px;
+          margin-bottom: 60px;
+          color: rgb(152, 152, 152);
+        }
+      }
+      .email-modal {
+        position: absolute;
+        background-color: white;
+        padding: 5px;
+        height: 100%;
+        transform: scale(0);
+        border: 1px solid $cardbg;
+        @include flexDisplay(flex-start, center, column);
+        // display: none;
+        border-radius: 10px;
+
+        .sign-in-header {
+          margin-top: 20px;
+          margin-bottom: 50px;
+          font-weight: 600;
+          color: $darkestBg;
+        }
+
+        .go-back {
+          @include flexDisplay(space-between, center, row);
+          position: absolute;
+          width: 20px;
+          height: 20px;
+
+          font-size: 16px;
+          font-weight: 500;
+          left: 10px;
+          top: 20px;
+          margin: 10px;
+          border: none;
+          border-radius: 50%;
+          padding: 2px 3px;
+          color: white;
+          background: $darkestBg;
+          font-weight: 600;
+          line-height: 18px;
+        //   margin-top: 20px;
+          cursor: pointer;
+          //   background-color: transparent;
+        }
+        .session-note {
+          //   border: 2px solid red;
+          width: 80%;
+          text-align: center;
+          font-size: 13px;
+          margin-top: -35px;
+          color: rgb(152, 152, 152);
+        }
+        .login-btn-link {
+          width: 80%;
+          height: 50px;
+          cursor: pointer;
+          margin-top: 70px;
+          //   border: 2px solid red;
+        }
+        .login-submit-btn {
+          border: none;
+          background-color: transparent;
+          color: $cardbg;
+          font-weight: 600;
+          font-size: 15px;
+          text-align: center;
+          border-radius: 5px;
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+          @include flexDisplay(center, center, row);
+
+          //   margin-top: 20px;
+          cursor: pointer;
+
+          
+        }
+      }
       .front {
         background-color: white;
         padding: 5px;
         @include flexDisplay(flex-start, center, column);
-        border: 1px solid $darkestBg;
+
         border-radius: 10px;
 
         .sign-in-header {
@@ -165,6 +272,11 @@ $darkestBg: #025760;
                 // height: 600px;
               }
             }
+            .eye {
+              //   position: absolute;
+              left: 93%;
+              //   border: 2px solid red;
+            }
           }
 
           .validation-text {
@@ -200,17 +312,27 @@ $darkestBg: #025760;
           width: 80%;
           //   border: 2px solid red;
         }
+        .login-btn-link {
+          width: 80%;
+          height: 50px;
+          cursor: pointer;
+          margin-top: 70px;
+          //   border: 2px solid red;
+        }
         .login-submit-btn {
           border: none;
           background-color: $text-Color;
           color: white;
           font-weight: 600;
           font-size: 15px;
+          text-align: center;
           border-radius: 5px;
           width: 100%;
-          height: 50px;
+          height: 100%;
           margin: 0 auto;
-          margin-top: 20px;
+          @include flexDisplay(center, center, row);
+
+          //   margin-top: 20px;
           cursor: pointer;
 
           &:hover {
@@ -235,11 +357,10 @@ $darkestBg: #025760;
       }
       .back {
         transform: rotateY(180deg);
-        background-color: red;
+        // background-color: red;
         background-color: white;
         padding: 5px;
         @include flexDisplay(flex-start, center, column);
-        border: 1px solid $darkestBg;
         border-radius: 10px;
 
         .sign-in-header {
@@ -248,12 +369,55 @@ $darkestBg: #025760;
           color: $darkestBg;
         }
         .input-main-con {
-          // border: 1px solid red;
+          //   border: 1px solid red;
           margin-right: auto;
           width: 80%;
           height: 40px;
           margin: 0 auto;
           margin: 0 0 30px 0;
+
+          label {
+            font-size: 15px;
+            color: $cardbg;
+            // border: 2px solid red;
+            margin-top: 50px;
+          }
+          .input-con {
+            border: 1px solid $cardbg;
+            position: relative;
+            border-radius: 5px;
+            @include flexDisplay(center, flex-end, column);
+            width: 100%;
+            height: 100%;
+            padding: 1px;
+            margin-bottom: 20px;
+
+            input {
+              width: 90%;
+              height: 90%;
+              border: none;
+              padding: 0 5px;
+              // margin-right: auto;
+              // margin-right: -10px;
+              //
+            }
+            .input-icon {
+              position: absolute;
+              left: 5px;
+              font-size: 20px;
+              color: $darkestBg;
+
+              @include responsive(smallPhone) {
+                font-size: 15px;
+                // height: 600px;
+              }
+            }
+            .eye {
+              //   position: absolute;
+              left: 94%;
+              //   border: 2px solid red;
+            }
+          }
 
           .input-name-con {
             // border: 1px solid $cardbg;
@@ -321,17 +485,27 @@ $darkestBg: #025760;
           }
         }
 
-        button {
+        .login-btn-link {
+          width: 80%;
+          height: 50px;
+          cursor: pointer;
+          margin-top: 70px;
+          //   border: 2px solid red;
+        }
+        .login-submit-btn {
           border: none;
           background-color: $text-Color;
           color: white;
           font-weight: 600;
           font-size: 15px;
+          text-align: center;
           border-radius: 5px;
-          width: 80%;
-          height: 40px;
+          width: 100%;
+          height: 100%;
           margin: 0 auto;
-          margin-top: 20px;
+          @include flexDisplay(center, center, row);
+
+          //   margin-top: 20px;
           cursor: pointer;
 
           &:hover {

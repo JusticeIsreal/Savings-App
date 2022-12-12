@@ -59,6 +59,110 @@ body {
   position: absolute;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  border: 1px solid #009daf;
+}
+.login-page-con .container .card .front .go-back,
+.login-page-con .container .card .back .go-back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  left: 10px;
+  top: 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 2px 3px;
+  color: white;
+  background: #025760;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+}
+.login-page-con .container .card .front .session-note,
+.login-page-con .container .card .back .session-note {
+  width: 80%;
+  text-align: center;
+  font-size: 13px;
+  margin-top: -35px;
+  margin-bottom: 60px;
+  color: rgb(152, 152, 152);
+}
+.login-page-con .container .card .email-modal {
+  position: absolute;
+  background-color: white;
+  padding: 5px;
+  height: 100%;
+  transform: scale(0);
+  border: 1px solid #009daf;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.login-page-con .container .card .email-modal .sign-in-header {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #025760;
+}
+.login-page-con .container .card .email-modal .go-back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  left: 10px;
+  top: 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 2px 3px;
+  color: white;
+  background: #025760;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+}
+.login-page-con .container .card .email-modal .session-note {
+  width: 80%;
+  text-align: center;
+  font-size: 13px;
+  margin-top: -35px;
+  color: rgb(152, 152, 152);
+}
+.login-page-con .container .card .email-modal .login-btn-link {
+  width: 80%;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 70px;
+}
+.login-page-con .container .card .email-modal .login-submit-btn {
+  border: none;
+  background-color: transparent;
+  color: #009daf;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
 }
 .login-page-con .container .card .front {
   background-color: white;
@@ -67,7 +171,6 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #025760;
   border-radius: 10px;
 }
 .login-page-con .container .card .front .sign-in-header {
@@ -116,6 +219,9 @@ body {
     font-size: 15px;
   }
 }
+.login-page-con .container .card .front .input-main-con .input-con .eye {
+  left: 93%;
+}
 .login-page-con .container .card .front .input-main-con .validation-text {
   color: red;
   font-size: 12px;
@@ -142,17 +248,27 @@ body {
 .login-page-con .container .card .front .login-btn-link {
   width: 80%;
 }
+.login-page-con .container .card .front .login-btn-link {
+  width: 80%;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 70px;
+}
 .login-page-con .container .card .front .login-submit-btn {
   border: none;
   background-color: #009daf;
   color: white;
   font-weight: 600;
   font-size: 15px;
+  text-align: center;
   border-radius: 5px;
   width: 100%;
-  height: 50px;
+  height: 100%;
   margin: 0 auto;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   cursor: pointer;
 }
 .login-page-con .container .card .front .login-submit-btn:hover {
@@ -171,14 +287,12 @@ body {
 }
 .login-page-con .container .card .back {
   transform: rotateY(180deg);
-  background-color: red;
   background-color: white;
   padding: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #025760;
   border-radius: 10px;
 }
 .login-page-con .container .card .back .sign-in-header {
@@ -192,6 +306,44 @@ body {
   height: 40px;
   margin: 0 auto;
   margin: 0 0 30px 0;
+}
+.login-page-con .container .card .back .input-main-con label {
+  font-size: 15px;
+  color: #009daf;
+  margin-top: 50px;
+}
+.login-page-con .container .card .back .input-main-con .input-con {
+  border: 1px solid #009daf;
+  position: relative;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  margin-bottom: 20px;
+}
+.login-page-con .container .card .back .input-main-con .input-con input {
+  width: 90%;
+  height: 90%;
+  border: none;
+  padding: 0 5px;
+}
+.login-page-con .container .card .back .input-main-con .input-con .input-icon {
+  position: absolute;
+  left: 5px;
+  font-size: 20px;
+  color: #025760;
+}
+@media only screen and (max-width: 380px) {
+  .login-page-con .container .card .back .input-main-con .input-con .input-icon {
+    font-size: 15px;
+  }
+}
+.login-page-con .container .card .back .input-main-con .input-con .eye {
+  left: 94%;
 }
 .login-page-con .container .card .back .input-main-con .input-name-con {
   border-radius: 5px;
@@ -257,20 +409,30 @@ body {
   font-size: 12px;
   font-style: italic;
 }
-.login-page-con .container .card .back button {
+.login-page-con .container .card .back .login-btn-link {
+  width: 80%;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 70px;
+}
+.login-page-con .container .card .back .login-submit-btn {
   border: none;
   background-color: #009daf;
   color: white;
   font-weight: 600;
   font-size: 15px;
+  text-align: center;
   border-radius: 5px;
-  width: 80%;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   cursor: pointer;
 }
-.login-page-con .container .card .back button:hover {
+.login-page-con .container .card .back .login-submit-btn:hover {
   background-color: #025760;
 }
 .login-page-con .container .card .back .login-registration-link {

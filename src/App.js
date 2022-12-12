@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TopBar from "./Components/TopBar";
 import LoginPage from "./Pages/LoginPage";
+import ForgetPassword from "./Components/RegistrationLogin/ForgetPassword";
 import HomePage from ".//Pages/HomePage";
 import WalletPage from "./Pages/WalletPage";
 import TransactionPage from "./Pages/TransactionPage";
@@ -15,6 +16,7 @@ function App() {
         {/* <TopBar /> */}
         <Routes>
           <Route path="/" element={<LoginPage />} />
+          <Route path="/ForgetPassword" element={<ForgetPassword />} />
           <Route path="/HomePage" element={<HomePage />} />
           <Route path="/WalletPage" element={<WalletPage />} />
           <Route path="/TransactionPage" element={<TransactionPage />} />
